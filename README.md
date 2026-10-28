@@ -1640,6 +1640,38 @@ curl -X POST $BASE/api/admin/research/import -H "X-Admin-Token: $TOKEN" \
 `dist/` 建出来是另一个哈希 —— 部署链路不同步时，所有改动都"看不见效果"，
 先查这条，别怀疑代码。
 
+### 6. 部署：三处必须一起更新（2026-10-28 线上事故）
+
+前端产物、后端进程、nginx 配置是**三个独立的发布物**，少更新一个都会表现成
+「功能坏了」，而不是「还没部署」。当天线上的真实症状与判据：
+
+| 只更新了前端 `dist`（本次事故） | 现象 | 一条命令确认 |
+| --- | --- | --- |
+| 后端进程还是旧代码 | 后台导入研究文档报 **「导入失败：Not Found」**；页面有入口但打不开文章 | `curl -s https://qicifier.com/api/health` → `features` 里应有 `research`；没有就是旧后端 |
+| nginx 配置还是旧的 | `/sitemap.xml` 返回 `text/html`（SPA 的 index.html）；不存在的路径返回 200 | `curl -sI https://qicifier.com/sitemap.xml \| grep -i content-type` → 期望 `application/xml` |
+| 没跑预渲染 | 页面能开，但关掉 JS / 抓取时看不到正文 | `curl -s https://qicifier.com/clusters/415X-人工智能 \| grep -o '<title>[^<]*'` → 期望集群名，不是站名 |
+
+`/api/health` 的 200 与 `/api/clusters` 的 200，**都说明不了后端是新的** —— 它们旧版就有。
+判据是 `/api/health` 里的 `features` 数组（新版才有 `research` / `sitemap` 两项），
+或直接探 `/api/research`。这也是为什么健康检查要报「能力」而不只是 `status: ok`。
+
+发布顺序（三步都不能省）：
+
+```bash
+# ① 服务器上更新代码并重启后端（新路由只在重启后存在）
+git pull && ./zanzhu.sh restart          # 或 systemctl restart <uvicorn 服务>
+
+# ② 同步 nginx 配置（deploy/nginx.qicifier.com.conf），再 reload
+sudo nginx -t && sudo nginx -s reload
+
+# ③ 重新构建 + 预渲染（预渲染要连后端，所以在能连到 5172 的机器上跑）
+cd frontend && npm run build:seo && cd .. && rsync -a frontend/dist/ /srv/qicifier/dist/
+```
+
+后台的「行业研究文档」面板现在会自己探一次 `/api/research`：后端缺这个路由时，
+面板顶部直接写「后端没有行业研究接口（GET /api/research 返回 404）。多半是
+「只更新了前端产物、后端没重启」」，不再让人对着一句 `Not Found` 猜。
+
 ## 目录结构
 
 ```

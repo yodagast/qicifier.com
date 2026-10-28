@@ -86,7 +86,14 @@ def health():
         database = "up"
     except Exception as exc:  # pragma: no cover - operational probe
         return JSONResponse(status_code=503, content={"status": "degraded", "database": str(exc)})
-    return {"status": "ok", "database": database, "site": settings.site_name}
+    return {
+        "status": "ok",
+        "database": database,
+        "site": settings.site_name,
+        # 版本判据：线上「改了代码但没重启后端」时，/api/health 与 /api/clusters
+        # 这类旧接口返回 200 说明不了任何问题。运维只需要看这里有没有本版新增的能力。
+        "features": ["clusters", "enterprises", "regions", "tracks", "research", "sitemap"],
+    }
 
 
 @app.on_event("startup")

@@ -155,6 +155,13 @@ def main() -> int:
     section("健康检查")
     status, health = call("GET", "/api/health")
     check("后端可访问", status == 200 and health.get("status") == "ok", health)
+    # 线上最常见的部署事故是「前端 dist 更新了、后端没重启」：旧接口全绿，
+    # 新功能 404。所以健康检查要能回答「这一版有哪些能力」，运维一条 curl 就能判断。
+    check(
+        "健康检查报出本版能力（用来判断后端是否真的重启过）",
+        {"research", "sitemap"} <= set(health.get("features") or []),
+        health.get("features"),
+    )
     if status != 200:
         print("\n后端未运行，跳过其余测试")
         return 1

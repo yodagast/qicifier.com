@@ -101,7 +101,7 @@ async function load() {
     unlocked.value = true
     localStorage.setItem(TOKEN_KEY, token.value)
     loadLists()
-    loadResearch()
+    probeResearch().then((ready) => ready && loadResearch())
   } catch (err) {
     unlocked.value = false
     error.value = String(err.message || err)
@@ -351,8 +351,34 @@ const researchFile = ref(null)
 const researchInput = ref(null)
 const researchBusy = ref(false)
 const researchFlow = ref({ tone: 'idle', text: '' })
+// 后端有没有这个功能。**必须单独探一次公开接口**，不能拿「管理接口 404」当判据：
+// 那个 404 既可能是「后端没有这个路由」，也可能是「服务端没配 ADMIN_TOKEN」，
+// 而两者的处置完全不同。见 probeResearch() 里的注释。
+const researchReady = ref(true)
+const researchIssue = ref('')
+
+/** 探一下后端是否带行业研究功能（用公开接口，不需要令牌）。 */
+async function probeResearch() {
+  try {
+    await request('/research')
+    researchReady.value = true
+    researchIssue.value = ''
+    return true
+  } catch (err) {
+    researchReady.value = false
+    // 线上最常见的失败是**只发了前端、没重启后端**：dist 是新的（页面有入口），
+    // uvicorn 跑的还是旧代码（没有 /api/research 这个路由）→ FastAPI 回
+    // {"detail":"Not Found"}，界面上就只剩一句「导入失败：Not Found」。
+    researchIssue.value =
+      err.status === 404
+        ? '后端没有行业研究接口（GET /api/research 返回 404）。多半是「只更新了前端产物、后端没重启」—— 重启后端（./zanzhu.sh restart 或 restart uvicorn）后本页即可用。'
+        : `后端探测失败：${err.message || err}`
+    return false
+  }
+}
 
 async function loadResearch() {
+  if (!researchReady.value) return
   try {
     const data = await call('/admin/research')
     researchDocs.value = data.items || []
@@ -385,7 +411,13 @@ async function importResearch() {
     researchForm.value = { slug: '', title: '', summary: '', published_at: '' }
     loadResearch()
   } catch (err) {
-    researchFlow.value = { tone: 'error', text: `导入失败：${err.message || err}` }
+    // 404 单独说清楚，别让用户对着一句「Not Found」猜是文件问题还是部署问题
+    const hint =
+      err.status === 404
+        ? '（后端没有 /api/admin/research/import 这个路由 —— 通常是后端没更新或没重启）'
+        : ''
+    researchFlow.value = { tone: 'error', text: `导入失败：${err.message || err}${hint}` }
+    if (err.status === 404) probeResearch()
   } finally {
     researchBusy.value = false
   }
@@ -427,7 +459,7 @@ onMounted(() => {
     load()
     loadLists()
     loadManual()
-    loadResearch()
+    probeResearch().then((ready) => ready && loadResearch())
     // 令牌已在本地：模板会立刻展开，无需等 watch
     scrollToImportIfAsked()
   }
@@ -741,6 +773,9 @@ onMounted(() => {
         </p>
 
         <div class="card panel">
+          <p v-if="researchIssue" class="notice warn" style="margin-bottom: 12px" role="alert">
+            {{ researchIssue }}
+          </p>
           <div class="form-grid">
             <label>
               HTML 文档
@@ -764,7 +799,7 @@ onMounted(() => {
             </label>
           </div>
           <div class="stack" style="margin-top: 12px">
-            <button class="primary" :disabled="researchBusy || !researchFile" @click="importResearch">
+            <button class="primary" :disabled="researchBusy || !researchFile || !researchReady" @click="importResearch">
               {{ researchBusy ? '处理中…' : '导入文档' }}
             </button>
           </div>

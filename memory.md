@@ -1517,6 +1517,37 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
   `data/research/itest-research.html` 留在库里，下次列表页就会多出一条「测试用行业研究」。
 
 
+### 4.8q 线上「导入失败：Not Found」= 后端没更新，不是导入功能坏了
+
+线上部署完前端后，后台导入行业研究文档报 `导入失败：Not Found`。这个报错本身
+**没有指出任何原因**：FastAPI 的 404 就是 `{"detail":"Not Found"}`，而
+`require_admin` 在没配 `ADMIN_TOKEN` 时也故意回同一个 404 —— 三种完全不同的处境
+（路由不存在 / 令牌没配 / 反向代理没转发）说成同一句话。
+
+用**这一版新增的公开接口**做判据，一条命令分清：
+
+```
+curl -s https://qicifier.com/api/health
+# features 里有 research / sitemap → 后端是新的
+# 没有这两项（或 /api/research 404）→ 后端还是旧代码，uvicorn 没重启
+```
+
+`/api/health` 因此改成会报 `features`：`status: ok` 只能说明进程活着，
+说明不了它跑的是哪一版 —— 旧接口全绿正是这次误判的来源。
+
+当天实测：`/api/health` 200、`/api/clusters` 200，但 `/api/research` 404、
+`/sitemap.xml` 返回 `text/html`、`/clusters/not-exist-xyz` 返回 200 ——
+**只有 dist 是新的**。旧接口全绿会让人误判「后端没问题」，这类误判只能靠
+「拿本版新增的能力去探」来避免。
+
+处置：① `git pull && ./zanzhu.sh restart`；② 同步 `deploy/nginx.qicifier.com.conf`
+并 `nginx -s reload`；③ `npm run build:seo` 后同步 dist。
+
+顺带改了两处，让下次不必靠猜：
+* `Admin.vue` 的行业研究面板会先探 `/api/research`（公开、不需要令牌），
+  404 时直接在面板顶部写「后端没有行业研究接口，多半是只更新了前端、后端没重启」；
+* 导入失败若是 404，错误文案补一句「后端没有 /api/admin/research/import 这个路由」。
+
 ## 6. 还没做的（后续追补）
 
 1. **联系方式覆盖率仍不理想**：浏览器搜索把命中率从约 5% 提到约 30%，
