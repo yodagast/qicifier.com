@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import json
+import csv
 import re
 import sys
 from pathlib import Path
@@ -195,7 +196,7 @@ def main() -> int:
 
     cli_set = cli_companies.load_companies()
     backend_set = load_company_skeletons()
-    check("两份骨架实现的公司数一致", len(cli_set) == len(backend_set) == 3159, (len(cli_set), len(backend_set)))
+    check("两份骨架实现的公司数一致", len(cli_set) == len(backend_set) == 4228, (len(cli_set), len(backend_set)))
     # 两份骨架实现必须给出同一条记录。唯一允许的差异是 `cluster_slug`：
     # 归属映射只有入库时才用得到（见 LIST_CLUSTER 的注释），它不能反过来影响
     # 「哪些企业存在」这个判断。除此之外任何字段差异都是漂移。
@@ -223,9 +224,9 @@ def main() -> int:
     from collections import Counter
 
     check(
-        # 三档：616 官方名单 + 1959 第三方调研 + 584 政府公开（临安规上企业底表）
-        "核实程度按名单分级（616 官方 + 1959 调研 + 584 政府公开）",
-        Counter(grades.values()) == {"official": 616, "site_curated": 1959, "gov_open": 584},
+        # 三档：616 官方名单 + 3028 第三方调研 + 584 政府公开（临安规上企业底表）
+        "核实程度按名单分级（616 官方 + 3028 调研 + 584 政府公开）",
+        Counter(grades.values()) == {"official": 616, "site_curated": 3028, "gov_open": 584},
         Counter(grades.values()),
     )
 
@@ -238,9 +239,10 @@ def main() -> int:
         # 其中 612 家已在其余名单里，档位归先到的那份；它自己带进 A87/B76/C4）。
         # 医疗器械那份自己 309 行是 A195/B112/C2，
         # 其中有 30 家已在别的清单里（档位归先到的那份），所以并进来只涨 279 家。
-        # 第九份（气动元件）带进 A66/B302/C92，其中已在库的按先到的档位算
-        "九份调研清单合计档位分布正确（A709 / B1024 / C218 / 未标 8）",
-        Counter(c["verify_tier"][0] for c in research) == {"A": 709, "B": 1024, "C": 218, "—": 8},
+        # 第九份（气动元件）带进 A66/B302/C92、第十份（集装箱移动房）带进 A98/B692/C279，
+        # 已在库的按先到的档位算
+        "十份调研清单合计档位分布正确（A807 / B1716 / C497 / 未标 8）",
+        Counter(c["verify_tier"][0] for c in research) == {"A": 807, "B": 1716, "C": 497, "—": 8},
         Counter(c["verify_tier"][0] for c in research),
     )
     # 不是每份清单都有「主营产品」列：镇街级那份只有产区级的「产业」标签，
@@ -339,14 +341,15 @@ def main() -> int:
         # + 415X 调研清单的省外 2
         # + 全国气动元件清单的省外 231（460 行里 231 行省份不是浙江；其中 29 家
         #   属「国产气动龙头 / 外资品牌在华」两条企业池，它们也不参与浙江统计）
+        # + 全国集装箱移动房清单的省外 917（1069 行里 917 行的地市不是浙江的市）
         # + 浙江省产业带调研清单的省外 4 —— 比上一版少 3 家：舟山渔业那 3 行
         #   （中国水产舟山海洋渔业 / 舟山海洲水产 / 舟山震洋）的行政列写的是
         #   对标的「上海市普陀区」，而地址里的「普陀区沈家门街道」其实是舟山的
         #   （浙江与外省重名的那一坑）。现在按企业自己的地址改判回浙江。
         # `out_of_province` 优先于 `benchmark`（两件事都真时按省域记），
         # 所以 JUKI / 新秀丽 / Herman Miller / 鄂尔多斯 记在省外那一档里。
-        "省外（对比产区 + 全国代表 + 对标龙头 + 纺织 + 医疗器械 + 415X + 产业带 + 气动）共 677 家",
-        sum(1 for c in research if c["region_source"] == "out_of_province") == 677,
+        "省外（对比产区 + 全国代表 + 对标龙头 + 纺织 + 医疗器械 + 415X + 产业带 + 气动 + 集装箱房）共 1594 家",
+        sum(1 for c in research if c["region_source"] == "out_of_province") == 1594,
         sum(1 for c in research if c["region_source"] == "out_of_province"),
     )
     check(
@@ -1466,6 +1469,140 @@ def main() -> int:
         and delta["new_to_db"] == 0
         and delta["dropped_from_db"] == [],
         delta,
+    )
+
+    # ------------------------------------------------------------------
+    # CLI：`seed --csv` —— 让新放进 docs/ 的 CSV 能被命令行直接导入
+    #
+    # 在此之前这份 CLI 只能从 data/source/*.json 灌库，一份新 CSV 必须先进网页端
+    # 或另写一个 tools/parse_*.py 才会变成产物，`seed --drop` 对它毫无反应 ——
+    # 于是「照着文档跑完，新名单里的公司一家都没进库」看起来像个 bug，
+    # 而报告里一个字都不提。下面四条钉住的就是这条路。
+    # ------------------------------------------------------------------
+    print("\n=== CLI：seed --csv ===")
+    import contextlib
+    import io
+
+    from app import cli as app_cli  # noqa: E402
+
+    repo_root = ROOT
+
+    # ① 路径解析：文档里那条命令在 backend/ 下执行，而路径写的是相对仓库根的
+    #    （docs/x.csv）。三种写法都要能落到同一个文件。
+    csv_rel = "docs/全国气动元件企业调研清单.csv"
+    resolved = app_cli.resolve_csv(csv_rel)
+    check(
+        "resolve_csv 认仓库根相对路径（在 backend/ 下也能用）",
+        resolved == (repo_root / csv_rel).resolve(),
+        str(resolved),
+    )
+    original_cwd = Path.cwd()
+    try:
+        import os
+
+        os.chdir(repo_root / "backend")
+        check(
+            "resolve_csv 在 backend/ 目录下同样解得开 docs/ 路径",
+            app_cli.resolve_csv(csv_rel) == (repo_root / csv_rel).resolve(),
+            "",
+        )
+    finally:
+        os.chdir(original_cwd)
+
+    # ② 已登记的名单只给文件就够 —— 元数据从注册表读，不必把当初那堆参数再抄一遍
+    #    （抄错一个字就是另一个 source_key，同一份名单在库里出现两条）。
+    known = app_cli.registry_entry_for(resolved)
+    check(
+        "按文件名就能从注册表认出这份 CSV（含 source_key 与核实程度）",
+        known.get("source_key") == "pneumatic_research"
+        and known.get("grade") == "site_curated"
+        and known.get("list_name"),
+        {k: known.get(k) for k in ("source_key", "grade", "list_name")},
+    )
+
+    # ③ 没登记过、又没给 --source-key：必须**停下并说清怎么补**，不能自己编一个键。
+    #    source_key 是产物文件名 + 注册表唯一键，猜错就是一条再也对不上的名单。
+    def run_cli(argv):
+        out = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(out), contextlib.redirect_stderr(out):
+                app_cli.main(argv)
+        except SystemExit as exc:
+            return str(exc.code or ""), out.getvalue()
+        return "", out.getvalue()
+
+    # 用一份确定未登记的文件名来验（已登记的那几份会走 ② 的路径，覆盖不到这里）
+    unregistered = ROOT / "data" / "source" / "__not_a_list__.csv"
+    unregistered.write_text("公司名称,官网\n测试公司,\n", encoding="utf-8")
+    try:
+        code2, _ = run_cli(["seed", "--csv", str(unregistered), "--dry-run"])
+    finally:
+        unregistered.unlink()
+    check(
+        "未登记且没给 --source-key 时停下并给出补法（不自己编键）",
+        "还没登记过" in code2 and "--source-key" in code2,
+        code2[:80],
+    )
+
+    # ④ 多份 --csv 配一条元数据 = 会把它们全写进同一条注册表记录，必须拦住
+    code3, _ = run_cli(
+        [
+            "seed",
+            "--csv",
+            csv_rel,
+            "--csv",
+            "docs/浙江省产业带企业调研清单.csv",
+            "--source-key",
+            "whatever",
+            "--dry-run",
+        ]
+    )
+    check(
+        "多份 --csv 配一条元数据会被拦住（否则两份挤进同一记录）",
+        "只能来自注册表" in code3 or "同一条注册表记录" in code3,
+        code3[:90],
+    )
+
+    # ⑤ 注册表里的 source_file 必须**真的在磁盘上**。
+    #    曾经有两条只写了文件名（没有 docs/ 前缀），来源地图上看着有值、
+    #    实际指不到任何文件；顺着它去找源 CSV 的人会找不到。
+    from app.services.list_import import imported_lists  # noqa: E402
+
+    dangling = [e["source_key"] for e in imported_lists() if not (ROOT / e.get("source_file", "")).is_file()]
+    check("注册表里每条 source_file 都指向真实存在的文件", not dangling, dangling)
+
+    # ⑥ 每份已登记名单的「产业带 / 块状经济」取值都要能落位，否则那几十行
+    #    会静默地不出现在任何集群页上（这个库因此丢过两次数据：355 行、1069 行）。
+    #    这一条**按 CSV 实测**，不是查注册表 —— 查注册表只能证明导入过。
+    from app.services.list_import import cluster_slug_index  # noqa: E402
+
+    # 判据必须与灌库时**同一个函数**（``dispatch_cluster``）：它先查等价名
+    # （CLUSTER_SYNONYMS，「塘下汽摩配」→「瑞安汽摩配」），再查骨架与派生档案。
+    # 只查 index 会把 4 个别名误报成「缺档案」。
+    #
+    # 两份**刻意没有档案**的跨产区企业池（气动的「国产气动龙头」「外资品牌在华」）
+    # 是有意为之，写进白名单 —— 白名单只有这两个，新增任何一条都要有人解释。
+    INTENTIONAL_POOLS = {"国产气动龙头", "外资品牌在华"}
+    index = cluster_slug_index()
+    unresolved: dict[str, list[str]] = {}
+    for entry in imported_lists():
+        path = ROOT / entry.get("source_file", "")
+        if not path.is_file():
+            continue
+        with path.open(encoding="utf-8-sig") as handle:
+            header = next(csv.reader(handle), [])
+            handle.seek(0)
+            column = next((c for c in ("产业带", "块状经济") if c in header), "")
+            if not column:
+                continue
+            names = {row[column].strip() for row in csv.DictReader(handle) if row.get(column, "").strip()}
+        missing = sorted(n for n in names if not li.dispatch_cluster(n, index))
+        if missing:
+            unresolved[entry["source_key"]] = missing
+    check(
+        "每份名单的「产业带 / 块状经济」取值都有对应档案（含集装箱房 46 条）",
+        set().union(*unresolved.values()) <= INTENTIONAL_POOLS if unresolved else True,
+        {k: v[:4] for k, v in unresolved.items()},
     )
 
     print("\n=== 摘要联系方式抽取 ===")

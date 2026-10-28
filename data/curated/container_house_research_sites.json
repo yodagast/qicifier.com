@@ -1,0 +1,2281 @@
+{
+  "_note": "全国集装箱移动房企业调研清单（第三方调研）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "docs/全国集装箱移动房企业调研清单.csv",
+  "companies": [
+    {
+      "name": "台州大成移动板房有限公司",
+      "website": "https://dcydbf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "台州新圣活动板房有限公司",
+      "website": "https://tzhtydbf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "台州贵丰移动板房有限公司",
+      "website": "https://tzguifeng.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "嘉善新华昌集装箱有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江鑫源净化设备有限公司",
+      "website": "https://zjxyjh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐清市鸿福轻钢活动房有限公司",
+      "website": "https://zjhfhdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江众邦集成房屋有限公司",
+      "website": "https://zjspgc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州安士居集成房屋有限公司",
+      "website": "https://wzanshiju.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "温州市广昌五金制品有限公司",
+      "website": "https://gcseals.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "温州经济技术开发区海城鑫盛活动板房加工厂",
+      "website": "https://wzxshdf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "温州雅润活动板房有限公司",
+      "website": "https://jinghanzs.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "舟山市蜗居移动板房有限公司",
+      "website": "https://wjddf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "衢州力天集装箱有限公司",
+      "website": "https://ltjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "衢州明宇活动房有限公司",
+      "website": "https://myhdf.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "义乌市中超集装箱有限公司",
+      "website": "https://zccontainer.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "金华市鑫安钢结构工程有限公司",
+      "website": "https://xinan-gjg.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "陕西华腾箱式活动房有限公司",
+      "website": "https://htkpf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "陕西川百煜集成房屋有限公司",
+      "website": "https://chuanbaiyu.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "西安中大钢结构集成房屋有限公司",
+      "website": "https://xazhongda.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安建鑫钢构工程有限公司",
+      "website": "https://xajxgc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安盛鑫达智能制造有限公司",
+      "website": "https://shengxizhizao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安腾达兴房屋工程有限公司",
+      "website": "https://xatdxfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安观筑集成房屋有限公司",
+      "website": "https://guanzhu029.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安领航彩钢工程有限公司",
+      "website": "https://xahulanw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "陕西隆宇鑫业集成房屋有限公司",
+      "website": "https://lyxyjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "兰州得利晟箱式房屋有限公司",
+      "website": "https://dlsdbx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "新疆华筑兴达钢结构工程有限公司",
+      "website": "https://hzxdgjg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "祈虹（山西）集成房屋有限公司",
+      "website": "https://qhcgsx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "太原箱族猛人集成房屋智能科技有限公司",
+      "website": "https://tyxzmr.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山西箱族猛人建材有限公司",
+      "website": "https://xzmrjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁夏野利集成房屋有限公司",
+      "website": "https://nxyeli.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "内蒙古景优集成房屋有限公司",
+      "website": "https://nmgjyjzx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南京中凯集装箱科技有限公司",
+      "website": "https://njzkjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州众居集装箱有限公司",
+      "website": "https://yzjzxcz.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州战狼集装箱制造有限公司",
+      "website": "https://yzzhanlang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州润扬物流装备有限公司",
+      "website": "https://yzryc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "扬州通利冷藏集装箱有限公司",
+      "website": "https://tlc-yz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏雅居特种集装箱有限公司",
+      "website": "https://yajutx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏宝昱莱特种集装箱制造有限公司",
+      "website": "https://js-byl.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏荣伟集装箱制造有限公司",
+      "website": "https://jsrongwei.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泰州新华昌物流装备有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泰州昆龙集装箱有限公司",
+      "website": "https://kunlong888.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东台市唐城集装箱制造有限公司",
+      "website": "https://tc-container.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东台淼润动力科技有限公司",
+      "website": "https://cnmiaorun.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "盐城华丰集成房屋有限公司",
+      "website": "https://hfeng168.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "盐城市避风港活动房有限公司",
+      "website": "https://bfghouse.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "江苏中腾装备科技有限公司",
+      "website": "https://zt-zb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏斯然集装箱科技有限公司",
+      "website": "https://s-than.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中昱钢结构有限公司",
+      "website": "https://zhongyuhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "寿光东宇集成房屋有限公司",
+      "website": "https://sgdyjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东东创集成房屋有限公司",
+      "website": "https://dccontainerhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东中亿绿建集成房屋有限公司",
+      "website": "https://zhongyijcfw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东中源绿建集成房屋有限公司",
+      "website": "https://zhongyuanlvjian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东中睿绿建集成房屋有限公司",
+      "website": "https://wfzrlj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东华汇装配式建筑有限公司",
+      "website": "https://huahuizp.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东国恒建筑科技有限公司",
+      "website": "https://guohengjianke.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东恒硕集成房屋有限公司",
+      "website": "https://sdhsjcf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东潍昌新型建材有限公司",
+      "website": "https://sdweichang.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东潍昌集成房屋有限公司",
+      "website": "https://sdweichang.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东酷居空间建筑科技有限公司",
+      "website": "https://kujukongjian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东鸿泰鼎盛集成房屋有限公司",
+      "website": "https://wfhtds.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "潍坊万盟集成房屋有限公司",
+      "website": "https://wfwmjcfw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊万豪集成房屋有限公司",
+      "website": "https://wanhaofangwu.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊宏创集成房屋有限公司",
+      "website": "https://weifanghongchuang.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊家益集成房屋有限公司",
+      "website": "https://aqbb.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊市万隆钢结构有限公司",
+      "website": "https://wfwanlong.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊市华辉集成房屋有限公司",
+      "website": "https://huahuijichengfangwu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "潍坊昌云集成房屋有限公司",
+      "website": "https://weifangchangyun.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "潍坊鑫欧达钢结构工程有限公司",
+      "website": "https://wfxod.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "佛山市三水区通造集装箱制造厂",
+      "website": "https://fstongzao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市中瑜集装箱有限公司",
+      "website": "https://zyjzx.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市南方新联物流装备制造有限公司",
+      "website": "https://nfxlwl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市南海区得劳斯集装箱有限公司",
+      "website": "https://fsdelaosi.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佛山市南海耀达建材有限公司",
+      "website": "https://fsyaoda.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "佛山市博雅洁净科技有限公司",
+      "website": "https://boyacleanroom.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市合阁钢构集成房屋有限公司",
+      "website": "https://fchege.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市喜固钢结构有限公司",
+      "website": "https://hdbf688.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "佛山市尚成夹芯板有限公司",
+      "website": "https://fsscjxb.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市德苏曼建材科技有限公司",
+      "website": "https://desuman.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市智安箱房屋科技有限公司",
+      "website": "https://zhianfangwu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市筑建集成房屋科技有限公司",
+      "website": "https://matrixliving.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市耀伦达集成房屋有限公司",
+      "website": "https://yaolunda.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市胜邦钢结构有限公司",
+      "website": "https://sbshouses.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市钜人集装箱有限公司",
+      "website": "https://mrmhouse.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东中辉绿建集装箱有限公司",
+      "website": "https://njzhgb.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东富华机械装备制造有限公司",
+      "website": "https://fuwa.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东广舍模块化建筑有限公司",
+      "website": "https://gdguangshe.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东永筑集成房屋科技有限公司",
+      "website": "https://gzyongzhu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东深特集装箱制造有限公司",
+      "website": "https://st-jzx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东顺安达太平货柜有限公司",
+      "website": "https://singamas.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东飞思特建材有限公司",
+      "website": "https://fst8.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "涿州大千集装箱有限公司",
+      "website": "https://daqianbox.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北华狮智能建筑科技有限公司",
+      "website": "https://xjjlq.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "河北威正恒集成房屋科技有限公司",
+      "website": "https://wzhgroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "石家庄轩立集成房屋有限公司",
+      "website": "https://xljcfw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "中环绿建集成房屋科技河北有限公司",
+      "website": "https://zhonghuanlvjian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "秦皇岛市海星方舱制造有限公司",
+      "website": "https://qhdhxfc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "邢台增周集装箱制造有限公司",
+      "website": "https://xtzzhdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "邢台市芸圣集成房屋有限公司",
+      "website": "https://hbysjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北中泰钢结构科技有限公司",
+      "website": "https://hbztgjg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中集新型环保材料股份有限公司",
+      "website": "https://cems-cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中山市中化储运装备有限公司",
+      "website": "https://zztc-cn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东方国际集装箱（广州）有限公司",
+      "website": "https://dficgz.huanyu.development.coscoshipping.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "惠州胜狮能源装备有限公司",
+      "website": "https://hsclgd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中国国际海运集装箱（集团）股份有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南通中集特种运输设备制造有限公司",
+      "website": "https://cimcnt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南通中集能源装备有限公司",
+      "website": "https://cimcenergy.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南通四方罐式储运设备制造有限公司",
+      "website": "https://nttank.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "启东胜狮海工装备有限公司",
+      "website": "https://singamas.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "新华昌集团有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "泰州沪祥集装箱配件有限公司",
+      "website": "https://tzhxjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "太仓世珍集装箱部件股份有限公司",
+      "website": "https://saejin-cn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "太仓中集冷藏物流装备有限公司",
+      "website": "https://cimctcrc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "张家港世珍集装箱部件有限公司",
+      "website": "https://sae-jin.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "张家港中集圣达因低温装备有限公司",
+      "website": "https://sdy-cn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江可信竹木有限公司",
+      "website": "https://zjkexin.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴世龙运输设备部件有限公司",
+      "website": "https://suraloc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江泛洋特种装配设备有限公司",
+      "website": "https://chinapanocean.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江金盾压力容器智造股份有限公司",
+      "website": "https://jindun.cc",
+      "verify_tier": "B"
+    },
+    {
+      "name": "临沂鸿运木业有限公司",
+      "website": "https://hongyunwoods.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "青岛新华昌集装箱有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "沧州华电集装箱配件有限公司",
+      "website": "https://jzxpj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "龙岩市壹荣铸造有限公司",
+      "website": "https://yirongcasting.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海寰宇物流装备有限公司",
+      "website": "https://cshuanyu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海胜狮冷冻货柜有限公司",
+      "website": "https://singamas.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海胜狮集成设备有限公司",
+      "website": "https://singamas-sbpc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南桃花江竹材科技股份有限公司",
+      "website": "https://chinathj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津泰德利机械配件有限公司",
+      "website": "https://tightally.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津津滨华星机械配件有限公司",
+      "website": "https://tjhxcasting.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中集（重庆）物流装备制造有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大连中集特种物流装备有限公司",
+      "website": "https://dcle.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东方国际集装箱（锦州）有限公司",
+      "website": "https://dficjz.huanyu.development.coscoshipping.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "吴江区金利达空调净化设备有限公司",
+      "website": "https://jldclean.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "吴江市中正钢结构净化彩板有限公司",
+      "website": "https://wjzzcb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "吴江市亚泰净化设备有限公司",
+      "website": "https://yatai-clean.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "吴江市华联净化彩板有限公司",
+      "website": "https://szhljh.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "吴江市双达彩钢板有限公司",
+      "website": "https://wjtd.net",
+      "verify_tier": "C"
+    },
+    {
+      "name": "吴江市金虹净化彩板有限公司",
+      "website": "https://jhjhcb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "太仓中集特种物流装备有限公司",
+      "website": "https://tcmccontainer.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "太仓中集集装箱制造有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常熟苏南得劳斯移动房有限公司",
+      "website": "https://sndls188.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常熟雅致模块化建筑有限公司",
+      "website": "https://archispace.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "张家港市海星集装箱制造有限公司",
+      "website": "https://chinamaristar.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "张家港联星特种箱体有限公司",
+      "website": "https://uniteam.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "昆山永固集成房屋科技有限公司",
+      "website": "https://ks-yonggu.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "苏州中南钢结构股份有限公司",
+      "website": "https://szzhongnan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州中晟盛金属材料制造有限公司",
+      "website": "https://sz-zcs.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州大博金集成房屋科技有限公司",
+      "website": "https://bokinghouse.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "苏州大向集成房屋有限公司",
+      "website": "https://dxprefabhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州安士居集成房屋科技有限公司",
+      "website": "https://anshijuhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州平创集成房屋有限公司",
+      "website": "https://pingchuanghouse.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州罗尼奥模块化建筑有限公司",
+      "website": "https://roneo.cnbaowen.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州集科模块化建筑有限公司",
+      "website": "https://jk-jz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "莱之智模块化建筑工程（苏州）有限公司",
+      "website": "https://wisdommodular.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "佛山市格罗博房屋科技有限公司",
+      "website": "https://glbhouse.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东东方广厦住宅科技实业有限公司",
+      "website": "https://gsmodular.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东东方广厦模块化建筑有限公司",
+      "website": "https://gshmodular.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中集模块化建筑投资有限公司",
+      "website": "https://cimc-mbs.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中集模块化建筑设计研发有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中建海龙科技有限公司",
+      "website": "https://cschl.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "有利华建筑预制件（深圳）有限公司",
+      "website": "https://yaulee.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市华阳国际工程设计股份有限公司",
+      "website": "https://capol.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳雅致集成房屋有限公司",
+      "website": "https://yahgee.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅致集成房屋股份有限公司",
+      "website": "https://yahgee.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭萧钢构股份有限公司",
+      "website": "https://hxss.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江东南网架股份有限公司",
+      "website": "https://dongnanwangjia.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宝业集团股份有限公司",
+      "website": "https://baoyegroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江普天集成房屋有限公司",
+      "website": "https://pthhouse.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江绿筑集成科技有限公司",
+      "website": "https://gbstech.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "精工绿筑科技集团有限公司",
+      "website": "https://600496.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "长江精工钢结构（集团）股份有限公司",
+      "website": "https://600496.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "万华建筑科技有限公司",
+      "website": "https://wanhuaes.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海城建物资有限公司",
+      "website": "https://shmgc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海建工集团股份有限公司",
+      "website": "https://scg.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海莫欧实业有限公司",
+      "website": "https://magicmodule.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中建科技集团有限公司",
+      "website": "https://ccstc.cscec.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中铁装配式建筑股份有限公司",
+      "website": "https://crpcc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京浩石集成房屋有限公司",
+      "website": "https://house-space.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京诚栋国际营地集成房屋股份有限公司",
+      "website": "https://cdph.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北新集团建材股份有限公司",
+      "website": "https://bnbm.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安捷诚栋国际集成房屋（北京）有限公司",
+      "website": "https://anjiechengdong.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安徽富煌钢构股份有限公司",
+      "website": "https://fuhuang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安徽鸿路钢结构（集团）股份有限公司",
+      "website": "https://ahhonglu.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中建科工集团有限公司",
+      "website": "https://sstr.cscec.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "四川浩石模块化房屋科技有限公司",
+      "website": "https://house-ppvc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖南三一筑工有限公司",
+      "website": "https://sanygroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "远大住宅工业有限公司",
+      "website": "https://bhome.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海中集冷藏箱有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海中集宝伟工业有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海中集洋山物流装备有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海互集建筑科技有限公司",
+      "website": "https://hujicontainer.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海亮力活动房有限公司",
+      "website": "https://starhouse.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海太平国际货柜有限公司",
+      "website": "https://spictank.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海宝山太平货柜有限公司",
+      "website": "https://singamas.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海寰耀活动房有限公司",
+      "website": "https://shhuanyao.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海悦新特种集装箱发展有限公司",
+      "website": "https://shyuexin.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海扬品建筑科技有限责任公司",
+      "website": "https://modularfuture.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海捷屋建筑科技有限公司",
+      "website": "https://arkjiewu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海昌居实业有限公司",
+      "website": "https://changju888.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海昱地钢结构工程有限公司",
+      "website": "https://yudicn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海柜众货柜有限公司",
+      "website": "https://shgzbox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海柜族实业有限公司",
+      "website": "https://guizujituan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海美澳建筑科技有限公司",
+      "website": "https://meaochina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海英唐模块建筑有限公司",
+      "website": "https://cilc.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海莫腾科技有限公司",
+      "website": "https://mottontech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海铂实建筑科技发展股份有限公司",
+      "website": "https://bopind.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "希屋系统集成（上海）有限公司",
+      "website": "https://shinewoo.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "慧盖集装箱（上海）有限公司",
+      "website": "https://hui-gai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "殷弘活动房（上海）有限公司",
+      "website": "https://yinhonghdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宿迁市吉安特集装箱移动板房有限公司",
+      "website": "https://sqjat.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宿迁金柜集装箱有限公司",
+      "website": "https://sqjgjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏万里集成房屋有限公司",
+      "website": "https://wljcf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "淮安市柜族集装箱有限公司",
+      "website": "https://guizujituan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "淮安易天装配式建筑有限公司",
+      "website": "https://ha-yitian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "淮安鸿锦源活动房有限公司",
+      "website": "https://hahjy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东方国际集装箱（连云港）有限公司",
+      "website": "https://dficlyg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "连云港中远海运特种装备制造有限公司",
+      "website": "https://diwenyalirongqi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "连云港圣凡集成房屋有限公司",
+      "website": "https://lygcdjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东隆集数字货柜有限公司",
+      "website": "https://shandonglongji.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "德州信达集成房屋有限公司",
+      "website": "https://xindacapsule.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东兴邦工业装备有限公司",
+      "website": "https://xbgyjt.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东华达集成房屋有限公司",
+      "website": "https://shandonghuada.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "济南如家移动板房有限公司",
+      "website": "https://jnrjbf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "济南金品集成房屋有限公司",
+      "website": "https://maiborui.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "山东润建集成房屋有限公司",
+      "website": "https://runjianfangwu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东万事达建筑钢品股份有限公司",
+      "website": "https://wiskind.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东巨久集成房屋有限公司",
+      "website": "https://jujiulvjian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中山市中亿活动板房有限公司",
+      "website": "https://zy-hdf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "惠州市聚汇集装箱科技有限公司",
+      "website": "https://hzjhjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "惠州市辉翰集装箱制造有限公司",
+      "website": "https://hzhhcontainer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "惠州惠集特种装备制造有限公司",
+      "website": "https://hzhj.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东新会中集特种运输设备有限公司",
+      "website": "https://special-container.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江门市中顺住人集装箱有限公司",
+      "website": "https://jmzsjzx.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江门市宝腾活动房屋有限公司",
+      "website": "https://btboardroom.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江门市新会区得劳斯集装箱有限公司",
+      "website": "https://jmdls.top",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞中辉易建集装箱有限公司",
+      "website": "https://zhyjjzx168.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞南方中集物流装备制造有限公司",
+      "website": "https://cimcdlem.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市中泰集装箱制造有限公司",
+      "website": "https://dgztjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市安家集装箱有限公司",
+      "website": "https://anjiajzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市柜族集装箱有限公司",
+      "website": "https://guizujituan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市简驿活动板房有限公司",
+      "website": "https://dgjybf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "东莞市雅顺轻钢结构有限公司",
+      "website": "https://ysjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中集集装箱（集团）有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东汇赢模块化房屋科技有限公司",
+      "website": "https://huiyingbuild.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "箱大大集成房屋（东莞）有限公司",
+      "website": "https://xddbox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波中集物流装备有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波北仑百盾集装箱服务有限公司",
+      "website": "https://nbbdjzx.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波志雅集成房屋有限公司",
+      "website": "https://zhiyahouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波新华昌运输设备有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波海燕佳集装箱有限公司",
+      "website": "https://nbhyjf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波集郡集装箱科技有限公司",
+      "website": "https://chinaytown.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "绍兴圣凡集成房屋有限公司",
+      "website": "https://lygcdjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "绍兴市易家活动板房有限公司",
+      "website": "https://0575yijia.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "绍兴精工绿筑集成建筑系统工业有限公司",
+      "website": "https://gbstech.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川快住集成房屋有限公司",
+      "website": "https://kz1998.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "云南合弘晟装配式建筑有限公司",
+      "website": "https://yncjhdf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "云南红人集成房屋有限公司",
+      "website": "https://ynhrjcfw.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "昆明雅居集装箱有限公司",
+      "website": "https://ynyaju.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南宁市众拓活动板房有限公司",
+      "website": "https://gxztbf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广西佳成集成房屋有限公司",
+      "website": "https://gxjcbf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "广西南宁市雅冠集成房屋有限公司",
+      "website": "https://gxygjcw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广西阳宏集成房屋有限公司",
+      "website": "https://lezaix.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "贵州冠诚钢结构工程有限公司",
+      "website": "https://yngchdf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "贵州铭利莱集成活动房屋有限公司",
+      "website": "https://gymll.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "贵阳永升顺集装箱有限责任公司",
+      "website": "https://gyyssjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "漳州中集集装箱有限公司",
+      "website": "https://fjcimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "漳州市江霖兴活动房有限公司",
+      "website": "https://jlxhdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "漳州法利莱集成房屋有限公司",
+      "website": "https://zzfalilai.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "福建中箱集成房屋科技有限公司",
+      "website": "https://fujianzhongxiang.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "福州宝丰阁金属制品有限公司",
+      "website": "https://bf9511.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "福州市法莱斯活动房有限公司",
+      "website": "https://fjfalaisi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "福州市箱聚活动房有限公司",
+      "website": "https://fzhdf.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "福州金华彩钢夹芯板有限公司",
+      "website": "https://fjjhcg.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "福建万邦活动房有限公司",
+      "website": "https://fzwbhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大连富华恒润实业有限公司",
+      "website": "https://fhhrsy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大连立信钢结构工程有限公司",
+      "website": "https://dlgangting.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大连紫淇集装箱制造有限公司",
+      "website": "https://seven-ocean.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山郑篷房制造（沈阳）有限公司",
+      "website": "https://syszpf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "永强（辽宁）集成房屋有限公司",
+      "website": "https://yqcontainer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沈阳海昊集装箱活动板房有限公司",
+      "website": "https://syhh024.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沈阳瑞和集成房屋有限公司",
+      "website": "https://syrhjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沈阳鑫宏盛彩板钢构有限公司",
+      "website": "https://syhyjzgs.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "海纳百川（沈阳）模块化房屋建筑工程有限公司",
+      "website": "https://hnbchouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "云杰新型建筑科技（吉林）有限公司",
+      "website": "https://yun-jie.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "哈尔滨鑫虎建筑工程有限公司",
+      "website": "https://hrbxinhu.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州中浩集成房屋有限公司",
+      "website": "https://hzzhjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州华创集成房屋科技有限公司",
+      "website": "https://huachuangjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州博科熙科技有限公司",
+      "website": "https://hzboxi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州启创集成房屋科技有限公司",
+      "website": "https://qcjizhuangxiang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州恒辉模块化建筑有限公司",
+      "website": "https://zjhhbox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州湘泰集装箱移动板房有限公司",
+      "website": "https://xtjzx.com.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州致雅集装箱移动板房有限公司",
+      "website": "https://hzzhiya.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州苏歌建筑科技有限公司",
+      "website": "https://sugehouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州集盒建筑科技有限公司",
+      "website": "https://hzjihebox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "汉尔姆建筑科技有限公司",
+      "website": "https://halumm.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江萧雅装配式建筑有限公司",
+      "website": "https://hzxiaoya.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东光县源玺集成房屋科技有限公司",
+      "website": "https://yuanxifw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沧县宏达活动房有限公司",
+      "website": "https://hdjzx.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "沧州信合集装箱制造有限公司",
+      "website": "https://czxhyzc.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "沧州兴通预制房有限公司",
+      "website": "https://yzl1687.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沧州创合集装箱有限公司",
+      "website": "https://czchjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "沧州海旺达特种集装箱制造有限公司",
+      "website": "https://haiwangda.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北优迪集成房屋有限公司",
+      "website": "https://hbudi.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河北坤呈集装箱有限公司",
+      "website": "https://hkc198.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北宝丰轻钢彩板有限责任公司",
+      "website": "https://hbbfgg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泊头市东南西北特房制造有限公司",
+      "website": "https://dnxbtf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "盐山志昂箱体科技有限公司",
+      "website": "https://zhiangyzc.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青县卓佳电器设备制造有限公司",
+      "website": "https://hbhzjmjx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "寰宇东方国际集装箱（青岛）有限公司",
+      "website": "https://dficqingdao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "汇隆丰（山东）环保设备有限公司",
+      "website": "https://hlfcontainer.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛中集冷藏箱制造有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛中集特种冷藏设备有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛中集集装箱制造有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛双朋物流装备有限公司",
+      "website": "https://dfcontainer.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "青岛和泰源工贸有限公司",
+      "website": "https://jizhuangxiangfangwu.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛品木智能科技有限公司",
+      "website": "https://pinmufuture.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛悦立金属制造有限公司",
+      "website": "https://yl-specialcontainer.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛景建工贸有限公司",
+      "website": "https://jingjiangongmao.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛百恒达集成房屋有限公司",
+      "website": "https://qdbaihengda.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛盛威集装箱有限公司",
+      "website": "https://swcontainer.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛筑创集成房屋有限公司",
+      "website": "https://zcjzxfw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛雷悦重工股份有限公司",
+      "website": "https://rayfore.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛顺联集装箱部件制造有限公司",
+      "website": "https://shunliangroup.com.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "青岛马士基集装箱工业有限公司",
+      "website": "https://mcicontainers.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "青岛鸿诚集装箱配件有限公司",
+      "website": "https://qdhongcheng.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "正工模块化建筑科技（深圳）有限公司",
+      "website": "https://zengom.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市中创集装箱有限公司",
+      "website": "https://szzcjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市中润达集装箱有限公司",
+      "website": "https://zrdjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "深圳市华创集成房屋有限公司",
+      "website": "https://hchouses.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市华旅居集成房屋工程有限公司",
+      "website": "https://wholedream.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市安诚通集装箱服务有限公司",
+      "website": "https://anchengtong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市模块建筑科技有限公司",
+      "website": "https://cschl.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市浩河集成房屋有限公司",
+      "website": "https://haohesz.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "深圳法利莱集成房屋有限公司",
+      "website": "https://szfalilai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "箱大大移动房屋（深圳）有限公司",
+      "website": "https://xddbox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "合肥聚茂钢结构有限公司",
+      "website": "https://hfjmgjg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "合肥飞翼集装箱有限公司",
+      "website": "https://hffeiyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安徽九居智造建筑科技有限公司",
+      "website": "https://jjmkh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安徽玉强钢结构集成房屋有限公司",
+      "website": "https://anhuiyuqiang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安徽荣品空间科技有限公司",
+      "website": "https://rpkjzz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安徽集科模块化建筑科技有限公司",
+      "website": "https://jk-jz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "芜湖汉居特种集装箱有限公司",
+      "website": "https://whhjjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "芜湖皖居移动板房有限公司",
+      "website": "https://wuhuwj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "诚誉折叠住人集装箱有限公司",
+      "website": "https://thzrjzx.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "阜阳兴建集装箱有限公司",
+      "website": "https://0558jzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川兴普达集成房屋有限公司",
+      "website": "https://scxpd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川创蓝建筑工程有限公司",
+      "website": "https://sccljz.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "四川卡丰科技有限公司",
+      "website": "https://sckfkj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川爱上柜族集装箱有限公司",
+      "website": "https://cdguizu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都东顺集装箱有限公司",
+      "website": "https://dongshuns.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都中业智创集成房屋有限公司",
+      "website": "https://zyzc1668.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都四季宜居集成房屋有限公司",
+      "website": "https://cdsijiju.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都四季移居集成房屋有限公司",
+      "website": "https://sijiyiju.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "成都富邦集成房屋科技有限公司",
+      "website": "https://cdfubon.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都市得莱斯集装箱移动板房有限公司",
+      "website": "https://028dls.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都舒馨活动板房有限公司",
+      "website": "https://sxhdf8.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "成都诚建邦集成房屋有限公司",
+      "website": "https://jbjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都锐鑫活动板房有限公司",
+      "website": "https://cdrx9988.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都鸿富集成房屋有限公司",
+      "website": "https://hfjcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中建集成科技有限公司",
+      "website": "https://ccistc.cscec.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京万家同安建筑工程有限公司",
+      "website": "https://wjtajt.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京东方广厦模块化房屋有限公司",
+      "website": "https://gsmodular.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京同城易家集成房屋有限公司",
+      "website": "https://bjtcfw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京天下安居国际集成房屋有限公司",
+      "website": "https://bjtxaj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京好莱屋集成房屋有限公司",
+      "website": "https://bjhaolaiwu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京宏筑集成房屋科技有限公司",
+      "website": "https://bjhongzhu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京常乐之家活动房有限公司",
+      "website": "https://beijingchanglezhijia.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京星业集装箱活动房有限公司",
+      "website": "https://tc5188.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京航天中际集装箱有限公司",
+      "website": "https://hangbacc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京金华恒源集成房屋有限公司",
+      "website": "https://hyhdf.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐家集成房屋启东有限公司",
+      "website": "https://star-house.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南通中箱集成房屋有限公司",
+      "website": "https://ntzhongxiang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南通中集罐式储运设备制造有限公司",
+      "website": "https://cimctank.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "南通中集顺达集装箱有限公司",
+      "website": "https://cimcnt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南通尊达集成房屋科技有限公司",
+      "website": "https://ntzdfw.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "寰宇东方国际集装箱（启东）有限公司",
+      "website": "https://dficqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏华健集装箱有限公司",
+      "website": "https://huajiancontainer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏拓维集成房屋有限公司",
+      "website": "https://tuoweibox.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海门市柜族集装箱有限公司",
+      "website": "https://hmgzjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东客族装配式建筑科技有限公司",
+      "website": "https://gdkezugw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东爱上柜族集成房屋有限公司",
+      "website": "https://asgz1688.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州一号集装箱有限公司",
+      "website": "https://dyhjzx3.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州卓越集成房屋有限公司",
+      "website": "https://zhuoyuebf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州市众润房屋科技有限公司",
+      "website": "https://zr-house.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市勇辉集成房屋有限公司",
+      "website": "https://gzyonghui168.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市客族装配式建筑有限公司",
+      "website": "https://gzkzzps.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市曼布斯钢结构工程有限公司",
+      "website": "https://manbusi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市柜族集装箱有限公司",
+      "website": "https://guizujituan.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州科创建筑科技有限公司",
+      "website": "https://gzkchouse.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州联合装配式建筑有限公司",
+      "website": "https://gzlhwq.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州锦阁钢结构工程有限公司",
+      "website": "https://gzkinghouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州集之家移动房屋有限公司",
+      "website": "https://pdmodular.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "郑州中宇集装箱制造有限公司",
+      "website": "https://zzzyjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "郑州国平实业有限公司",
+      "website": "https://guopingshiye.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "临沂市贵通钢结构工程有限公司",
+      "website": "https://gtgjg.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "百格瑞（山东）集成房屋有限公司",
+      "website": "https://baigerui.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泉州伍金柜族集装箱有限公司",
+      "website": "https://qzwjgz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泉州市茂源彩钢板有限公司",
+      "website": "https://maoyuanjh.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "泉州得力斯移动房有限公司",
+      "website": "https://fjdelisi.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "泉州猛人集装箱有限公司",
+      "website": "https://qzmengren.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "徐州市仁泰活动板房有限公司",
+      "website": "https://xzrtbf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "徐州振烁彩钢有限公司",
+      "website": "https://xzzscg.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "徐州鑫居集装箱有限公司",
+      "website": "https://xinjujzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "徐州雅居集装箱有限公司",
+      "website": "https://xzyjjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南中湖建筑科技有限公司",
+      "website": "https://hnzhjk.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南雅恒腾飞轻钢房屋有限公司",
+      "website": "https://hnyhtf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "长沙中业钢结构有限公司",
+      "website": "https://zygjg8.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "长沙华驰活动板房有限公司",
+      "website": "https://cshcjzx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "天津中集北洋集装箱有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津中集集装箱有限公司",
+      "website": "https://cimc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津佰利信集成房屋有限公司",
+      "website": "https://blxgw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "天津新华昌运输设备有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "天津澳亚特种集装箱有限公司",
+      "website": "https://tjaoya.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "维勒钢结构（天津）有限公司",
+      "website": "https://vlhouse.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "廊坊国鑫彩钢活动房有限公司",
+      "website": "https://gxjzxf.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北一木集成房屋科技有限公司",
+      "website": "https://hebeiyimu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河北佳强节能科技有限公司",
+      "website": "https://hebeijiaqiang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河北武果钢结构有限公司",
+      "website": "https://wggjg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "霸州市万顺彩钢钢构制造有限公司",
+      "website": "https://wanshuncaigang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "厦门大禾速建建筑科技有限公司",
+      "website": "https://dahejianke.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "厦门太平货柜制造有限公司",
+      "website": "https://singamas-xpcl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "厦门市法利莱移动板房有限公司",
+      "website": "https://xmfalilai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "厦门旺世达活动房有限公司",
+      "website": "https://wsd999.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "厦门欣宏翔彩钢夹芯板有限公司",
+      "website": "https://xmxhxcg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中莱箱业模块化集成房屋（重庆）有限公司",
+      "website": "https://cqzhonglai.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆中科集装箱有限公司",
+      "website": "https://cqzkjzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆品建集成房屋有限公司",
+      "website": "https://cqzzdt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆奈斯集成房屋有限公司",
+      "website": "https://023nice.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆驿家集装箱有限公司",
+      "website": "https://yijiajzx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河南恒裕集成房屋有限公司",
+      "website": "https://hdbfpf.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "河南天宏集成房屋有限公司",
+      "website": "https://thjzxf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河南天达装配建筑科技有限公司",
+      "website": "https://hntianda.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河南亚佳特绿建科技股份有限公司",
+      "website": "https://yajate.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北佰达铭盛集成房屋有限公司",
+      "website": "https://hebeibaida.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北易佳集成房屋有限公司",
+      "website": "https://yijiajichengfangwu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北逸航新诺集成房屋有限公司",
+      "website": "https://hbyhxn.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "阜城华营集成房屋有限公司",
+      "website": "https://hyzdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉中宜装配式建筑工程有限公司",
+      "website": "https://whzyzps.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉志尚之星集成房屋有限公司",
+      "website": "https://zszx518.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉锦翔轻钢房屋有限公司",
+      "website": "https://whjinxiang.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖北和亿方装配式建筑科技有限公司",
+      "website": "https://hxboxhouse.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "常州市天辰彩钢瓦有限公司",
+      "website": "https://jscztc.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "常州新华昌国际集装箱有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常州永友活动房有限公司",
+      "website": "https://czyyhdf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "常州裕达钢结构工程有限公司",
+      "website": "https://cz889.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏万隆特种货柜有限公司",
+      "website": "https://cxic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏星旭集成房屋科技有限公司",
+      "website": "https://jsxingxu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海南立松集成实业有限公司",
+      "website": "https://hnlisong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海南唯胜装配式房屋科技有限公司",
+      "website": "https://weishenghouse.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海南百斯特集成房屋有限公司",
+      "website": "https://bstjcfw.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "无锡市创伟集装箱移动板房有限公司",
+      "website": "https://wxcwjzx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡市豪钢钢构活动房有限公司",
+      "website": "https://delaosihz.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "荆州市龙德集成房屋股份有限公司",
+      "website": "https://cnlongde.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖北省盛凯集装箱有限公司",
+      "website": "https://xyzrjzx.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "武汉瑞轶电气有限公司",
+      "website": "https://wuhanruiyi.com",
+      "verify_tier": "B"
+    }
+  ]
+}

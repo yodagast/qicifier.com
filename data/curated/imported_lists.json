@@ -46,6 +46,52 @@
       }
     },
     {
+      "source_key": "container_house_research",
+      "list_name": "全国集装箱移动房企业调研清单（第三方调研）",
+      "grade": "site_curated",
+      "source_file": "docs/全国集装箱移动房企业调研清单.csv",
+      "used_for": "全国集装箱房 / 活动房 / 模块化建筑产区调研，逐行给出省份/地市/区县/产业带；46 条产业带逐条建档（浙江 4 / 省外 42）",
+      "role": "产区企业层",
+      "imported_at": "2026-10-28T14:42:29+08:00",
+      "rows": 1069,
+      "companies": 1069,
+      "tiers": {
+        "B": 692,
+        "C": 279,
+        "A": 98
+      },
+      "with_website": 455,
+      "with_phone": 497,
+      "with_address": 1069,
+      "out_of_province": 917,
+      "default_cluster": "",
+      "source_columns": [
+        "序号",
+        "省份",
+        "地市",
+        "区县",
+        "产业带",
+        "产品方向",
+        "公司名称",
+        "官网",
+        "官网类型",
+        "电话",
+        "电话性质",
+        "地址",
+        "地址类型",
+        "核实等级",
+        "备注"
+      ],
+      "source_json": "container_house_research.json",
+      "layer_json": "container_house_research_list.json",
+      "sites_json": "container_house_research_sites.json",
+      "tier_labels": {
+        "A": "第三方调研 · 官网公示（未复核）",
+        "B": "第三方调研 · 工商可核（联系方式来自第三方）",
+        "C": "第三方调研 · 未核线索"
+      }
+    },
+    {
       "source_key": "linan_registry",
       "list_name": "临安区规上企业基本信息（政府公开数据）",
       "grade": "gov_open",
@@ -330,10 +376,10 @@
       "source_key": "zhejiang_415x_research",
       "list_name": "浙江省415X先进制造业企业调研清单（第三方调研）",
       "grade": "site_curated",
-      "source_file": "浙江省415X先进制造业企业调研清单.csv",
+      "source_file": "docs/浙江省415X先进制造业企业调研清单.csv",
       "used_for": "按 415X 赛道收录的浙江省先进制造业企业调研清单；官网只作候选，须先核验",
       "role": "赛道企业池",
-      "imported_at": "2026-10-26T13:15:46+08:00",
+      "imported_at": "2026-10-28T14:40:05+08:00",
       "rows": 779,
       "companies": 779,
       "tiers": {
@@ -377,10 +423,10 @@
       "source_key": "zhejiang_industrial_belt_research",
       "list_name": "浙江省产业带企业调研清单（第三方调研）",
       "grade": "site_curated",
-      "source_file": "浙江省产业带企业调研清单.csv",
+      "source_file": "docs/浙江省产业带企业调研清单.csv",
       "used_for": "逐行给出产业带 / 地市 / 县市区 / 镇街 四列，产地归属由清单决定；同一条产业带换名字出现时指向已有档案（塘下汽摩配→瑞安汽摩配、崧厦伞业→上虞伞业、店口铜加工→店口五金、云和木玩→云和木制玩具）",
       "role": "产业带企业层",
-      "imported_at": "2026-10-26T13:15:47+08:00",
+      "imported_at": "2026-10-28T14:40:06+08:00",
       "rows": 594,
       "companies": 594,
       "tiers": {

@@ -31,7 +31,7 @@ from ..database import get_session
 from ..models import Enterprise
 from ..seed.companies import load_company_skeletons, resolve_cluster_slug
 from ..services.admin_auth import require_admin
-from ..services.list_import import GRADE_PREFIX, import_list, imported_lists
+from ..services.list_import import GRADE_PREFIX, cluster_mapping, import_list, imported_lists
 
 router = APIRouter(prefix="/api/admin/lists", tags=["admin"])
 
@@ -131,7 +131,7 @@ async def import_csv(
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     report = result["report"]
-    report["cluster_mapping"] = _cluster_mapping(result["parsed"]["rows"])
+    report["cluster_mapping"] = cluster_mapping(result["parsed"]["rows"])
     report["database"] = _database_delta(
         session, result["parsed"]["rows"], dry_run, source_key.strip()
     )
@@ -166,107 +166,6 @@ def _known_cluster_slugs() -> set[str]:
         for row in payload.get("新星产业群", []):
             slugs.add(f"newstar-{row['seq']:02d}-{row['cluster']}")
     return slugs
-
-
-def _cluster_mapping(rows: list[dict]) -> dict:
-    """这批行能落到哪些已有集群 —— 落不上、以及**按什么依据**落的，都要能看见。
-
-    映射规则与灌库时**是同一个函数**：解析阶段算好的 ``list_cluster_slug``
-    （块状经济 / 产业带 / 产区 / 集群类型列）优先，其次是
-    ``seed.companies.resolve_cluster_slug`` 的兜底（赛道、整份归属）。
-    导入报告里算出来的结果，就是灌库后的结果。
-
-    **按行进总数，不按分组取最后一行。** 两处都必须按行：
-    落位与否取决于这一行的县市区（「中医药大健康」在兰溪/天台能落到新星产业群，
-    在滨江就不该落），把分组当成整体、用最后一行的 slug 代表全组，
-    曾让 21 个赛道全部显示「落不上」，而实际灌库后 591 行是有归属的 ——
-    报告与事实相反，比没有报告更糟。
-
-    **每行都要进某一个桶。** 早先只统计「有集群类型/赛道列」的行，
-    于是《浙江省产业带企业调研清单》那种只有「产业带」列的清单会得到
-    「0 组 / 0 行」——不是「全部落位」，也不是「全部落空」，而是**什么都没算**，
-    而页面上的「集群可落位 0 / 0 行」看起来却像个正常结论。
-    所以这里始终返回 total，并且把「按哪一列落的」单独统计（``bases``）。
-    """
-    from collections import Counter
-
-    from ..seed.companies import newstar_slug_index
-
-    newstar = newstar_slug_index()
-    by_key: dict[tuple, dict] = {}
-    bases: Counter = Counter()
-    total = resolved_total = 0
-
-    for row in rows:
-        total += 1
-        slug = row.get("list_cluster_slug") or ""
-        basis = "" if slug else ""
-        if slug:
-            basis = row.get("list_cluster_basis") or "清单自带"
-        else:
-            slug = resolve_cluster_slug(row, newstar)
-            if slug:
-                basis = "按赛道 / 整份归属"
-        if slug:
-            resolved_total += 1
-            bases[basis] += 1
-
-        # 分组标签：优先用清单自己声明的归属列（产业带 / 块状经济 / 产区）原文，
-        # 其次才是赛道 / 集群类型 —— 前者是这一行**为什么**属于那个集群的依据。
-        label = " ".join(
-            part
-            for part in (
-                row.get("list_cluster_name"),
-                row.get("cluster_type"),
-                row.get("track"),
-                row.get("sub_track"),
-                row.get("cluster_district"),
-            )
-            if part
-        ) or "（清单未给归属列）"
-        key = (
-            row.get("list_cluster_name") or "",
-            row.get("cluster_type") or "",
-            row.get("track") or "",
-            row.get("sub_track") or "",
-            row.get("cluster_district") or "",
-        )
-        entry = by_key.setdefault(
-            key,
-            {
-                "label": label,
-                "cluster_type": key[1],
-                "cluster_district": key[4],
-                "track": key[2],
-                "sub_track": key[3],
-                "rows": 0,
-                "resolved_rows": 0,
-                "unresolved_rows": 0,
-                "slugs": Counter(),
-            },
-        )
-        entry["rows"] += 1
-        if slug:
-            entry["resolved_rows"] += 1
-            entry["slugs"][slug] += 1
-        else:
-            entry["unresolved_rows"] += 1
-
-    groups = sorted(by_key.values(), key=lambda e: (-e["rows"], e["label"]))
-    for entry in groups:
-        entry["slugs"] = dict(entry["slugs"].most_common(8))
-        # 「落位到哪」要能直接读出来：一个赛道可能分散到多个县的新星产业群
-        entry["slug_summary"] = "、".join(f"{slug}（{n} 行）" for slug, n in entry["slugs"].items())
-    unresolved = [entry for entry in groups if entry["unresolved_rows"]]
-    return {
-        "total_rows": total,
-        "resolved_rows": resolved_total,
-        "unresolved_rows": total - resolved_total,
-        "bases": dict(bases.most_common()),
-        "requests": groups,
-        "unresolved": unresolved,
-        "note": "unresolved 里的行不会挂到任何集群（企业仍会入库，只是没有集群归属）",
-    }
 
 
 def _database_delta(session: Session, rows: list[dict], dry_run: bool, source_key: str = "") -> dict:

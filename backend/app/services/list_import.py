@@ -53,7 +53,11 @@ COLUMN_ALIASES: dict[str, tuple[str, ...]] = {
     "cluster_district": ("集群（县市区）", "集群(县市区)", "集群属地", "集群所在地"),
     "track": ("所属产业赛道", "产业赛道", "赛道"),
     "sub_track": ("细分赛道",),
-    "product": ("主营产品", "主要产品", "产品"),
+    # 「产品方向」是《全国集装箱移动房企业调研清单》那一列的写法：取值是
+    # 箱式房 / 活动房 / 模块化建筑 / 特种集装箱 / 上游配套 / 海运集装箱，
+    # 逐行填满、没有空值 —— 它就是这份清单的「产品」。不认它，
+    # 1069 家企业在名录里会全部显示「未登记产品」，而清单其实给了。
+    "product": ("主营产品", "主要产品", "产品方向", "产品"),
     "production_area": ("产区", "生产产区"),
     "founded_year": ("成立年份", "成立时间"),
     "registered_capital": ("注册资本",),
@@ -1596,6 +1600,109 @@ def write_atomic(path: Path, text: str) -> None:
     finally:
         handle.close()
     Path(handle.name).replace(path)
+
+
+def cluster_mapping(rows: list[dict]) -> dict:
+    """这批行能落到哪些已有集群 —— 落不上、以及**按什么依据**落的，都要能看见。
+
+    映射规则与灌库时**是同一个函数**：解析阶段算好的 ``list_cluster_slug``
+    （块状经济 / 产业带 / 产区 / 集群类型列）优先，其次是
+    ``seed.companies.resolve_cluster_slug`` 的兜底（赛道、整份归属）。
+    导入报告里算出来的结果，就是灌库后的结果。
+
+    **按行进总数，不按分组取最后一行。** 两处都必须按行：
+    落位与否取决于这一行的县市区（「中医药大健康」在兰溪/天台能落到新星产业群，
+    在滨江就不该落），把分组当成整体、用最后一行的 slug 代表全组，
+    曾让 21 个赛道全部显示「落不上」，而实际灌库后 591 行是有归属的 ——
+    报告与事实相反，比没有报告更糟。
+
+    **每行都要进某一个桶。** 早先只统计「有集群类型/赛道列」的行，
+    于是《浙江省产业带企业调研清单》那种只有「产业带」列的清单会得到
+    「0 组 / 0 行」——不是「全部落位」，也不是「全部落空」，而是**什么都没算**，
+    而页面上的「集群可落位 0 / 0 行」看起来却像个正常结论。
+    所以这里始终返回 total，并且把「按哪一列落的」单独统计（``bases``）。
+    """
+    from collections import Counter
+
+    # 延迟导入：``seed.companies`` 在模块级依赖本模块的 ``imported_lists()``，
+    # 顶层导入会形成循环（与 ``parse_list_csv`` 里那处同理）。
+    from ..seed.companies import newstar_slug_index, resolve_cluster_slug
+
+    newstar = newstar_slug_index()
+    by_key: dict[tuple, dict] = {}
+    bases: Counter = Counter()
+    total = resolved_total = 0
+
+    for row in rows:
+        total += 1
+        slug = row.get("list_cluster_slug") or ""
+        basis = "" if slug else ""
+        if slug:
+            basis = row.get("list_cluster_basis") or "清单自带"
+        else:
+            slug = resolve_cluster_slug(row, newstar)
+            if slug:
+                basis = "按赛道 / 整份归属"
+        if slug:
+            resolved_total += 1
+            bases[basis] += 1
+
+        # 分组标签：优先用清单自己声明的归属列（产业带 / 块状经济 / 产区）原文，
+        # 其次才是赛道 / 集群类型 —— 前者是这一行**为什么**属于那个集群的依据。
+        label = " ".join(
+            part
+            for part in (
+                row.get("list_cluster_name"),
+                row.get("cluster_type"),
+                row.get("track"),
+                row.get("sub_track"),
+                row.get("cluster_district"),
+            )
+            if part
+        ) or "（清单未给归属列）"
+        key = (
+            row.get("list_cluster_name") or "",
+            row.get("cluster_type") or "",
+            row.get("track") or "",
+            row.get("sub_track") or "",
+            row.get("cluster_district") or "",
+        )
+        entry = by_key.setdefault(
+            key,
+            {
+                "label": label,
+                "cluster_type": key[1],
+                "cluster_district": key[4],
+                "track": key[2],
+                "sub_track": key[3],
+                "rows": 0,
+                "resolved_rows": 0,
+                "unresolved_rows": 0,
+                "slugs": Counter(),
+            },
+        )
+        entry["rows"] += 1
+        if slug:
+            entry["resolved_rows"] += 1
+            entry["slugs"][slug] += 1
+        else:
+            entry["unresolved_rows"] += 1
+
+    groups = sorted(by_key.values(), key=lambda e: (-e["rows"], e["label"]))
+    for entry in groups:
+        entry["slugs"] = dict(entry["slugs"].most_common(8))
+        # 「落位到哪」要能直接读出来：一个赛道可能分散到多个县的新星产业群
+        entry["slug_summary"] = "、".join(f"{slug}（{n} 行）" for slug, n in entry["slugs"].items())
+    unresolved = [entry for entry in groups if entry["unresolved_rows"]]
+    return {
+        "total_rows": total,
+        "resolved_rows": resolved_total,
+        "unresolved_rows": total - resolved_total,
+        "bases": dict(bases.most_common()),
+        "requests": groups,
+        "unresolved": unresolved,
+        "note": "unresolved 里的行不会挂到任何集群（企业仍会入库，只是没有集群归属）",
+    }
 
 
 def output_paths(source_key: str, entry: dict | None = None) -> dict[str, Path]:

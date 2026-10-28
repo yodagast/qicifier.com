@@ -339,9 +339,9 @@ def main() -> int:
     section("第三方调研清单导入（武义户外运动与休闲）")
     status, listed = call("GET", "/api/enterprises?data_grade=site_curated&page_size=100")
     check(
-        "第三方调研清单企业合计 1959 家（含现代纺织与服装 317 行、医疗器械 309 行、无缝 137 行修订版、"
-        "415X 调研清单带进的 167 家、全国气动元件 460 家）",
-        listed["meta"]["total"] == 1959,
+        "第三方调研清单企业合计 3028 家（含现代纺织与服装 317 行、医疗器械 309 行、无缝 137 行修订版、"
+        "415X 调研清单带进的 167 家、全国气动元件 460 家、全国集装箱移动房 1069 家）",
+        listed["meta"]["total"] == 3028,
         listed["meta"]["total"],
     )
     # 新增的两批代表企业里，第二批量最大；抽一家只出现在第二批的企业确认真的入库了
@@ -404,8 +404,9 @@ def main() -> int:
         # 山东 10，外加「国产气动龙头/外资品牌在华」两条企业池里的省外 8 家）——
         # 气动那 29 家**刻意不挂**：那两条企业池是跨产区的，挂到某一条产业带上
         # 会让同一家企业在两个产区里各算一次（详见 README 气动元件那一节）。
-        "整体口径：1959 家调研企业里 60 家无任何归属（省外 + 赛道只对应外地产业群 + 跨产区企业池）",
-        len(everything) == 1959 and len(loose) == 60 and len(fallback) == 49,
+        # 集装箱房那 1069 家**全部**有归属（46 条产业带逐条建档），所以这两个数字没变
+        "整体口径：3028 家调研企业里 60 家无任何归属（省外 + 赛道只对应外地产业群 + 跨产区企业池）",
+        len(everything) == 3028 and len(loose) == 60 and len(fallback) == 49,
         (len(everything), len(loose), len(fallback)),
     )
     # 415X 调研清单带来一批「赛道只对应外地新星产业群」的企业，它们本身就无集群可挂
@@ -505,7 +506,7 @@ def main() -> int:
     _, stats = call("GET", "/api/stats")
     check(
         "可见数 = 官方名单 + 第三方调研 + 政府公开（三档，不合并成一个口径）",
-        stats["enterprise_total"] == 616 + 1959 + 584,
+        stats["enterprise_total"] == 616 + 3028 + 584,
         stats["enterprise_total"],
     )
     check(
@@ -516,8 +517,8 @@ def main() -> int:
         #   4 家境外・外省对标龙头（JUKI / 新秀丽 / Herman Miller / 鄂尔多斯）
         #   的地址列写的是产地标记而不是地址，它们照样记省外。
         "省外（对比产区 + 全国代表 + 镇街级对标龙头 + 医疗器械 + 415X + 产业带）单独计数，不混进浙江企业数",
-        stats["enterprise_out_of_province"] == 685
-        and stats["enterprise_total"] - stats["enterprise_out_of_province"] == 2474,
+        stats["enterprise_out_of_province"] == 1602
+        and stats["enterprise_total"] - stats["enterprise_out_of_province"] == 2626,
         stats["enterprise_out_of_province"],
     )
 
@@ -580,7 +581,7 @@ def main() -> int:
 
     # 省外企业在列表里必须能被筛出来、也能量excluding，不能混进浙江产区统计
     _, foreign_list = call("GET", "/api/enterprises?scope=out_of_province&page_size=20")
-    check("省外企业可单独筛出", foreign_list["meta"]["total"] == 685, foreign_list["meta"]["total"])
+    check("省外企业可单独筛出", foreign_list["meta"]["total"] == 1602, foreign_list["meta"]["total"])
     check(
         "省外企业都带省外标记",
         all(i["region_source"] == "out_of_province" for i in foreign_list["items"]),
@@ -668,7 +669,7 @@ def main() -> int:
     check(
         "官方名单数与其它来源数分别给出（KPI 里那句话要能对上）",
         stats_now["enterprise_official"] == 616
-        and stats_now["enterprise_total"] - stats_now["enterprise_official"] == 1959 + 584,
+        and stats_now["enterprise_total"] - stats_now["enterprise_official"] == 3028 + 584,
         (stats_now["enterprise_official"], stats_now["enterprise_total"]),
     )
     check(
@@ -879,8 +880,8 @@ def main() -> int:
         slug_path = "/api/admin/clusters/newstar-18-%E6%97%A0%E7%BC%9D%E6%9C%8D%E8%A3%85"
         status, listed = call("GET", "/api/admin/clusters", token=admin_token)
         check(
-            "产业带列表可查（166 = 139 + 气动元件 27 条派生产区）",
-            status == 200 and listed["total"] == 166,
+            "产业带列表可查（212 = 166 + 集装箱移动房 46 条派生产区）",
+            status == 200 and listed["total"] == 212,
             listed["total"],
         )
         check(

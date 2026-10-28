@@ -12,6 +12,16 @@
       它靠「页面里有没有这串字」判断端口上跑的是不是本库前端。
     -->
     <title>杭州波动粒子 · 产业集群与企业检索</title>
+    <!--
+      标签页图标。路径必须是**相对**的（`./img/...`）：本库没有 `public/` 目录，
+      Vite 的 publicDir 指向不存在的 `public/`，所以写成 `/img/favicon-16x16.png`
+      只在 dev 下能取到 —— 构建后 dist 里没有这个文件，图标会 404（标签页退回默认图）。
+      相对路径会被 Vite 当资源处理：打进 `dist/assets/` 并带上内容哈希。
+
+      同一个坑 `src/site.js` 的备案图标已经记过一次（那里改用 import 解决），
+      但 index.html 用不了 import，只能靠相对路径。
+    -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
     <meta
       name="description"
       content="以官方名单为骨架、逐条标注核实程度的浙江产业集群与企业检索服务。415X 赛道、镇街级块状经济、11 市 90 县（市、区）企业名录。"
