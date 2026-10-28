@@ -1,0 +1,227 @@
+{
+  "_note": "全国无缝服装企业调研清单（第三方调研·第一批）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "docs/全国无缝服装企业调研清单.csv",
+  "companies": [
+    {
+      "name": "义乌市劲力针织科技股份有限公司",
+      "website": "https://ywjlfs.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "义乌市博宏针织有限公司",
+      "website": "https://bo-h.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "义乌市杭宏服饰有限公司",
+      "website": "https://ywhanghong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "义乌市聚通针织有限公司",
+      "website": "https://ywjtzz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江万千服饰有限公司",
+      "website": "https://vanqian.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江万羽针织有限公司",
+      "website": "https://cnwanyu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江博尼时尚控股集团有限公司",
+      "website": "https://bonnychina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天森服饰股份有限公司",
+      "website": "https://china-tiansen.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江年年旺针织有限公司",
+      "website": "https://nnw.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江棒杰数码针织品有限公司",
+      "website": "https://bangjie.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江浪莎内衣有限公司",
+      "website": "https://langshaunderwear.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "义乌市乐丰针织有限公司",
+      "website": "https://wuyingchushan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "义乌市伊秀服饰有限公司",
+      "website": "https://yixiuclothing.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "义乌市尔友针织袜业有限公司",
+      "website": "https://fanxueer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "义乌市瑛泽内衣有限公司",
+      "website": "https://e-face.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天派针织股份有限公司",
+      "website": "https://tianpaichina.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江润晖服饰有限公司",
+      "website": "https://chinarunhui.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江爱美莱科技有限公司",
+      "website": "https://amriy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江爱美莱纤体服饰有限公司",
+      "website": "https://amriy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江珊琪服饰有限公司",
+      "website": "https://shanqigroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江知音纺织科技有限公司",
+      "website": "https://zhiyinest.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江联合启华针织有限公司",
+      "website": "https://lianheqihua.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江芊叶服饰有限公司",
+      "website": "https://cnqianye.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江芬雪琳针织服饰有限公司",
+      "website": "https://fashionning.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江莎雪服饰有限公司",
+      "website": "https://chinashaxue.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江超凡制衣有限公司",
+      "website": "https://cfwsy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浪莎针织有限公司",
+      "website": "https://langsha.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东光伟针织有限公司",
+      "website": "https://gdguangwei.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东蓝天成实业有限公司",
+      "website": "https://ltcsy.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "汕头市双宝纺织有限公司",
+      "website": "https://stshuangbao.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "汕头市宇丰针织有限公司",
+      "website": "https://yufengzhenzhi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东曼娜内衣有限公司",
+      "website": "https://gd-manna.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "汕头市谷茂纺织有限公司",
+      "website": "https://stgumao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东欣薇尔服装有限公司",
+      "website": "https://singwear.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东洪兴实业股份有限公司",
+      "website": "https://hongxinggf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "奥丽侬集团（广东奥丽侬内衣集团有限公司）",
+      "website": "https://oleno.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "长泰服装织造有限公司",
+      "website": "https://changtai-co.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "百佳（福建）内衣有限公司",
+      "website": "https://aggcn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东瑞源科技股份有限公司",
+      "website": "https://rygf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江彩蝶实业股份有限公司",
+      "website": "https://chinacaidie.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江罗纳服饰有限公司",
+      "website": "https://cnunderwear.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "腾飞科技股份有限公司",
+      "website": "https://e-tengfei.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "博尼国际控股有限公司（浙江博尼时尚控股集团）",
+      "website": "http://bonnychina.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "幂姿内衣（佛山南海盐步）",
+      "website": "http://mizibra.com",
+      "verify_tier": "B 官网可核·电话待补"
+    }
+  ],
+  "_legacy_note": "本文件是两份同源清单的并集：137 行修订版（source_key=seamless_research） + 19 家首版里独有的条目（幂姿内衣 mizibra.com）。首版其余 14 家已被修订版覆盖，不再重复列出。"
+}

@@ -1,0 +1,1231 @@
+{
+  "_note": "全国气动元件企业调研清单（第三方调研）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "docs/全国气动元件企业调研清单.csv",
+  "companies": [
+    {
+      "name": "奉化市中海气动成套有限公司",
+      "website": "https://hjzhpc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "奉化市沃克志合机械有限公司",
+      "website": "https://nbwkzh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "奉化市鸿宇气动有限公司",
+      "website": "https://hyqdyj.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波万海阀门科技有限公司",
+      "website": "https://wanhai-cn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波佰励气动元件有限公司",
+      "website": "https://ybaile.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波全盛世纪气动科技有限公司",
+      "website": "https://cnquansheng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波凯威纳电子科技有限公司",
+      "website": "https://nbkvn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波台科电子有限公司",
+      "website": "https://tperinc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波哈克斯车辆部件有限公司",
+      "website": "https://cn-hawks.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波天鑫佳能气动成套有限公司",
+      "website": "https://china-txpc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波奉化溪口恒润中工气动元件厂",
+      "website": "https://nbhxzg.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波奉化溪口顺发气动工程有限公司",
+      "website": "https://shunfapc.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市中驰电子科技有限公司",
+      "website": "https://nbzonci.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市佳盛伟业自动化工业有限公司",
+      "website": "https://casun.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市凯亿自动化工业有限公司",
+      "website": "https://nbkaiyi.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市奉化升光气动机械有限公司",
+      "website": "https://nbsgpc.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市奉化威泰气动有限公司",
+      "website": "https://weitaiqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市奉化溪口四明气动元件厂",
+      "website": "https://nbsmqd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波市奉化益源气动元件有限公司",
+      "website": "https://yyxzpc.com.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波市奉化马可自动化工业设备有限公司",
+      "website": "https://fhmake.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市恒诚气动机械有限公司",
+      "website": "https://hc-pc.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市柯斯普气动液压件有限公司",
+      "website": "https://nbcospl.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市爱托普气动液压有限公司",
+      "website": "https://airtop-pneumatic.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波市科川动力科技有限公司",
+      "website": "https://nbsxzk.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市羽新气动有限公司",
+      "website": "https://nbyxqidong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波市豪发液压气动有限公司",
+      "website": "https://haofayy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市鑫潮自动化元件有限公司",
+      "website": "https://china-xcpc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市铭格气动科技有限公司",
+      "website": "https://nbmingge.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波希沃机械有限公司",
+      "website": "https://nbxiwo.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波开灵气动元件制造有限公司",
+      "website": "https://kailing-cn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波恒敏灵通气动成套有限公司",
+      "website": "https://ltqd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波斯科达气动液压机械有限公司",
+      "website": "https://nbskd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波斯诺特气动机械有限公司",
+      "website": "https://nbsnt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波新佳行自动化工业有限公司",
+      "website": "https://nbqdjx.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波新邦工具有限公司",
+      "website": "https://ningboqidong.com.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波旭日气动元件有限公司",
+      "website": "https://xuriqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波晨光威腾自动化机械有限公司",
+      "website": "https://cnwtpc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波森亚气动科技有限公司",
+      "website": "https://nbsenya.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波永益高科气动有限公司",
+      "website": "https://yy-pc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波汉德森自动化工业有限公司",
+      "website": "https://nbhandsun.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波海蓝气动有限公司",
+      "website": "https://hlpneu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波爱尔肯气动设备有限公司",
+      "website": "https://airkir.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波盛达阳光气动机械有限公司",
+      "website": "https://cnsdpc.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波科赛特气动科技有限公司",
+      "website": "https://cctpower.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波科顿自动化工业有限公司",
+      "website": "https://keduen.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波纽帕得机械有限公司",
+      "website": "https://nppc-pneumatic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波航远气动技术有限公司",
+      "website": "https://nb-hytic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波英特灵气动科技有限公司",
+      "website": "https://isaiahpc.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波诺华工业自动化有限公司",
+      "website": "https://norha.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波迪尔威动力机械有限公司",
+      "website": "https://nbdrw.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波陈氏鑫光气动有限公司",
+      "website": "https://xgqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波麦格诺机械制造有限公司",
+      "website": "https://magano.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "余姚司徒气动元件有限公司",
+      "website": "https://stccn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "余姚市三力信电磁阀有限公司",
+      "website": "https://solenoidvalve.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "余姚市企飞特气动元件有限公司",
+      "website": "https://qftqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "余姚市金帅电气动设备有限公司",
+      "website": "https://jinshuaitools.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "余姚金锐气动元件有限公司",
+      "website": "https://jinruiyuyao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波舜驰气动科技有限公司",
+      "website": "https://spefittings.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市北仑弗莱柯气动工具有限公司",
+      "website": "https://frvnk.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁海县东升气动工具厂",
+      "website": "https://zjairtools.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁海县联翔气动机械厂",
+      "website": "https://lxqdmd.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波波特气动元件有限公司",
+      "website": "https://nbptec.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波艾弗德气动元件有限公司",
+      "website": "https://afd-fittings.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "慈溪市友田气动元件有限公司",
+      "website": "https://chinayoutian.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "慈溪市康尼气动元件有限公司",
+      "website": "https://conekfit.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "慈溪市维世达气动元件有限公司",
+      "website": "https://nbvisd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "慈溪市菲泰德气动科技有限公司",
+      "website": "https://fitat-pneumatic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "慈溪市道通气动元件有限公司",
+      "website": "https://daotong-china.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波全佳气动元件制造有限公司",
+      "website": "https://qjvalve.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波韦和气动元件有限公司",
+      "website": "https://vpc-pneumatic.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "象山石浦东海气缸厂",
+      "website": "https://donghai-dh.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "乐清东明气动科技有限公司",
+      "website": "https://klhair.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐清博胜气动元件有限公司",
+      "website": "https://bogsh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐清市斯迈格气动元件有限公司",
+      "website": "https://zjsmuk.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐清市百乐气动有限公司",
+      "website": "https://chinablqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "乐清市神威气动有限公司",
+      "website": "https://diancifa.cc",
+      "verify_tier": "C"
+    },
+    {
+      "name": "乐清市鑫光气动有限公司",
+      "website": "https://zjxgqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州金业气动科技有限公司",
+      "website": "https://zjjyqd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "永嘉县立正气动阀门成套有限公司",
+      "website": "https://cn-lizheng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "瑞安市经纬气动液压元件成套有限公司",
+      "website": "https://jwqd.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州市气动元件厂",
+      "website": "https://wzqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州市力州气动工具有限公司",
+      "website": "https://lztools.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州市枪宝工具有限公司",
+      "website": "https://chinaairnailer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江岩治气动工具股份有限公司",
+      "website": "https://yanztools.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江迈特工具制造有限公司",
+      "website": "https://maxtoptool.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州市椒江宜语气动元件有限公司",
+      "website": "https://zgyiyu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州普洛通气动有限公司",
+      "website": "https://poritontools.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "玉环精工气动股份有限公司",
+      "website": "https://sljg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "台州市路桥同心气动工具厂",
+      "website": "https://tztongxin.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉善边锋机械股份有限公司",
+      "website": "https://bfmade.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴米克气动设备有限公司",
+      "website": "https://pneulead.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州富阳瓦尔精密机械有限公司",
+      "website": "https://cn.waalpc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "藤卓智能科技（湖州）有限公司",
+      "website": "https://aotc.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "永康市佳风气动工具有限公司",
+      "website": "https://ykjiafeng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡市华通气动制造有限公司",
+      "website": "https://wxpneum.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡市友通自动化设备有限公司",
+      "website": "https://wxyoto.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "无锡东南液压气动有限公司",
+      "website": "https://wxdnyy.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "无锡市华中气动液压有限公司",
+      "website": "https://hzqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡市协新气动有限公司",
+      "website": "https://wxxxqd.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "无锡市大浮液压气动元件厂",
+      "website": "https://wxdf.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡市马先达气动成套厂",
+      "website": "https://mxdqd.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "无锡优力克气动元件制造有限公司",
+      "website": "https://unicotubing.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡市华机机械制造有限公司",
+      "website": "https://wxhjjxzz.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "常州恒立气动科技有限公司",
+      "website": "https://wxhengli.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常州市东海气动液压成套设备有限公司",
+      "website": "https://czdhyy.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "埃迈诺冠气动器件（苏州）有限公司",
+      "website": "https://norgren.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "太仓喜拿卡液压气动有限公司",
+      "website": "https://hinaka.com.tw",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州施米特机械有限公司",
+      "website": "https://simitch.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州樱东气动科技有限公司",
+      "website": "https://szoutou.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "亚德客（江苏）自动化有限公司",
+      "website": "https://airtac.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "昆山市当拓气动元件有限公司",
+      "website": "https://d-tuo.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "阿尔赛克（江苏）智能科技有限公司",
+      "website": "https://airsack.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "麦吾德气动（苏州）有限公司",
+      "website": "https://mwd.cxzsdd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "启东普力马机械有限公司",
+      "website": "https://primamac.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏黑克气动工具有限公司",
+      "website": "https://hokia88.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南通永艺恒气动设备有限公司",
+      "website": "https://yongyiheng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州大山液压气动制造有限公司",
+      "website": "https://yzdsyy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州市永发气动液压设备有限公司",
+      "website": "https://yzyfqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "扬州市江都永恒气动液压有限公司",
+      "website": "https://yzyongheng.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "镇江市亚凤气动元件有限公司",
+      "website": "https://yafeng-gasspring.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏丹港机械制造有限公司",
+      "website": "https://jsdangang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海卢斯气动元件有限公司",
+      "website": "https://rosscontrolschina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海西勇五金机电有限公司",
+      "website": "https://shxiyong.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海骏马气动工具有限公司",
+      "website": "https://sh-junma.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "欧霓博（上海）机械自动化有限公司",
+      "website": "https://universal-onebot.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海山耐斯气动元件有限公司",
+      "website": "https://cnshsns.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海永芮气动科技有限公司",
+      "website": "https://shyongrui.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海贝洋泵业有限公司",
+      "website": "https://beiyangbengye.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海国逸气动成套厂有限公司",
+      "website": "https://guoyiqidong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海气动工具厂",
+      "website": "https://shqdgj.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "上海气动成套公司三分厂",
+      "website": "https://shqdctgs.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海巨良电磁阀制造有限公司",
+      "website": "https://juliang.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海御豹流体动力有限公司",
+      "website": "https://upower-sh.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "上海日益自动化元件有限公司",
+      "website": "https://china-riyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海气立可气动设备有限公司",
+      "website": "https://chelic.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "速易可气动（上海）有限公司",
+      "website": "https://tonab.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "费斯托（中国）有限公司",
+      "website": "https://festo.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海侠飞泵业有限公司",
+      "website": "https://jofeepump.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海涵延机械有限公司",
+      "website": "https://shhanyan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海邦业气动液压件有限公司",
+      "website": "https://sh-bangye.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "SMC（中国）有限公司上海分公司",
+      "website": "https://smc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海沪气气动成套有限公司",
+      "website": "https://cccspf.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海麦阳机械设备有限公司",
+      "website": "https://shmaiyang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "通又顺气动马达制造有限公司",
+      "website": "https://tonson.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市世安气动液压设备有限公司",
+      "website": "https://seyasu.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市力酷气动科技有限公司",
+      "website": "https://chinaliku.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市卓源液压气动设备有限公司",
+      "website": "https://dgzyyy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市嘉迈气动科技有限公司",
+      "website": "https://jiamai1688.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市天友智云五金科技有限公司",
+      "website": "https://tiayoair.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市天森技业气动元件有限公司",
+      "website": "https://diacion.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市威速特自动化设备有限公司",
+      "website": "https://dg-west.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市强劲五金工具有限公司",
+      "website": "https://dgxinzhi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市昱昇自动化科技有限公司",
+      "website": "https://yusheng18.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市柏卡气动元件科技有限公司",
+      "website": "https://boo-ka.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市海晟智能科技有限公司",
+      "website": "https://hqtechnic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市玖容气动液压设备有限公司",
+      "website": "https://twzyg.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市磁心电磁科技有限公司",
+      "website": "https://smartcixin.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市莫派克气动元件有限公司",
+      "website": "https://moopik.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "东莞市长信行气动科技有限公司",
+      "website": "https://cxhqd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东莞市雁飞气动设备有限公司",
+      "website": "https://yfqdsb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳博耐泵业制造有限公司",
+      "website": "https://sz-sb.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市伙伴气动精密机械有限公司",
+      "website": "https://szhuoban.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳鹏斐克科技有限公司",
+      "website": "https://pfk-vacuum.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市航臣气动元件有限公司",
+      "website": "https://szhcqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳利强自动化科技有限公司",
+      "website": "https://lqzdh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市森迪源气动设备制造有限公司",
+      "website": "https://sdy-po.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市汇川智控气动技术有限公司",
+      "website": "https://inovance.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市高准科技有限公司",
+      "website": "https://hi-stand.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市华贸气动技术开发有限公司",
+      "website": "https://airwamo.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市迈斯艾尔科技发展有限公司",
+      "website": "https://imaxair.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳汉弘环保科技有限公司",
+      "website": "https://bailinian.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东尼尔森气动元件有限公司",
+      "website": "https://pneumatic.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佛山市南海利驰气动机械有限公司",
+      "website": "https://nh-jisn.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "佛山市南海区南鹰液压气动制造有限公司",
+      "website": "https://nanyingyeya.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "佛山市南海区路卡斯气动液压设备有限公司",
+      "website": "https://fs-lks.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佛山市威盈加科技有限公司",
+      "website": "https://fs-wyj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东亚德客自动化工业有限公司",
+      "website": "https://airtac.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佛山市欧贝特气动液压杆有限公司",
+      "website": "https://abetty.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "广东明晖气动科技有限公司",
+      "website": "https://airnailer.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市海珠区白云液压气动成套厂",
+      "website": "https://byccn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州诺华机电制造有限公司",
+      "website": "https://nh-shc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江门市力创液压气动有限公司",
+      "website": "https://chymec.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "烟台创煌气动液压设备有限公司",
+      "website": "https://ytchqdyy.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "烟台卓越气动元件制造有限公司",
+      "website": "https://ytzyqd.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "烟台市芝罘明发气动元件厂",
+      "website": "https://ytmfqd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佳阀科技（香河）有限公司",
+      "website": "https://biotechcomp.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "河北泰科环保设备有限公司",
+      "website": "https://hbtkhb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "泊头市宏天除尘设备有限公司",
+      "website": "https://hongtianchuchen.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "泊头市通用除尘设备有限责任公司",
+      "website": "https://bttycc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "SMC（天津）制造有限公司",
+      "website": "https://smc.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津博益气动股份有限公司",
+      "website": "https://boyiqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "泉州艾斯拓气动元件有限公司",
+      "website": "https://airstrol.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "成都迈可森流体控制设备有限公司",
+      "website": "https://mksvc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "成都麦克斯机械设备有限公司",
+      "website": "https://cmaxjx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "成都市振华液压气动成套设备有限公司",
+      "website": "https://cd-zh.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "重庆亚工机械制造有限公司",
+      "website": "https://yugotools.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆弘愿工具（集团）有限公司",
+      "website": "https://hybest.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆恒拓高自动化技术有限公司",
+      "website": "https://hitop-pma.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆盾铭电磁阀有限公司",
+      "website": "https://valvedm.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "郑州博亿开源自动化设备有限公司",
+      "website": "https://bykaiyuan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉市宏达液压气动设备制造有限公司",
+      "website": "https://hdyyqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南伊米森科技有限公司",
+      "website": "https://imison.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "合肥旭伟电子气动有限公司",
+      "website": "https://hfxwdz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "合肥迅捷气动元件有限公司",
+      "website": "https://hfxwdz.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宣城艾瑞斯流体自控有限公司",
+      "website": "https://ares-flowtech.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安伊目气动元件有限责任公司",
+      "website": "https://xaemqd.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海康茂胜自动控制有限公司",
+      "website": "https://camozzi.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "麦特沃克气动元件（上海）有限公司",
+      "website": "https://metalworkchina.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "喜开理（上海）机器有限公司",
+      "website": "https://ckd.sh.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "妙德空霸睦机械设备（上海）有限公司",
+      "website": "https://convum.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "施迈茨（上海）真空科技有限公司",
+      "website": "https://schmalz.net.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "派克汉尼汾液压系统（上海）有限公司",
+      "website": "https://parker.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "英格索兰机械（上海）有限公司",
+      "website": "https://ingersollrandproducts.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海丹海科技有限公司",
+      "website": "https://tpcpage.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "日东工器省力机器贸易（上海）有限公司",
+      "website": "https://nitto-kohki.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "碧士克（上海）自动化科技有限公司",
+      "website": "https://pisco.co.jp",
+      "verify_tier": "B"
+    },
+    {
+      "name": "埃迈诺冠气动器材（上海）有限公司",
+      "website": "https://norgren.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "SMC（中国）有限公司",
+      "website": "https://smc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "费斯托气动有限公司",
+      "website": "https://festo.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳气立可气动设备有限公司",
+      "website": "https://chelic.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "博世力士乐（常州）有限公司",
+      "website": "https://boschrexroth.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安沃驰气动设备（常州）有限公司",
+      "website": "https://aventics.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "喜开理（中国）有限公司",
+      "website": "https://ckd.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "纽迈司气动器材（苏州）有限公司",
+      "website": "https://pneumaxchina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "神驰气动有限公司",
+      "website": "https://s-ns.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海新益气动元件有限公司",
+      "website": "https://sqw.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "济南华能气动元件有限公司",
+      "website": "https://jpcchina.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东美特机械有限公司",
+      "website": "https://gdmeite.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市恒拓高工业技术股份有限公司",
+      "website": "https://hitop-pma.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东省肇庆方大气动有限公司",
+      "website": "https://fangda.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡气动技术研究所有限公司",
+      "website": "https://pneumatics.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州市大江实业有限公司",
+      "website": "https://chinaairtool.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "台州市洛克赛工具有限公司",
+      "website": "https://luxitool.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江奥利达气动工具股份有限公司",
+      "website": "https://auarita.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江荣鹏气动工具股份有限公司",
+      "website": "https://rongpeng.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波市华益气动工程有限公司",
+      "website": "https://hy-xmc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波索普迈克气动液压有限公司",
+      "website": "https://nb-chuangyi.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "星宇电子(宁波)有限公司",
+      "website": "https://xingyunb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江三正气动科技有限公司",
+      "website": "https://chinasazn.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江山耐斯气动有限公司",
+      "website": "https://sn-s.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江星辰气动有限公司",
+      "website": "https://xcqd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "百灵气动科技有限公司",
+      "website": "https://blch.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江固特气动科技股份有限公司",
+      "website": "https://gutekeji.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "永康市三和气动工具有限公司",
+      "website": "https://zjsanhe.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "陕西合阳风动工具有限责任公司",
+      "website": "https://heyangfengdong.com",
+      "verify_tier": "A"
+    }
+  ]
+}

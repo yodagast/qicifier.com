@@ -1,0 +1,43 @@
+{
+  "_note": "手工补充的企业公开信息。用于自动发现无法核实到官网的企业。字段留空即不覆盖自动结果。",
+  "_priority": "手工补充 > 自动发现校验 > 站方候选抓取。合并逻辑见 backend/app/services/contacts.py::load_contacts()",
+  "_boundary": "只填公开信息：官网、官网公示的总机/400 电话、公开邮箱、公开地址。不得填写个人手机号、个人邮箱或任何非公开联系方式。",
+  "_field_help": {
+    "name": "必须与官方名单中的企业名称完全一致（否则不会生效，校验会报错）",
+    "website": "企业官网首页，形如 https://www.example.com/",
+    "public_phone": "官网公示的总机/400 号码，形如 0571-88888888 或 400-888-8888",
+    "public_email": "官网公示的通用邮箱，形如 info@example.com",
+    "address": "公开的注册/办公地址",
+    "source_url": "证明上述信息的公开页面地址（强烈建议填，页面会展示）",
+    "note": "备注，例如“电话取自官网联系我们页面”"
+  },
+  "companies": [
+    {
+      "name": "上上德盛集团股份有限公司",
+      "website": "https://www.ssdsgroup.com",
+      "public_phone": "0578-8061168",
+      "public_email": "",
+      "address": "",
+      "source_url": "",
+      "note": "回环验证"
+    },
+    {
+      "name": "浙江万晟医药有限公司",
+      "website": "https://www.warm.com/",
+      "public_phone": "",
+      "public_email": "",
+      "address": "",
+      "source_url": "",
+      "note": ""
+    },
+    {
+      "name": "杭州千芝雅卫生用品有限公司",
+      "website": "https://www.hzqianzhiya.com/",
+      "public_phone": "",
+      "public_email": "",
+      "address": "",
+      "source_url": "",
+      "note": ""
+    }
+  ]
+}

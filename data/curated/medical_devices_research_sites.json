@@ -1,0 +1,1486 @@
+{
+  "_note": "医疗器械企业调研清单（第三方调研·全国）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "docs/医疗器械企业调研清单.csv",
+  "companies": [
+    {
+      "name": "上海科华生物工程股份有限公司",
+      "website": "https://skhb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海透景生命科技股份有限公司",
+      "website": "https://tellgen.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海之江生物科技股份有限公司",
+      "website": "https://liferiver.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京热景生物技术股份有限公司",
+      "website": "https://hotgen.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京九强生物技术股份有限公司",
+      "website": "https://bsbe.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京万泰生物药业股份有限公司",
+      "website": "https://ystwt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "基蛋生物科技股份有限公司",
+      "website": "https://getein.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波美康生物科技股份有限公司",
+      "website": "https://nbmedicalsystem.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州达安基因股份有限公司",
+      "website": "https://daangene.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "迈克生物股份有限公司",
+      "website": "https://maccura.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州中翰盛泰生物技术股份有限公司",
+      "website": "https://joinstar.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州博拓生物科技股份有限公司",
+      "website": "https://biotests.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州德同生物技术有限公司",
+      "website": "https://daltonbiomarketing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州艾康生物技术有限公司",
+      "website": "https://aconlabs.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "迪安诊断技术集团股份有限公司",
+      "website": "https://dazd.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州联川生物技术股份有限公司",
+      "website": "https://lc-bio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州奥泰生物技术股份有限公司",
+      "website": "https://alltests.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "武汉明德生物科技股份有限公司",
+      "website": "https://mdeasydiagnosis.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市新产业生物医学工程股份有限公司",
+      "website": "https://snibe.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳华大智造科技股份有限公司",
+      "website": "https://mgi-tech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳普门科技股份有限公司",
+      "website": "https://lifotronic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市亚辉龙生物科技股份有限公司",
+      "website": "https://szyhlo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江伊利康生物技术有限公司",
+      "website": "https://erkn.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江凯立特医疗器械有限公司",
+      "website": "https://poctechcorp.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州康德医疗器械有限公司",
+      "website": "https://karma.com.tw",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州数康生物科技有限公司",
+      "website": "https://mingyuan-hd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州申科生物技术股份有限公司",
+      "website": "https://shenkebio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖州美奇医疗器械有限公司",
+      "website": "https://mqcgm.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江东方基因生物制品股份有限公司",
+      "website": "https://orientgene.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江数问生物技术有限公司",
+      "website": "https://shuwendx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江惠龙医疗科技股份有限公司",
+      "website": "https://wellongmedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江金三发卫生材料科技有限公司",
+      "website": "https://jinsanfa.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东凯普生物科技股份有限公司",
+      "website": "https://hybribio.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江夸克生物科技有限公司",
+      "website": "https://zjkuake.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "郑州安图生物工程股份有限公司",
+      "website": "https://autobio.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中元汇吉生物技术股份有限公司",
+      "website": "https://zybio.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "圣湘生物科技股份有限公司",
+      "website": "https://sansure.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海康德莱企业发展集团股份有限公司",
+      "website": "https://kdlchina.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海普益医疗器械股份有限公司",
+      "website": "https://puyimed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江西三鑫医疗科技股份有限公司",
+      "website": "https://sanxin-med.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江西3L医用制品集团股份有限公司",
+      "website": "https://3l.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康泰医疗器械有限公司",
+      "website": "https://zjktyl.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江灵洋医疗器械有限公司",
+      "website": "https://ly-medical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江苏嘉医疗器械股份有限公司",
+      "website": "https://zjsj.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波天益医疗器械股份有限公司",
+      "website": "https://tianyi-med.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波普瑞柏生物技术股份有限公司",
+      "website": "https://purebio.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "奥美医疗用品股份有限公司",
+      "website": "https://allmed.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州维力医疗器械股份有限公司",
+      "website": "https://welllead.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏华夏医疗器械有限公司",
+      "website": "https://jshxylqx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河南驼人医疗器械集团有限公司",
+      "website": "https://tuoren.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州千岛湖兰格生物科技有限公司",
+      "website": "https://lgswkj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "英科医疗科技股份有限公司",
+      "website": "https://intcomedical.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "稳健医疗用品股份有限公司",
+      "website": "https://winnermedical.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江康德莱医疗器械股份有限公司",
+      "website": "https://zjkdl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "振德医疗用品股份有限公司",
+      "website": "https://zhende.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江优特格尔医疗用品有限公司",
+      "website": "https://integral-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江博慧生物技术有限责任公司",
+      "website": "https://biowaybiotech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江海圣医疗器械股份有限公司",
+      "website": "https://hisern.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江达美生物技术有限公司",
+      "website": "https://delta-ivd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江震元医疗器械有限公司",
+      "website": "https://zjzy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "绍兴福清卫生用品有限公司",
+      "website": "https://sxfuqing.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州林华医疗器械股份有限公司",
+      "website": "https://linhwa.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京安德盛威科技发展有限公司",
+      "website": "https://adsslaser.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京宏强富瑞技术有限公司",
+      "website": "https://honkonlaser.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "爱美客技术发展股份有限公司",
+      "website": "https://imeik.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "哈尔滨敷尔佳科技股份有限公司",
+      "website": "https://voolga.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山西锦波生物医药股份有限公司",
+      "website": "https://sxjbswyy.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州远想生物科技股份有限公司",
+      "website": "https://evech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州创尔生物技术股份有限公司",
+      "website": "https://trauer.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "华东医药股份有限公司",
+      "website": "https://eastchinapharm.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉奇致激光技术股份有限公司",
+      "website": "https://miraclelaser.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市吉斯迪科技有限公司",
+      "website": "https://gsdmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳半岛医疗有限公司",
+      "website": "https://peninsula-med.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏吴中医药发展股份有限公司",
+      "website": "https://600200.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安巨子生物基因技术股份有限公司",
+      "website": "https://xajuzi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东乐心医疗电子股份有限公司",
+      "website": "https://lifesense.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南京康尼智能技术有限公司",
+      "website": "https://kangnismart.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南京伟思医疗科技股份有限公司",
+      "website": "https://vishee.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏鹿得医疗电子股份有限公司",
+      "website": "https://asian-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "天津九安医疗电子股份有限公司",
+      "website": "https://jiuan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河南翔宇医疗设备股份有限公司",
+      "website": "https://xyyl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常州市钱璟康复股份有限公司",
+      "website": "https://qjrehab.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州龙之杰科技有限公司",
+      "website": "https://longest.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "四川千里倍益康医疗科技股份有限公司",
+      "website": "https://qlbeoka.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏鱼跃医疗设备股份有限公司",
+      "website": "https://yuwell.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "三诺生物传感股份有限公司",
+      "website": "https://sinocare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "可孚医疗科技股份有限公司",
+      "website": "https://cofoe.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海联影医疗科技股份有限公司",
+      "website": "https://united-imaging.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海商汤善萃医疗科技有限公司",
+      "website": "https://sensetime.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海联影智能医疗科技有限公司",
+      "website": "https://uii-ai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海涛影医疗科技有限公司",
+      "website": "https://taoimage.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "赛诺威盛科技（北京）股份有限公司",
+      "website": "https://sinovision-tech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "数坤科技股份有限公司",
+      "website": "https://shukun.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京万东医疗科技股份有限公司",
+      "website": "https://wandong.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "推想医疗科技股份有限公司",
+      "website": "https://infervision.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京朗视仪器股份有限公司",
+      "website": "https://largev.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京汇医慧影医疗科技有限公司",
+      "website": "https://huiyihuiying.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京深睿博联科技有限责任公司",
+      "website": "https://deepwise.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京安德医智科技有限公司",
+      "website": "https://biomind.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南京普爱医疗设备股份有限公司",
+      "website": "https://perlove.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "有方（合肥）医疗科技有限公司",
+      "website": "https://yofomedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波鑫高益医疗设备股份有限公司",
+      "website": "https://china-mri.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "辽宁开普医疗系统有限公司",
+      "website": "https://kampo.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州深睿博联科技有限公司",
+      "website": "https://deepwise.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州健培科技有限公司",
+      "website": "https://jianpeicn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "明峰医疗系统股份有限公司",
+      "website": "https://minfound.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "汕头市超声仪器研究所股份有限公司",
+      "website": "https://siui.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳开立生物医疗科技股份有限公司",
+      "website": "https://sonoscape.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市安健科技股份有限公司",
+      "website": "https://szangell.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市菲森科技有限公司",
+      "website": "https://fussengroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳视见医疗科技有限公司",
+      "website": "https://imsightmed.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳迈瑞生物医疗电子股份有限公司",
+      "website": "https://mindray.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳深图医学影像设备有限公司",
+      "website": "https://sontu.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳安科高技术股份有限公司",
+      "website": "https://anke.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市贝斯达医疗股份有限公司",
+      "website": "https://basda.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "昆山医源医疗技术有限公司",
+      "website": "https://ksyymedical.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州博思得电气有限公司",
+      "website": "https://powersite-group.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海以心医疗器械有限公司",
+      "website": "https://mitrassist.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海形状记忆合金材料有限公司",
+      "website": "https://scientechmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海汇禾医疗科技有限公司",
+      "website": "https://hh-healthcare.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海微创医疗器械（集团）有限公司",
+      "website": "https://microport.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海微创电生理医疗科技股份有限公司",
+      "website": "https://everpace.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海心脉医疗科技股份有限公司",
+      "website": "https://endovastec.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "乐普（北京）医疗器械股份有限公司",
+      "website": "https://lepumedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京佰仁医疗科技股份有限公司",
+      "website": "https://balancemed.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "科凯（南通）生命科学有限公司",
+      "website": "https://kokalife.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波健世科技股份有限公司",
+      "website": "https://jenscare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "归创通桥医疗科技股份有限公司",
+      "website": "https://zyloxmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州启明医疗器械股份有限公司",
+      "website": "https://venusmedtech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州德诺医疗科技有限公司",
+      "website": "https://dinovamedtech.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "蓝帆医疗股份有限公司",
+      "website": "https://bluesail.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳先健科技股份有限公司",
+      "website": "https://lifetechmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳惠泰医疗器械股份有限公司",
+      "website": "https://aptmed.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "沛嘉医疗科技（苏州）有限公司",
+      "website": "https://peijiamedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州恒瑞宏远医疗科技有限公司",
+      "website": "https://hrmedical.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海成运医疗器械股份有限公司",
+      "website": "https://huger.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海世音光电仪器有限公司",
+      "website": "https://shshiyin.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海医光仪器有限公司",
+      "website": "https://smoif.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海澳华内镜股份有限公司",
+      "website": "https://aohua.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江优亿医疗器械股份有限公司",
+      "website": "https://ueworld.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江桐轩医疗科技有限公司",
+      "website": "https://tongxuanyiliao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津瑞奇外科器械股份有限公司",
+      "website": "https://reachsurgical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "常州市速瑞医疗科技有限公司",
+      "website": "https://surgray.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州光典医疗器械有限公司",
+      "website": "https://hzguangdian.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州南宇医疗器械有限公司",
+      "website": "https://nyylqx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州康基医疗器械有限公司",
+      "website": "https://hzkangji.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州桐庐医达医疗器械有限公司",
+      "website": "https://hztlyd.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州桐庐精锐医疗器械有限公司",
+      "website": "https://tljingrui.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐庐优视医疗器械有限公司",
+      "website": "https://china-youshi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐庐福澳医疗器械有限公司",
+      "website": "https://yuhuamedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江优视医疗器械有限公司",
+      "website": "https://china-youshi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天松医疗器械股份有限公司",
+      "website": "https://zj-tiansong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江华诺康科技有限公司",
+      "website": "https://healnoc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州好克光电仪器有限公司",
+      "website": "https://chinahawk.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "沈阳沈大内窥镜有限公司",
+      "website": "https://china-endoscope.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市擎源医疗器械有限公司",
+      "website": "https://symmedtech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新光维医疗科技（苏州）股份有限公司",
+      "website": "https://scivitamedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛海泰新光科技股份有限公司",
+      "website": "https://novelbeam.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海微创医疗机器人（集团）股份有限公司",
+      "website": "https://medbotsurgical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京天智航医疗科技股份有限公司",
+      "website": "https://tinavi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京术锐机器人股份有限公司",
+      "website": "https://surgerii.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南京佗道医疗科技有限公司",
+      "website": "https://tuodaomedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "哈尔滨思哲睿智能医疗设备股份有限公司",
+      "website": "https://hrbszr.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东威高手术机器人有限公司",
+      "website": "https://wegosurgical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州键嘉医疗科技股份有限公司",
+      "website": "https://jmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市海博科技有限公司",
+      "website": "https://huihengmedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳康诺思腾科技有限公司",
+      "website": "https://csrbtx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市精锋医疗科技股份有限公司",
+      "website": "https://edgemed.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州铸正机器人有限公司",
+      "website": "https://zoezen.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西安大医集团股份有限公司",
+      "website": "https://ourunited.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江康康医疗器械股份有限公司",
+      "website": "https://kangkang.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江京环医疗用品有限公司",
+      "website": "https://zjjhyl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江玉升医疗器械股份有限公司",
+      "website": "https://ysyl.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "迈得医疗工业设备股份有限公司",
+      "website": "https://maiderchina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江拱东医疗器械股份有限公司",
+      "website": "https://gongdong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华福医疗科技有限公司",
+      "website": "https://huafuzj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海松力生物技术有限公司",
+      "website": "https://sh-songli.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京白象新技术有限公司",
+      "website": "https://baix.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东威高集团医用高分子制品股份有限公司",
+      "website": "https://weigaoholding.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波市海曙医疗器械有限公司",
+      "website": "https://yesonmed.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏创健医疗科技股份有限公司",
+      "website": "https://trautec.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "冠昊生物科技股份有限公司",
+      "website": "https://guanhaobio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "老肯医疗科技股份有限公司",
+      "website": "https://laoken.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡贝迪生物工程股份有限公司",
+      "website": "https://cossenbiot.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江崇山生物制品有限公司",
+      "website": "https://csbiological.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东新华医疗器械股份有限公司",
+      "website": "https://shinva.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江隆泰医疗科技有限公司",
+      "website": "https://longterm-health.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海德尔格医疗器械有限公司",
+      "website": "https://drager.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京谊安医疗系统股份有限公司",
+      "website": "https://aeonmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏斯坦德利医疗科技有限公司",
+      "website": "https://medstandard.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市科曼医疗设备有限公司",
+      "website": "https://comen.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市安保医疗科技股份有限公司",
+      "website": "https://amoulmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市杰纳瑞医疗仪器股份有限公司",
+      "website": "https://genareal.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市理邦精密仪器股份有限公司",
+      "website": "https://edan.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市普博医疗科技股份有限公司",
+      "website": "https://prunusmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳华腾生物医疗电子有限公司",
+      "website": "https://hwatime.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东宝莱特医用科技股份有限公司",
+      "website": "https://blt.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海新眼光医疗器械股份有限公司",
+      "website": "https://neweyes.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海昊海生物科技股份有限公司",
+      "website": "https://3healthcare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海其胜生物制剂有限公司",
+      "website": "https://shqisheng.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "爱博诺德（北京）医疗科技股份有限公司",
+      "website": "https://ebmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "欧普康视科技股份有限公司",
+      "website": "https://orthok.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "天津视达佳科技有限公司",
+      "website": "https://mastervision.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天津世纪康泰生物医学工程有限公司",
+      "website": "https://tjsjkt.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州卫视博生物科技有限公司",
+      "website": "https://vesber.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡蕾明视康科技有限公司",
+      "website": "https://wx-visionpro.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江诺尔康神经电子科技股份有限公司",
+      "website": "https://nurotron.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州欣视界科技有限公司",
+      "website": "https://focusee.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "目立康（温州）医疗科技有限公司",
+      "website": "https://focusee.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州六六视觉科技股份有限公司",
+      "website": "https://66vision.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "河南宇宙人工晶状体研制有限公司",
+      "website": "https://universeiol.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江一益医疗器械有限公司",
+      "website": "https://cn.inimd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江医鼎医用敷料有限公司",
+      "website": "https://yidingmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州博康医疗器械有限公司",
+      "website": "https://wzbokang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州康宇医疗器械有限公司",
+      "website": "https://wzkyylqx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州康尔健医疗器械有限公司",
+      "website": "https://krjmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州维科生物实验设备有限公司",
+      "website": "https://zjweike.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "贝普医疗科技股份有限公司",
+      "website": "https://beipu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康德药业集团股份有限公司",
+      "website": "https://zj-kangde.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "嘉兴允英医学检验有限公司",
+      "website": "https://yymedicine.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴凯实生物科技股份有限公司",
+      "website": "https://quaerolife.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "微创优通医疗科技（嘉兴）有限公司",
+      "website": "https://microportmicrocare.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江清华长三角研究院医疗器械中心",
+      "website": "https://tsinghua-zj.edu.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江华福医疗器械有限公司",
+      "website": "https://huafuzj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江伏尔特医疗器械股份有限公司",
+      "website": "https://zjfert.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "奕安医疗科技（海宁）有限公司",
+      "website": "https://yian-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "爱而康医疗（浙江）有限公司",
+      "website": "https://zjaikang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "嘉兴德康医疗器械有限公司",
+      "website": "https://decansmd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波健信核磁技术有限公司",
+      "website": "https://healthcredit.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波华坤医疗器械有限公司",
+      "website": "https://chinahuakun.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波新跃医疗科技股份有限公司",
+      "website": "https://cn.xinwell.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江广慈医疗器械有限公司",
+      "website": "https://zjgcyl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "赛诺微医疗科技（浙江）有限公司",
+      "website": "https://surgnova.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "康达洲际医疗器械有限公司",
+      "website": "https://kangdaim.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波戴维医疗器械股份有限公司",
+      "website": "https://nbdavid.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波永新光学股份有限公司",
+      "website": "https://yxopt.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波海尔施基因科技股份有限公司",
+      "website": "https://hgt.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波基内生物技术有限公司",
+      "website": "https://geneinn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州奥士医疗器械有限公司",
+      "website": "https://aosicare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州归桥医疗科技有限公司",
+      "website": "https://zyloxmedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "先临三维科技股份有限公司",
+      "website": "https://shining3d.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江景嘉医疗科技有限公司",
+      "website": "https://jingjiayl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江鼎创医疗科技有限公司",
+      "website": "https://topstromed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康吉尔药业有限公司",
+      "website": "https://kancheer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江微度医疗器械有限公司",
+      "website": "https://wedumedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "英洛华科技股份有限公司",
+      "website": "https://innuovo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江科惠医疗器械股份有限公司",
+      "website": "https://canwell.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江千喜车业有限公司",
+      "website": "https://chinaqianxi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "金华市景迪医疗用品有限公司",
+      "website": "https://jhjingdi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海医疗器械股份有限公司",
+      "website": "https://smicc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京怡和嘉业医疗科技股份有限公司",
+      "website": "https://bmc-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京航天长峰股份有限公司",
+      "website": "https://ascf.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东威高血液净化制品股份有限公司",
+      "website": "https://wego-healthcare.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州暨华医疗器械有限公司",
+      "website": "https://ji-hua.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "贝恩医疗设备（广州）有限公司",
+      "website": "https://bainmedical.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "成都欧赛医疗器械有限公司",
+      "website": "https://cdoci.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "健帆生物科技集团股份有限公司",
+      "website": "https://jafron.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "重庆山外山血液净化技术股份有限公司",
+      "website": "https://swskj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海三友医疗器械股份有限公司",
+      "website": "https://sanyoumed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海时代天使医疗器械有限公司",
+      "website": "https://angelalign.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海凯利泰医疗科技股份有限公司",
+      "website": "https://kineticmedinc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海正雅齿科科技股份有限公司",
+      "website": "https://smartee.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海慧丰牙科技术有限公司",
+      "website": "https://huifengdental.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京爱康宜诚医疗器材有限公司",
+      "website": "https://ak-medical.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京市春立正达医疗器械股份有限公司",
+      "website": "https://clzd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "大博医疗科技股份有限公司",
+      "website": "https://double-medical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "合肥美亚光电技术股份有限公司",
+      "website": "https://meyerop.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "天津正天医疗器械有限公司",
+      "website": "https://naton.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东威高骨科材料股份有限公司",
+      "website": "https://wegortho.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波华科润生物科技有限公司",
+      "website": "https://hicren.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "常州奥斯迈医疗器械有限公司",
+      "website": "https://stryker.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "常州鼎健医疗器械有限公司",
+      "website": "https://dingjianmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏创英医疗器械有限公司",
+      "website": "https://trausim.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "无锡倍达医疗科技有限公司",
+      "website": "https://cn.bettatec.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东沪鸽口腔材料股份有限公司",
+      "website": "https://hugedental.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江新亚医疗科技股份有限公司",
+      "website": "https://shinye-ortho.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州而然科技有限公司",
+      "website": "https://errantech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉德骼拜尔外科植入物有限公司",
+      "website": "https://dragonbio.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳爱尔创科技有限公司",
+      "website": "https://upcera.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "现代牙科器材（深圳）有限公司",
+      "website": "https://moderndentalchina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳康泰健牙科器材有限公司",
+      "website": "https://ktjdental.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "北京家鸿口腔医疗股份有限公司",
+      "website": "https://jhteeth.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "烟台正海生物科技股份有限公司",
+      "website": "https://zhbio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州微创关节医疗科技有限公司",
+      "website": "https://microport.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "墨卓生物科技（浙江）有限公司",
+      "website": "https://mobidrop.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "微泰医疗器械（杭州）股份有限公司",
+      "website": "https://microtechmd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州赛基生物科技股份有限公司",
+      "website": "https://cell-genebio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州鑫泽源医疗科技有限公司",
+      "website": "https://shinehe.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江医高医疗科技有限公司",
+      "website": "https://yigaomedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州瑞克斯医疗器械有限公司",
+      "website": "https://hzrex.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州糖吉医疗科技股份有限公司",
+      "website": "https://tangjimed.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州科腾生物制品有限公司",
+      "website": "https://sofiderm.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江世纪康大医疗科技有限公司",
+      "website": "https://condormedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州博圣医学检验实验室有限公司",
+      "website": "https://biosan.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州创新生物检控技术有限公司",
+      "website": "https://hgb.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江卡易智慧医疗科技有限公司",
+      "website": "https://kayisoft.com",
+      "verify_tier": "A"
+    }
+  ]
+}

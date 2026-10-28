@@ -1,0 +1,2071 @@
+{
+  "_note": "浙江省产业带企业调研清单（第三方调研）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "浙江省产业带企业调研清单.csv",
+  "companies": [
+    {
+      "name": "奥丽侬集团（广东奥丽侬内衣集团有限公司）",
+      "website": "https://oleno.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "百佳（福建）内衣有限公司",
+      "website": "https://aggcn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "长泰服装织造有限公司",
+      "website": "https://changtai-co.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中科环力股份有限公司",
+      "website": "https://china-hl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江万胜智能科技股份有限公司",
+      "website": "https://wellsun.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波星巡智能科技有限公司",
+      "website": "https://simshine.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "宁波水表(集团)股份有限公司",
+      "website": "https://chinawatermeter.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波联河光子技术有限公司",
+      "website": "https://asptech.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江瑞晟智能科技股份有限公司",
+      "website": "https://sunrise.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "立芯科技股份有限公司",
+      "website": "https://laxcen.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "先临三维科技股份有限公司",
+      "website": "https://shining3d.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州先锋电子技术股份有限公司",
+      "website": "https://innover.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州哲达科技股份有限公司",
+      "website": "https://zetacn.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州泽天春来科技股份有限公司",
+      "website": "https://tranlion.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州海康机器人股份有限公司",
+      "website": "https://hikrobotics.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州炬华科技股份有限公司",
+      "website": "https://sunrisemeter.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州盘古自动化系统有限公司",
+      "website": "https://pangu.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江万马股份有限公司",
+      "website": "https://wanma-cable.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江中控研究院",
+      "website": "https://z-control.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华是科技股份有限公司",
+      "website": "https://zjwhyis.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江大华技术股份有限公司",
+      "website": "https://dahuatech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江威星智能仪表股份有限公司",
+      "website": "https://viewshine.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "海卫通网络科技有限公司",
+      "website": "https://marinesat.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "西子电梯科技有限公司",
+      "website": "https://xizielevator.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江码尚科技股份有限公司",
+      "website": "https://8612315.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波柯力传感科技股份有限公司",
+      "website": "https://kelichina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "巨人通力电梯有限公司",
+      "website": "https://giantkone.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江东通光网物联科技有限公司",
+      "website": "https://zjdt.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江禾川科技股份有限公司",
+      "website": "https://hcfa.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东欣薇尔服装有限公司",
+      "website": "https://singwear.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广东洪兴实业股份有限公司",
+      "website": "https://hongxinggf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江亿利达风机股份有限公司",
+      "website": "https://yilida.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "西马智能科技股份有限公司",
+      "website": "https://chinacoma.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "德沃康科技集团有限公司",
+      "website": "https://dewertokintechnology.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "梦天家居集团股份有限公司",
+      "website": "https://mengtian.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江美大实业股份有限公司",
+      "website": "https://meida.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江联翔智能家居股份有限公司",
+      "website": "https://lead-show.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "火星人厨具股份有限公司",
+      "website": "https://marssenger.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中银（宁波）电池有限公司",
+      "website": "https://sonluk.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波力隆机电股份有限公司",
+      "website": "https://nblilong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波嘉乐智能科技股份有限公司",
+      "website": "https://china-careline.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波奥克斯电气有限公司",
+      "website": "https://auxgroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "圣奥科技股份有限公司",
+      "website": "https://isunon.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州老板电器股份有限公司",
+      "website": "https://robam.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州西奥电梯有限公司",
+      "website": "https://xiolift.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安吉久大家具有限公司",
+      "website": "https://cnjudor.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "德华兔宝宝装饰新材股份有限公司",
+      "website": "https://tubaobao.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江升华云峰新材股份有限公司",
+      "website": "https://yunfeng.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖州越球电机有限公司",
+      "website": "https://yqmotor.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江亿田智能厨电股份有限公司",
+      "website": "https://entive.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江帅丰电器股份有限公司",
+      "website": "https://sanfer.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江阳光照明电器集团股份有限公司",
+      "website": "https://yankon.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江威邦机电科技有限公司",
+      "website": "https://goleadercorp.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江炊大王炊具有限公司",
+      "website": "https://cook-king.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "群升集团有限公司",
+      "website": "https://chinaqunsheng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江联盛化学股份有限公司",
+      "website": "https://realsunchem.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安佐化学有限公司",
+      "website": "https://anzuocn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江杰上杰新材料股份有限公司",
+      "website": "https://joysuns.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波润禾高新材料科技股份有限公司",
+      "website": "https://chinarunhe.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江吉泰新材料股份有限公司",
+      "website": "https://zjjtxc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江孚诺林化工新材料有限公司",
+      "website": "https://sino-fluorine.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "凯喜姆阀门有限公司",
+      "website": "https://kcmvalve.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江冠正阀门股份有限公司",
+      "website": "https://valve-gz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州市天成密封件制造有限公司",
+      "website": "https://trisunltd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江万享科技股份有限公司",
+      "website": "https://wanxiang.cc",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江捷发科技股份有限公司",
+      "website": "https://jiefakj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江皇马科技股份有限公司",
+      "website": "https://huangma.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江诺亚氟化工有限公司",
+      "website": "https://zjnoah.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江屹晶微电子股份有限公司",
+      "website": "https://egmicro.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "芯越微电子材料（嘉兴）有限公司",
+      "website": "https://xinyuemicro.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "赛晶亚太半导体科技（浙江）有限公司",
+      "website": "https://swiss-sem.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波安集微电子科技有限公司",
+      "website": "https://anjimicro.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波康强电子股份有限公司",
+      "website": "https://kangqiang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波施捷电子有限公司",
+      "website": "https://sje-nb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州国芯微电子股份有限公司",
+      "website": "https://nationalchip.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州富芯半导体有限公司",
+      "website": "https://fullsemitech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州广立微电子股份有限公司",
+      "website": "https://semitronix.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州谱析光晶半导体科技有限公司",
+      "website": "https://spectr-semi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州飞仕得科技股份有限公司",
+      "website": "https://firstack.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "比科奇微电子（杭州）有限公司",
+      "website": "https://picocom.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江创芯集成电路有限公司",
+      "website": "https://icsprout.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江启尔机电技术有限公司",
+      "website": "https://cheertech.ltd",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江星曜半导体有限公司",
+      "website": "https://starshine-semi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江洁美电子科技股份有限公司",
+      "website": "https://jmkj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江六方半导体科技有限公司",
+      "website": "https://hexcarbon.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江晶盛机电股份有限公司",
+      "website": "https://jsjd.cc",
+      "verify_tier": "B"
+    },
+    {
+      "name": "绍兴中科通信设备有限公司",
+      "website": "https://zktel.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "芯联先锋集成电路制造（绍兴）有限公司",
+      "website": "https://smecs.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中巨芯科技股份有限公司",
+      "website": "https://grandit.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江强达紧固件股份有限公司",
+      "website": "https://qdfastener.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江博拓里尼机械股份有限公司",
+      "website": "https://botuo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江四兄绳业有限公司",
+      "website": "https://fbrope.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江鱼童新材料股份有限公司",
+      "website": "https://yutongpaint.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江亚达绿能科技股份有限公司",
+      "website": "https://cnyada.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波中策动力机电集团有限公司",
+      "website": "https://ningdong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波凯荣新能源有限公司",
+      "website": "https://kairong.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江东红船业有限公司",
+      "website": "https://zjdhcy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江洋普重机有限公司",
+      "website": "https://yungpu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江钰烯腐蚀控制股份有限公司",
+      "website": "https://yuxicorrosion.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州华新机电工程有限公司",
+      "website": "https://huaxinhz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州钱航船舶修造有限公司",
+      "website": "https://hzqhcb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "保一集团有限公司",
+      "website": "https://baoyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "方圆阀门集团有限公司",
+      "website": "https://fy6666.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江志达管业有限公司",
+      "website": "https://jndia.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江永安工程机械有限公司",
+      "website": "https://yonganjx.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "海星海事电气集团有限公司",
+      "website": "https://haixing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江恒久传动科技股份有限公司",
+      "website": "https://hengjiu-pt.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江申发轴瓦股份有限公司",
+      "website": "https://shenfagroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "舟山市鑫亚船舶修造有限公司",
+      "website": "https://xinyashipyard.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "舟山市龙山船厂有限公司",
+      "website": "https://ls-shipyard.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江派尼尔科技股份有限公司",
+      "website": "https://chinapioneer.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江木玩世家玩具有限公司",
+      "website": "https://mwsj.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江庆元欧迪实业有限公司",
+      "website": "https://airwoman.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江攀首文具有限公司",
+      "website": "https://pencilvip.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江鸿星文具有限公司",
+      "website": "https://china-pencil.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华鸣不锈钢有限公司",
+      "website": "https://huamingsteel.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江博盛钢业集团有限公司",
+      "website": "https://bosheng.group",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江宝丰特材股份有限公司",
+      "website": "https://wzbftg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江永业钢管有限公司",
+      "website": "https://cnyygg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江金信不锈钢制造有限公司",
+      "website": "https://chinajxc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江隆兴不锈钢有限公司",
+      "website": "https://chinazjlx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江伟业锯床有限公司",
+      "website": "https://weiyejc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江得力机床制造有限公司",
+      "website": "https://zjdljc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江晨龙控股股份有限公司",
+      "website": "https://chenlong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江省缙云县力伟机床有限公司",
+      "website": "https://zjlwjc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江锯力煌工业科技股份有限公司",
+      "website": "https://julihuang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "大唐（龙泉）青瓷有限公司",
+      "website": "https://lq-qingci.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江省龙泉市宝剑厂有限公司",
+      "website": "https://lqbj.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "龙泉市查氏刀剑有限公司（禾字号剑庄）",
+      "website": "https://lqzjc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "龙泉市江龙剑庄",
+      "website": "https://lqjljz.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "龙泉瓯江青瓷有限公司",
+      "website": "https://lqouci.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江台州雅特标志服饰有限公司",
+      "website": "https://zjyate.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江蓝途户外用品股份有限公司",
+      "website": "https://lantu-china.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杰克科技股份有限公司",
+      "website": "https://cn.chinajack.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江上工宝石缝纫科技有限公司",
+      "website": "https://gemsy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江欣普自动化科技有限公司",
+      "website": "https://sewpower.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "飞跃集团有限公司",
+      "website": "https://feiyuegroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江京环医疗用品有限公司",
+      "website": "https://zjjhyl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江优亿医疗器械股份有限公司",
+      "website": "https://ueworld.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康康医疗器械股份有限公司",
+      "website": "https://kangkang.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康泰医疗器械有限公司",
+      "website": "https://zjktyl.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江拱东医疗器械股份有限公司",
+      "website": "https://gongdong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江灵洋医疗器械有限公司",
+      "website": "https://ly-medical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江玉升医疗器械股份有限公司",
+      "website": "https://ysyl.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "迈得医疗工业设备股份有限公司",
+      "website": "https://maiderchina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江华福医疗科技有限公司",
+      "website": "https://huafuzj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江天台理想汽车用品股份有限公司",
+      "website": "https://lixiang-china.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江明丰实业股份有限公司",
+      "website": "https://cn.manful.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江爱特利汽车用品有限公司",
+      "website": "https://treasureland.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "临海市山项松浦眼镜厂（品牌 梦楠眼镜）",
+      "website": "https://mengnan-glasses.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "台州市涌虹眼镜有限公司",
+      "website": "https://yonghongglasses.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江万得凯流体设备科技股份有限公司",
+      "website": "https://zjwdk.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江双环传动机械股份有限公司",
+      "website": "https://gearsnet.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江苏强格液压股份有限公司",
+      "website": "https://chinastronger.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "玉环长虹阀门有限公司",
+      "website": "https://changhongvalve.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "艾迪西流体控制集团有限公司（IDC Group）",
+      "website": "https://idcgroup.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴允英医学检验有限公司",
+      "website": "https://yymedicine.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴凯实生物科技股份有限公司",
+      "website": "https://quaerolife.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嘉兴德康医疗器械有限公司",
+      "website": "https://decansmd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "奕安医疗科技（海宁）有限公司",
+      "website": "https://yian-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "微创优通医疗科技（嘉兴）有限公司",
+      "website": "https://microportmicrocare.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江伏尔特医疗器械股份有限公司",
+      "website": "https://zjfert.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江华福医疗器械有限公司",
+      "website": "https://huafuzj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江清华长三角研究院医疗器械中心",
+      "website": "https://tsinghua-zj.edu.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江苏嘉医疗器械股份有限公司",
+      "website": "https://zjsj.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江景嘉医疗科技有限公司",
+      "website": "https://jingjiayl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "平湖市华城箱包股份有限公司",
+      "website": "https://huachengbox.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新秀集团股份有限公司",
+      "website": "https://newcomer.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江银座箱包有限公司",
+      "website": "https://zjyinzuo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐昆控股集团有限公司",
+      "website": "https://zjtkgf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新凤鸣集团股份有限公司",
+      "website": "https://xinfengming.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐昆集团股份有限公司",
+      "website": "https://zjtkgf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宏达高科控股股份有限公司",
+      "website": "https://zjhongda.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "爱而康医疗（浙江）有限公司",
+      "website": "https://zjaikang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "兔皇羊绒有限公司",
+      "website": "https://tuhuang.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江恒生印染有限公司",
+      "website": "https://zjhsyr.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "余姚市天余模具塑料厂",
+      "website": "https://tianyumj.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "余姚市龙泽精密模具厂",
+      "website": "https://lonzmould.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波世泰塑料模具有限公司",
+      "website": "https://nbshitai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波家家明灯具有限公司",
+      "website": "https://jiaminglamps.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波燎原照明集团有限公司",
+      "website": "https://cn.nbliaoyuanlighting.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "华裕电器集团股份有限公司",
+      "website": "https://huayugroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波凯波集团有限公司",
+      "website": "https://kaibo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "月立集团股份有限公司",
+      "website": "https://yuelicn.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波健世科技股份有限公司",
+      "website": "https://jenscare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波健信核磁技术有限公司",
+      "website": "https://healthcredit.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波华坤医疗器械有限公司",
+      "website": "https://chinahuakun.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波华科润生物科技有限公司",
+      "website": "https://hicren.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波基内生物技术有限公司",
+      "website": "https://geneinn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波天益医疗器械股份有限公司",
+      "website": "https://tianyi-med.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波市海曙医疗器械有限公司",
+      "website": "https://yesonmed.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波戴维医疗器械股份有限公司",
+      "website": "https://nbdavid.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波新跃医疗科技股份有限公司",
+      "website": "https://cn.xinwell.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波普瑞柏生物技术股份有限公司",
+      "website": "https://purebio.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波永新光学股份有限公司",
+      "website": "https://yxopt.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波海尔施基因科技股份有限公司",
+      "website": "https://hgt.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波美康生物科技股份有限公司",
+      "website": "https://nbmedicalsystem.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波鑫高益医疗设备股份有限公司",
+      "website": "https://china-mri.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "康达洲际医疗器械有限公司",
+      "website": "https://kangdaim.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江广慈医疗器械有限公司",
+      "website": "https://zjgcyl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "赛诺微医疗科技（浙江）有限公司",
+      "website": "https://surgnova.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "公牛集团股份有限公司",
+      "website": "https://gongniu.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波慈工电器有限公司",
+      "website": "https://acpdu.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "慈溪冬宫电器有限公司",
+      "website": "https://chinadg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "韩电集团有限公司",
+      "website": "https://cnkeg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "墨卓生物科技（浙江）有限公司",
+      "website": "https://mobidrop.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "归创通桥医疗科技股份有限公司",
+      "website": "https://zyloxmedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "微泰医疗器械（杭州）股份有限公司",
+      "website": "https://microtechmd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州中翰盛泰生物技术股份有限公司",
+      "website": "https://joinstar.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州创新生物检控技术有限公司",
+      "website": "https://hgb.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州博圣医学检验实验室有限公司",
+      "website": "https://biosan.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州博拓生物科技股份有限公司",
+      "website": "https://biotests.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州启明医疗器械股份有限公司",
+      "website": "https://venusmedtech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州奥士医疗器械有限公司",
+      "website": "https://aosicare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州奥泰生物技术股份有限公司",
+      "website": "https://alltests.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州归桥医疗科技有限公司",
+      "website": "https://zyloxmedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州德同生物技术有限公司",
+      "website": "https://daltonbiomarketing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州德诺医疗科技有限公司",
+      "website": "https://dinovamedtech.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州瑞克斯医疗器械有限公司",
+      "website": "https://hzrex.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州科腾生物制品有限公司",
+      "website": "https://sofiderm.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州糖吉医疗科技股份有限公司",
+      "website": "https://tangjimed.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州联川生物技术股份有限公司",
+      "website": "https://lc-bio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州艾康生物技术有限公司",
+      "website": "https://aconlabs.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州赛基生物科技股份有限公司",
+      "website": "https://cell-genebio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州鑫泽源医疗科技有限公司",
+      "website": "https://shinehe.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州键嘉医疗科技股份有限公司",
+      "website": "https://jmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江世纪康大医疗科技有限公司",
+      "website": "https://condormedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江医高医疗科技有限公司",
+      "website": "https://yigaomedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华诺康科技有限公司",
+      "website": "https://healnoc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江诺尔康神经电子科技股份有限公司",
+      "website": "https://nurotron.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "迪安诊断技术集团股份有限公司",
+      "website": "https://dazd.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江卡易智慧医疗科技有限公司",
+      "website": "https://kayisoft.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州真心热能电器有限公司",
+      "website": "https://hzzhenxin.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州福斯特电子材料有限公司",
+      "website": "https://hzfirstem.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州可靠护理用品股份有限公司",
+      "website": "https://cocohealthcare.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州纳美智康科技有限公司",
+      "website": "https://hznamei.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州鑫富科技有限公司",
+      "website": "https://yifanyy.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州镇涵运动器材有限公司",
+      "website": "https://zhenhansports.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江大冢制药有限公司",
+      "website": "https://zjotsuka.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州临安鹏宇电子有限公司",
+      "website": "https://pengyupcb.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州升达电子有限公司",
+      "website": "https://lashengda.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州友成电子有限公司",
+      "website": "https://hzycpcb.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州宝临印刷电路有限公司",
+      "website": "https://blpcb.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州蓝盛电子材料有限公司",
+      "website": "https://ls-dz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江振有电子股份有限公司",
+      "website": "https://zjzhenyou.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州临安康宏精密科技有限公司",
+      "website": "https://hzkanghong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江驰拓科技有限公司",
+      "website": "https://hikstor.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州鼎申新材料科技有限公司",
+      "website": "https://dstcball.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州天堂伞业集团有限公司",
+      "website": "https://ebumbrella.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州临安裕功五金工具有限公司",
+      "website": "https://ygwjgj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州临安鹏达五金工具有限公司",
+      "website": "https://hzlapd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州临安太阳工具有限公司",
+      "website": "https://suntools.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州临安制钳有限公司",
+      "website": "https://sunwark.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州临安都美电镀有限公司",
+      "website": "https://zjdumei.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江桐轩医疗科技有限公司",
+      "website": "https://tongxuanyiliao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州光典医疗器械有限公司",
+      "website": "https://hzguangdian.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州南宇医疗器械有限公司",
+      "website": "https://nyylqx.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州好克光电仪器有限公司",
+      "website": "https://chinahawk.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州康基医疗器械有限公司",
+      "website": "https://hzkangji.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州桐庐医达医疗器械有限公司",
+      "website": "https://hztlyd.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州桐庐精锐医疗器械有限公司",
+      "website": "https://tljingrui.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐庐优视医疗器械有限公司",
+      "website": "https://china-youshi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐庐福澳医疗器械有限公司",
+      "website": "https://yuhuamedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江优视医疗器械有限公司",
+      "website": "https://china-youshi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天松医疗器械股份有限公司",
+      "website": "https://zj-tiansong.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "兴惠化纤集团有限公司",
+      "website": "https://chinaxinghui.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江恒逸聚合物有限公司",
+      "website": "https://hengyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江恒逸集团有限公司",
+      "website": "https://hengyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "施耐德电气（中国）有限公司",
+      "website": "https://schneider-electric.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "人民电器集团有限公司",
+      "website": "https://chinapeople.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "德力西集团有限公司",
+      "website": "https://delixi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天正电气股份有限公司",
+      "website": "https://tengen.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州意华接插件股份有限公司（意华股份 002897）",
+      "website": "https://czt.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "环宇集团有限公司",
+      "website": "https://huyu.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江一益医疗器械有限公司",
+      "website": "https://cn.inimd.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江伊利康生物技术有限公司",
+      "website": "https://erkn.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江医鼎医用敷料有限公司",
+      "website": "https://yidingmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康德莱医疗器械股份有限公司",
+      "website": "https://zjkdl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州博康医疗器械有限公司",
+      "website": "https://wzbokang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州康宇医疗器械有限公司",
+      "website": "https://wzkyylqx.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州康尔健医疗器械有限公司",
+      "website": "https://krjmed.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州欣视界科技有限公司",
+      "website": "https://focusee.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州维科生物实验设备有限公司",
+      "website": "https://zjweike.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "贝普医疗科技股份有限公司",
+      "website": "https://beipu.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江康德药业集团股份有限公司",
+      "website": "https://zj-kangde.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波均胜电子股份有限公司",
+      "website": "https://joyson.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江海岳新材料有限公司",
+      "website": "https://zjhaiyue88.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江铭博汽车部件股份有限公司",
+      "website": "https://mingbogroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江雅虎汽车部件股份有限公司",
+      "website": "https://zjyahoo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "瑞立集团有限公司",
+      "website": "https://sorl.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "方正阀门集团股份有限公司",
+      "website": "https://fzvgroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江中制阀门集团有限公司",
+      "website": "https://zfzv.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江伯特利科技股份有限公司",
+      "website": "https://botelitech.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华功阀门有限公司",
+      "website": "https://zjhgv.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "立信阀门集团有限公司",
+      "website": "https://rissonvalve.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "超达阀门集团股份有限公司",
+      "website": "https://chaodagroup.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州纽威阀门股份有限公司",
+      "website": "https://neway.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江亨达光学有限公司",
+      "website": "https://hindaroptical.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州市冠豪眼镜有限公司",
+      "website": "https://guanhaoglasses.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州市瓯海眼镜有限公司",
+      "website": "https://ouhaiglasses.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "明月镜片股份有限公司",
+      "website": "https://mingyue.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "温州佳塑包装有限公司",
+      "website": "https://joysu.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "温州晨光集团有限公司",
+      "website": "https://wzcggroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "立讯精密工业股份有限公司",
+      "website": "https://luxshare-ict.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东南电子股份有限公司（301359）",
+      "website": "https://switch-china.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "乐清市国祥电子有限公司",
+      "website": "https://zxecn.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "乐清市新虹电子有限公司",
+      "website": "https://chinaxinhong.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "合兴汽车电子股份有限公司（合兴集团）",
+      "website": "https://cwb.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大明电子股份有限公司",
+      "website": "https://daming.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江珠城科技股份有限公司（301280）",
+      "website": "https://zuch.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江中之杰智能系统有限公司",
+      "website": "https://chinajey.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江德塔森特数据技术有限公司",
+      "website": "https://dtctcn.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "恒生电子股份有限公司",
+      "website": "https://hundsun.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "易联云计算（杭州）有限责任公司",
+      "website": "https://eslink.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州优云科技股份有限公司",
+      "website": "https://uyun.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州和利时自动化有限公司",
+      "website": "https://hollysys.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州天谷信息科技有限公司",
+      "website": "https://esign.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州安恒信息技术股份有限公司",
+      "website": "https://dbappsecurity.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州惠嘉信息科技有限公司",
+      "website": "https://huijiait.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州新中大科技股份有限公司",
+      "website": "https://newgrand.cn",
+      "verify_tier": "C"
+    },
+    {
+      "name": "杭州趣链科技股份有限公司",
+      "website": "https://hyperchain.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江中控信息产业股份有限公司",
+      "website": "https://supconit.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江力太工业互联网有限公司",
+      "website": "https://zjrealtech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江数新网络有限公司",
+      "website": "https://datacyber.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江星汉信息技术股份有限公司",
+      "website": "https://starsino.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江远图技术股份有限公司",
+      "website": "https://yuantutech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江邦盛科技股份有限公司",
+      "website": "https://bsfit.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "邦业（杭州）智能技术有限公司",
+      "website": "https://bonyear.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "闪捷信息科技有限公司",
+      "website": "https://secsmart.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "亚龙智能装备集团股份有限公司",
+      "website": "https://yalong.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "帝杰曼科技股份有限公司",
+      "website": "https://zjdgm.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "汇智智能科技有限公司",
+      "website": "https://zjhuizhi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江怡联网络科技股份有限公司",
+      "website": "https://yilian.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江索思科技有限公司",
+      "website": "https://zjsos.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "温州欢腾软件有限公司（欢腾科技）",
+      "website": "https://feiyingai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "久盛地板有限公司",
+      "website": "https://jiushengboard.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江世友木业有限公司",
+      "website": "https://shiyouflooring.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天格地板销售有限公司",
+      "website": "https://teclic.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江永吉木业有限公司",
+      "website": "https://yongjiwooden.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安吉县盛信办公家具有限公司",
+      "website": "https://sx-officefurniture.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "恒林家居股份有限公司",
+      "website": "https://henglin.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "永艺家具股份有限公司",
+      "website": "https://uechairs.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江安吉恒昌椅业有限公司",
+      "website": "https://hc-chairs.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江东方基因生物制品股份有限公司",
+      "website": "https://orientgene.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江凯立特医疗器械有限公司",
+      "website": "https://poctechcorp.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江惠龙医疗科技股份有限公司",
+      "website": "https://wellongmedical.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江金三发卫生材料科技有限公司",
+      "website": "https://jinsanfa.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江隆泰医疗科技有限公司",
+      "website": "https://longterm-health.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州康德医疗器械有限公司",
+      "website": "https://karma.com.tw",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州数康生物科技有限公司",
+      "website": "https://mingyuan-hd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州申科生物技术股份有限公司",
+      "website": "https://shenkebio.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖州美奇医疗器械有限公司",
+      "website": "https://mqcgm.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江珍贝有限公司",
+      "website": "https://zhenbei.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江旭派电源有限公司",
+      "website": "https://xupai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "超威集团（超威电源集团有限公司）",
+      "website": "https://chilwee.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江友谊菲诺伞业股份有限公司",
+      "website": "https://youyifeinuo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天玮雨具有限公司",
+      "website": "https://eumbrella.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "绍兴市上虞海天伞业有限公司",
+      "website": "https://tumbrella.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "绍兴市天秀伞业有限公司",
+      "website": "https://cntxsy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江大唐袜业集团有限公司",
+      "website": "https://zhejiangsocks.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "诸暨市步鑫袜业有限公司",
+      "website": "https://bxsocks.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "诸暨市缘华针纺袜业有限公司",
+      "website": "https://yhsocks.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "诸暨美杜莎贸易有限公司",
+      "website": "https://meidushashop.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "千足珍珠集团股份有限公司（浙江千足珍珠有限公司）",
+      "website": "https://qzpearl.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江天使之泪珍珠股份有限公司",
+      "website": "https://angeperle.shop",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江阮仕珍珠股份有限公司",
+      "website": "https://ruans.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "嵊州欣立领带服饰有限公司",
+      "website": "https://xinlineckwear.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江加佳领带服装有限公司",
+      "website": "https://chinajiajia.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江好运来集团有限公司",
+      "website": "https://zjhaoyunlai.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅士林集团有限公司",
+      "website": "https://yashilin.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江海亮股份有限公司",
+      "website": "https://hailiangstock.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海亮集团有限公司",
+      "website": "https://hailiang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "盾安控股集团有限公司 / 浙江盾安人工环境股份有限公司",
+      "website": "https://dunan.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "明峰医疗系统股份有限公司",
+      "website": "https://minfound.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "振德医疗用品股份有限公司",
+      "website": "https://zhende.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江优特格尔医疗用品有限公司",
+      "website": "https://integral-medical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江博慧生物技术有限责任公司",
+      "website": "https://biowaybiotech.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江海圣医疗器械股份有限公司",
+      "website": "https://hisern.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江达美生物技术有限公司",
+      "website": "https://delta-ivd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江震元医疗器械有限公司",
+      "website": "https://zjzy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "绍兴福清卫生用品有限公司",
+      "website": "https://sxfuqing.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "中国水产舟山海洋渔业有限公司",
+      "website": "https://cnmingzhu.cnadc.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江兴业集团有限公司",
+      "website": "https://shengda-ocean.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江富丹旅游食品有限公司",
+      "website": "https://fd-foods.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "浙江华业塑料机械股份有限公司",
+      "website": "https://huaye-machinery.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "舟山市定海区金星塑料机械厂",
+      "website": "https://jx-lg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "舟山市盛洲螺杆制造有限公司",
+      "website": "https://zsszzz.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "人本集团有限公司",
+      "website": "https://cugroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "南京胜利体育用品（威克多 VICTOR）",
+      "website": "https://victorsport.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江山市邦大体育用品有限公司",
+      "website": "https://bangdasports.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江江山多娇实业有限公司",
+      "website": "https://cnjsdj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江华邦特种纸业有限公司",
+      "website": "https://winbonpaper.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江恒达新材料股份有限公司",
+      "website": "https://cn.hengdaxincai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江金昌特种纸股份有限公司",
+      "website": "https://cnjcpaper.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江千喜车业有限公司",
+      "website": "https://chinaqianxi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江康吉尔药业有限公司",
+      "website": "https://kancheer.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江微度医疗器械有限公司",
+      "website": "https://wedumedical.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江科惠医疗器械股份有限公司",
+      "website": "https://canwell.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "英洛华科技股份有限公司",
+      "website": "https://innuovo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "金华市景迪医疗用品有限公司",
+      "website": "https://jhjingdi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "东阳市明堂红木家俱有限公司",
+      "website": "https://mthmjj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江东阳木雕集团有限公司（「东雕」）",
+      "website": "https://mdjt.gujianchina.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江卓木王家具有限公司",
+      "website": "https://zmw1983.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江李忠信红木家具有限公司",
+      "website": "https://zhongxinhongmu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江万舟控股集团有限公司",
+      "website": "https://zjwzkg.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江双灯家纺有限公司",
+      "website": "https://twin-lantern.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江金梭纺织有限公司",
+      "website": "https://chinajinsuo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江浦江华德水晶科技股份有限公司",
+      "website": "https://hlcrystal.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浦江县奥凯水晶有限公司",
+      "website": "https://aksjcrystal.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浦江小桥水晶工艺品有限公司",
+      "website": "https://smallbridgecrystal.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浦江澎湃水晶工艺品有限公司",
+      "website": "https://pengpaicrystal.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浦江诚俊水晶工艺品有限公司",
+      "website": "https://pjcjsj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江亚特新材料有限公司",
+      "website": "https://yatexincai.com",
+      "verify_tier": "A"
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "_note": "站方整理的候选官网清单。data_grade=site_curated：候选域名由站方整理，实际可用性由 tools/enrich_companies.py 逐个核验（核验通过才写入企业记录，并带 source_url 与 verified_at）。未通过核验的候选不会进入数据库。",
+  "_verified_by": "tools/enrich_companies.py --seed data/curated/sites_seed.json",
+  "companies": [
+    {
+      "name": "浙江大华技术股份有限公司",
+      "website": "https://www.dahuatech.com/"
+    },
+    {
+      "name": "杭州海康机器人股份有限公司",
+      "website": "https://www.hikrobotics.com/"
+    },
+    {
+      "name": "先临三维科技股份有限公司",
+      "website": "https://www.shining3d.com/"
+    },
+    {
+      "name": "浙江晶盛机电股份有限公司",
+      "website": "https://www.jsjd.cc/"
+    },
+    {
+      "name": "万向钱潮股份公司",
+      "website": "https://www.wxqc.com.cn/"
+    },
+    {
+      "name": "新凤鸣集团股份有限公司",
+      "website": "http://www.xfmgroup.com/"
+    },
+    {
+      "name": "华峰化学股份有限公司",
+      "website": "https://www.huafeng.com/"
+    },
+    {
+      "name": "浙江我武生物科技股份有限公司",
+      "website": "https://www.wolwobiotech.com/"
+    },
+    {
+      "name": "杭州老板电器股份有限公司",
+      "website": "https://www.robam.com/"
+    },
+    {
+      "name": "宁波钢铁有限公司",
+      "website": "https://www.ningbosteel.com/"
+    },
+    {
+      "name": "浙江万里扬股份有限公司",
+      "website": "https://www.zjwl.com/"
+    },
+    {
+      "name": "浙江田中精机股份有限公司",
+      "website": "https://www.tanac.com.cn/"
+    },
+    {
+      "name": "星光农机股份有限公司",
+      "website": "https://www.xgny.com/"
+    },
+    {
+      "name": "伟明环保装备集团有限公司",
+      "website": "https://www.cnweiming.com/"
+    },
+    {
+      "name": "杭州国芯微电子股份有限公司",
+      "website": "https://www.nationalchip.com/"
+    },
+    {
+      "name": "西子电梯科技有限公司",
+      "website": "https://www.xizielevator.com/"
+    },
+    {
+      "name": "巨人通力电梯有限公司",
+      "website": "https://www.giantkone.com/"
+    },
+    {
+      "name": "浙江万马股份有限公司",
+      "website": "https://www.wanma.com.cn/"
+    },
+    {
+      "name": "杭州炬华科技股份有限公司",
+      "website": "https://www.sunrisemeter.com/"
+    },
+    {
+      "name": "浙江大华技术股份有限公司",
+      "website": "https://www.dahuasecurity.com/"
+    },
+    {
+      "name": "仙鹤股份有限公司",
+      "website": "https://www.xianhe.com/"
+    },
+    {
+      "name": "浙江金昌特种纸股份有限公司",
+      "website": "https://www.jinchangpaper.com/"
+    },
+    {
+      "name": "浙江巨圣氟化学有限公司",
+      "website": "https://www.juhua.com.cn/"
+    },
+    {
+      "name": "浙江衢州巨塑化工有限公司",
+      "website": "https://www.jushu.cn/"
+    },
+    {
+      "name": "浙江锦华新材料股份有限公司",
+      "website": "https://www.jhxcl.com/"
+    },
+    {
+      "name": "浙江菲达环保科技股份有限公司",
+      "website": "https://www.feida.com.cn/"
+    },
+    {
+      "name": "科润智能控制股份有限公司",
+      "website": "https://www.kerun.com.cn/"
+    },
+    {
+      "name": "浙江启明海洋电力工程有限公司",
+      "website": "https://www.zjqm.com/"
+    },
+    {
+      "name": "浙江三田汽车空调压缩机有限公司",
+      "website": "https://www.santian.com/"
+    },
+    {
+      "name": "浙江万里扬股份有限公司",
+      "website": "https://www.zjwlcorp.com/"
+    },
+    {
+      "name": "八环科技集团股份有限公司",
+      "website": "https://www.bahuan.com/"
+    },
+    {
+      "name": "浙江荣泰电工器材股份有限公司",
+      "website": "https://www.rtxcl.com/"
+    },
+    {
+      "name": "浙江正泰电器股份有限公司",
+      "website": "https://www.chint.com/"
+    },
+    {
+      "name": "雅莹集团股份有限公司",
+      "website": "https://www.elegant-prosper.com/"
+    },
+    {
+      "name": "浙江锂威能源科技有限公司",
+      "website": "https://www.lwbattery.com/"
+    },
+    {
+      "name": "杭州纤纳光电科技股份有限公司",
+      "website": "https://www.microquanta.com/"
+    },
+    {
+      "name": "浙江宇丰机械有限公司",
+      "website": "https://www.yufeng.com/"
+    },
+    {
+      "name": "零跑汽车有限公司",
+      "website": "https://www.leapmotor.com/"
+    },
+    {
+      "name": "杭州勇电照明有限公司",
+      "website": "https://www.yongdian.com/"
+    },
+    {
+      "name": "杭州奥能电源设备有限公司",
+      "website": "https://www.aoneng.com/"
+    },
+    {
+      "name": "浙江华飞智能科技有限公司",
+      "website": "https://www.huafei.com/"
+    },
+    {
+      "name": "浙江华采科技有限公司",
+      "website": "https://www.huacai.com/"
+    },
+    {
+      "name": "浙江红谱科技有限公司",
+      "website": "https://www.hongpu.com/"
+    },
+    {
+      "name": "杭州土星动力科技有限公司",
+      "website": "https://www.tuxing.com/"
+    },
+    {
+      "name": "浙江艾领创矿业科技股份有限公司",
+      "website": "https://www.ailingchuang.com/"
+    },
+    {
+      "name": "伟明环保装备集团有限公司",
+      "website": "https://www.weiming.com/"
+    },
+    {
+      "name": "浙江环耀环境建设有限公司",
+      "website": "https://www.huanyao.com/"
+    },
+    {
+      "name": "杭州新诺微电子有限公司",
+      "website": "https://www.xinnuo.com/"
+    },
+    {
+      "name": "浙江汉信科技有限公司",
+      "website": "https://www.hanxin.com/"
+    },
+    {
+      "name": "杭州凯美模具有限公司",
+      "website": "https://www.kaimei.com/"
+    },
+    {
+      "name": "浙江恒道科技股份有限公司",
+      "website": "https://www.hengdao.com/"
+    },
+    {
+      "name": "四维生态科技（杭州）有限公司",
+      "website": "https://www.siweist.com/"
+    },
+    {
+      "name": "杭州三相科技有限公司",
+      "website": "https://www.sanxiang.com/"
+    },
+    {
+      "name": "杭州微慕科技有限公司",
+      "website": "https://www.micro-mu.com/"
+    },
+    {
+      "name": "杭州天丰电源股份有限公司",
+      "website": "https://www.tianfeng.com/"
+    },
+    {
+      "name": "浙江衡美健康科技股份有限公司",
+      "website": "https://www.hengmei.com/"
+    },
+    {
+      "name": "浙江六方半导体科技有限公司",
+      "website": "https://www.liufang.com/"
+    },
+    {
+      "name": "浙江星曜半导体有限公司",
+      "website": "https://www.xingyao.com/"
+    },
+    {
+      "name": "浙江创芯集成电路有限公司",
+      "website": "https://www.chuangxin.com/"
+    },
+    {
+      "name": "杭州富芯半导体有限公司",
+      "website": "https://www.fuxin.com/"
+    },
+    {
+      "name": "芯联先锋集成电路制造（绍兴）有限公司",
+      "website": "https://www.smecs.com/"
+    },
+    {
+      "name": "浙江中晶科技股份有限公司",
+      "website": "https://www.zhongjing.com/"
+    },
+    {
+      "name": "杭州安普鲁薄膜科技有限公司",
+      "website": "https://www.anpulu.com/"
+    },
+    {
+      "name": "杭州程天科技发展有限公司",
+      "website": "https://www.ctech.cn/"
+    },
+    {
+      "name": "浙江三时纪新材科技有限公司",
+      "website": "https://www.sanshiji.com/"
+    },
+    {
+      "name": "浙江众凌科技有限公司",
+      "website": "https://www.zhongling.com/"
+    },
+    {
+      "name": "杭州晨鹰军泰科技有限公司",
+      "website": "https://www.chenying.com/"
+    },
+    {
+      "name": "杭州杭途科技有限公司",
+      "website": "https://www.hangtu.com/"
+    },
+    {
+      "name": "浙江振有电子股份有限公司",
+      "website": "https://www.zhenyou.com/"
+    },
+    {
+      "name": "杭州得明电子有限公司",
+      "website": "https://www.deming.com/"
+    },
+    {
+      "name": "浙江豪声电子科技股份有限公司",
+      "website": "https://www.haosheng.com/"
+    },
+    {
+      "name": "杭州海康存储科技有限公司",
+      "website": "https://www.hikstor.com/"
+    },
+    {
+      "name": "浙江久易电子科技股份有限公司",
+      "website": "https://www.jiuyi.com/"
+    },
+    {
+      "name": "浙江芯科半导体有限公司",
+      "website": "https://www.xinke-semi.com/"
+    },
+    {
+      "name": "德清申达机器制造有限公司",
+      "website": "https://www.deqingshenda.com/"
+    },
+    {
+      "name": "浙江田中精机股份有限公司",
+      "website": "http://www.tanac.com.cn/"
+    },
+    {
+      "name": "浙江亿帆自动化设备有限公司",
+      "website": "https://www.yifanauto.com/"
+    },
+    {
+      "name": "浙江德硕科技股份有限公司",
+      "website": "https://www.deshuo.com/"
+    },
+    {
+      "name": "浙江海印数码科技有限公司",
+      "website": "https://www.haiyin.com/"
+    },
+    {
+      "name": "杭州新川新材料有限公司",
+      "website": "https://www.xinchuan.com/"
+    },
+    {
+      "name": "湖州永兴特种不锈钢有限公司",
+      "website": "https://www.yongxing.com/"
+    },
+    {
+      "name": "浙江富日进材料科技有限公司",
+      "website": "https://www.furijin.com/"
+    },
+    {
+      "name": "浙江松发复合新材料有限公司",
+      "website": "https://www.songfa.com/"
+    },
+    {
+      "name": "浙江钙科科技股份有限公司",
+      "website": "https://www.gaike.com/"
+    },
+    {
+      "name": "浙江祥邦科技股份有限公司",
+      "website": "https://www.xiangbang.com/"
+    },
+    {
+      "name": "浙江普兰卡钎具股份有限公司",
+      "website": "https://www.pulanka.com/"
+    },
+    {
+      "name": "马丁科瑞半导体（浙江）有限公司",
+      "website": "https://www.martinkelly.com/"
+    },
+    {
+      "name": "浙江哲丰新材料有限公司",
+      "website": "https://www.zhefeng.com/"
+    },
+    {
+      "name": "浙江弄潮儿智慧科技有限公司",
+      "website": "https://www.nongchaoer.com/"
+    }
+  ]
+}

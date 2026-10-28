@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      标签页标题。JS 启动后由 main.js 改写为「<页面名> · 杭州波动粒子」，
+      这里的静态标题是 JS 执行前 / 无 JS 时的兜底，两者要用同一个后缀 ——
+      不一致会让首屏闪一下旧名字，搜索结果里也会看到两个不同的站名。
+
+      ⚠️ 改这一行要同步 ./zanzhu.sh 的 WEB_MARKER：
+      它靠「页面里有没有这串字」判断端口上跑的是不是本库前端。
+    -->
+    <title>杭州波动粒子 · 产业集群与企业检索</title>
+    <meta
+      name="description"
+      content="以官方名单为骨架、逐条标注核实程度的浙江产业集群与企业检索服务。415X 赛道、镇街级块状经济、11 市 90 县（市、区）企业名录。"
+    />
+    <!--
+      Google Analytics 4。衡量 ID 只在这里写一次，不要在别处再抄一份。
+
+      三条约束，缺一条报表就会变成假数据或假承诺：
+        1. 本地不加载 —— 开发与预览都跑在 127.0.0.1，本机调试会把生产报表
+           灌满假会话（而且这些假数据事后删不干净）；
+        2. 尊重「禁止跟踪」(DNT) —— 浏览器明确要求不被跟踪时不加载。
+           这是用户真实表达过的意愿，不是我们替他决定的偏好；
+        3. 只上报聚合访问统计，**不发送任何账号标识**（见 src/analytics.js）。
+           隐私条款承诺「账号信息不与第三方共享」，所以这里没有 user_id，
+           也没有任何自定义维度。
+
+      首屏与站内路由切换的 page_view 统一由 src/analytics.js 发，
+      所以 config 里关掉 send_page_view：否则进入站内会被记成两次浏览。
+    -->
+    <script>
+      ;(function () {
+        var MEASUREMENT_ID = 'G-CBYH25YPBK'
+        var host = location.hostname
+        var isLocal = !host || host === 'localhost' || host === '127.0.0.1' || host === '::1' || host === '[::1]'
+        var dnt =
+          navigator.doNotTrack === '1' ||
+          window.doNotTrack === '1' ||
+          navigator.msDoNotTrack === '1'
+        if (isLocal || dnt) return
+
+        var script = document.createElement('script')
+        script.async = true
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID
+        document.head.appendChild(script)
+
+        window.dataLayer = window.dataLayer || []
+        window.gtag = function () {
+          window.dataLayer.push(arguments)
+        }
+        window.gtag('js', new Date())
+        window.gtag('config', MEASUREMENT_ID, { send_page_view: false })
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

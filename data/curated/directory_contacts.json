@@ -1,0 +1,42 @@
+[
+  {
+    "name": "一能电气有限公司",
+    "public_phone": "",
+    "public_email": "",
+    "address": "浙江省温州市温州海洋经济发展示范区昆鹏街道半岛北路6号",
+    "source_url": "",
+    "extracted_at": "2026-10-10T14:23:40+08:00",
+    "layer": "search_directory",
+    "source_kind": "search_directory"
+  },
+  {
+    "name": "万向智造有限公司",
+    "public_phone": "",
+    "public_email": "",
+    "address": "浙江杭州萧山经济技术开发区",
+    "source_url": "",
+    "extracted_at": "2026-10-10T14:23:40+08:00",
+    "layer": "search_directory",
+    "source_kind": "search_directory"
+  },
+  {
+    "name": "杭州观远数据有限公司",
+    "public_phone": "400-880-0750",
+    "public_email": "",
+    "address": "浙江省杭州市余杭区五常街道文一西路998号18幢708室",
+    "source_url": "https://guandata.com/",
+    "extracted_at": "2026-10-10T14:23:41+08:00",
+    "layer": "search_directory",
+    "source_kind": "search_directory"
+  },
+  {
+    "name": "杭州金舟科技股份有限公司",
+    "public_phone": "0571-88777353",
+    "public_email": "",
+    "address": "杭州市余杭区良渚街道莫干山路2039号",
+    "source_url": "",
+    "extracted_at": "2026-10-10T14:23:41+08:00",
+    "layer": "search_directory",
+    "source_kind": "search_directory"
+  }
+]

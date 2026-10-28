@@ -1,0 +1,938 @@
+/* ==========================================================================
+   设计令牌：档案台账（archival register）
+   --------------------------------------------------------------------------
+   这个站的主体是**企业登记册**，不是创业公司落地页。所以视觉语汇取自中文
+   官方文件与工商登记（宋体标题 + 黑体正文 + 细线表格 + 档位钤记），
+   而不是「SaaS 卡片套件」。
+
+   三条硬约束，改这里之前先读：
+     1. **两级圆角**，不是一级套一切。--r-xs 给输入框/标签，--r-md 给面板卡片。
+     2. **细线是信息结构**，不是装饰：分隔线用来表达「这些字段属于同一条记录」。
+     3. **只有一处阴影**，留给真正浮起的面板；全站每张卡都挂同一条柔和阴影
+        是刻意的默认款，会让层级完全靠不住。
+   ========================================================================== */
+:root {
+  /* 纸与墨 */
+  --paper: #f5f6f4;      /* 页面底：极淡的冷灰绿，工业纸感（刻意避开暖奶油 #F4F1EA） */
+  --panel: #ffffff;
+  --ink: #1c1f24;        /* 正文墨色，冷调 */
+  --ink-2: #5a6068;      /* 次级文字 */
+  --ink-3: #878e96;      /* 三级：脚注、计数、来源 */
+  --rule: #e2e4e1;       /* 细线 */
+  --rule-strong: #cdd0cc;/* 强调细线：表头、区块边界 */
+
+  /* 品牌与强调。--seal 是全站**唯一**的重色，只出现在品牌、激活态与关键结论上。 */
+  --seal: #a8101a;
+  --seal-soft: #fdf4f4;
+  --jade: #0b5d4a;       /* 次强调：来源链接、说明块的竖线 */
+  --jade-soft: #f1f6f4;
+
+  /* 核实档位（钤记）。色相只是辅助，形状才是主判据 —— 见 styles 里的 .seal-* */
+  --official: #0f6b3f;
+  --gov: #1d4ed8;
+  --media: #8a5a08;
+  --curated: #5b5d63;
+  --stub: #a15c00;
+
+  /* 形制 */
+  --r-xs: 3px;           /* 输入框、标签、小控件 */
+  --r-md: 12px;          /* 面板、卡片 */
+  --shadow-panel: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-float: 0 6px 24px rgba(16, 24, 40, 0.10);
+
+  /* 字阶 1.25。字体家族见 body —— 不引外部字体（本站已备案，
+     外部字体 CDN 既慢又是新依赖），全部走系统栈。 */
+  --fs-xs: 12px;
+  --fs-sm: 13.5px;
+  --fs-base: 15px;
+  --fs-md: 18.5px;
+  --fs-lg: 23px;
+  --fs-xl: 29px;
+  --fs-2xl: 36px;
+
+  /* 兼容别名：模板里已有大量 var(--bg)/var(--border)/var(--muted)/var(--radius)，
+     一次改名的收益抵不上漏改一处的风险，所以保留别名指向新值。 */
+  --bg: var(--paper);
+  --border: var(--rule);
+  --text: var(--ink);
+  --muted: var(--ink-2);
+  --brand: var(--seal);
+  --brand-soft: var(--seal-soft);
+  --accent: var(--jade);
+  --official-bg: #eaf6ef;
+  --gov-bg: #eaeffd;
+  --media-bg: #fdf4e3;
+  --curated-bg: #f0f1f3;
+  --stub-bg: #fff4e5;
+  --radius: var(--r-md);
+  --shadow: var(--shadow-panel);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  /* 黑体走正文：小字号可读性优先。标题用宋体（见 .serif / 各页 h1）。 */
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 宋体标题：中文官方文件与档案的排版惯例。冷、正式、有来源感 ——
+   这是本库与「创业公司落地页」最直接的分界。fallback 覆盖 macOS / Windows / Linux。 */
+.serif,
+h1 {
+  font-family: 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'STSong', 'SimSun',
+    Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--seal);
+}
+
+/* 键盘可达性：只去掉鼠标态的 outline，键盘焦点必须看得见 */
+:focus-visible {
+  outline: 2px solid var(--jade);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 站内锚点（页脚的客户服务 / 关于我们分节链接）要避开吸顶导航：
+   不加这行，跳过去后小标题会被压在 60px 高的导航下面，看起来像跳错了。 */
+[id] {
+  scroll-margin-top: 76px;
+}
+
+.site-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule-strong);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 60px;
+}
+
+.brand {
+  font-family: 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'STSong', 'SimSun',
+    Georgia, serif;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: var(--seal);
+}
+
+/* 导航用**下划线**标记当前位置，不用变色 ——
+   细线在这个设计系统里本来就是结构符号。
+   flex:0 1 auto + min-width:0：此前 nav 是 flex:1，会把固定宽度的
+   搜索框挤到只剩一半，输入框里的占位文字被截断。 */
+.nav {
+  display: flex;
+  gap: 14px;
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.nav a {
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a.router-link-active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--seal);
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+.header-search input {
+  width: 190px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* 窄屏：不整条藏掉导航 —— 那等于把主入口从视口里拿走。
+   先让出首尾两项（产业地图 / 关于我们，页脚都有），保住中间两个主入口。
+   用 :first-child / :last-child 而不是 nth-child(数字)：
+   导航项增减过一次（数据来源移入页脚），写死序号会静默藏错项。 */
+@media (max-width: 1000px) {
+  .nav a:first-child,
+  .nav a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+}
+
+.account-link {
+  color: var(--muted);
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.account-link:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.account-link.primary-link {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.account-link.primary-link:hover {
+  color: #fff;
+  opacity: 0.92;
+}
+
+.account-name {
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tiny-btn {
+  padding: 4px 9px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.tiny-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+@media (max-width: 1240px) {
+  .nav {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .header-search input {
+    width: 140px;
+  }
+}
+
+/* 窄屏先让搜索框让位，而不是让导航换行或溢出：
+   导航是站内唯一的层级入口，搜索只是快捷方式，功能在 /enterprises 页仍在。 */
+@media (max-width: 900px) {
+  .account-name {
+    display: none;
+  }
+
+  .header-search input {
+    width: 120px;
+  }
+}
+
+@media (max-width: 780px) {
+  .header-search {
+    display: none;
+  }
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* 密码框必须和文本框长得一样。此前这里只列了 text / search，
+   于是登录页的密码输入框落在浏览器默认样式上：没有内边距、边框颜色不同，
+   同一个表单里两种控件对不齐 —— 看起来像页面坏了。 */
+input[type='text'],
+input[type='search'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+select {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+}
+
+button {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* 卡片是**兜底**容器，不是默认款。全站此前把一切（KPI/筛选器/集群/企业/名单）
+   都塞进同一条圆角 + 同一条柔和阴影的卡里，层级完全靠不住。
+   现在：卡只保留细线边界，不挂阴影；真正的浮起留给 .panel / 浮层。
+   新页面优先用 .register / .panel / .kpi-band，不要把网格又改回卡片墙。 */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-md);
+  box-shadow: none;
+}
+
+/* 细线是信息结构：表头、区块边界、登记册的行。 */
+.section {
+  padding: 26px 0;
+}
+
+/* 页面级标题：宋体、明显大于段落标题。此前所有页都用 h2 18px，
+   「企业名录」与「按设区市展开」看起来一样重 —— 层级完全靠不住。 */
+.page-head {
+  padding: 30px 0 18px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 22px;
+}
+
+.page-head h1 {
+  font-size: var(--fs-xl);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.page-head .lead {
+  margin: 0;
+  max-width: 74ch;
+  color: var(--ink-2);
+  font-size: var(--fs-base);
+}
+
+/* 段落标题：黑体小节题，与页面标题差两个档，并带一条短引导线 ——
+   引导线在这里是**结构**（标出段落起点），不是装饰。 */
+.section h2 {
+  font-size: var(--fs-md);
+  margin: 0 0 6px;
+  padding-left: 10px;
+  border-left: 3px solid var(--seal);
+  line-height: 1.4;
+}
+
+/* 卡片内的小节题：不加引导线（它已经在卡片边界里了），
+   只靠字重与字号跟正文分开。此前 h3 完全没有样式，等于默认 1.17em 粗体 ——
+   在中文语境里它跟正文几乎一样重，「企业档案」这种小标题就立不住。 */
+.section h3,
+.panel h3,
+.card h3 {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.section h2.plain {
+  border-left: none;
+  padding-left: 0;
+}
+
+.section .hint {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  margin: 0 0 16px;
+  max-width: 74ch;
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid.cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .grid.cols-3,
+  .grid.cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid.cols-2,
+  .grid.cols-3,
+  .grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+  .page-head h1 {
+    font-size: var(--fs-lg);
+  }
+  .header-search input {
+    width: 130px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   档位钤记：全站唯一允许重复出现的强符号。
+   形制（实心 / 实线 / 虚线 / 点线）是主判据，色相只是辅助 ——
+   去色打印或色觉差异下，五档仍然分得清。这也是本库的「印记」：
+   每一个数字旁边都跟着它的来路。
+   -------------------------------------------------------------------------- */
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: var(--r-xs);
+  font-size: var(--fs-xs);
+  line-height: 1.7;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* 官方认定：实心深底 —— 最强认定 */
+.grade-official {
+  color: #fff;
+  background: var(--official);
+  border-color: var(--official);
+}
+
+/* 政府公开：实心浅底 + 实线边 —— 次强 */
+.grade-gov {
+  color: #fff;
+  background: var(--gov);
+  border-color: var(--gov);
+}
+
+/* 媒体 · 协会：实线边、无底 —— 转述 */
+.grade-media {
+  color: var(--media);
+  background: transparent;
+  border-color: var(--media);
+}
+
+/* 站方整理：**虚线**边 —— 站方自己整理的，不是外部认定 */
+.grade-curated {
+  color: var(--curated);
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--curated);
+}
+
+/* 企业自报：**点线**边 —— 最弱，且已声明未核验 */
+.grade-self {
+  color: #6d28d9;
+  background: transparent;
+  border-style: dotted;
+  border-color: #6d28d9;
+}
+
+.tag-stub {
+  color: var(--stub);
+  background: var(--stub-bg);
+  border-color: #f2d3a3;
+}
+
+.tag-plain {
+  color: var(--ink-2);
+  background: transparent;
+  border-color: var(--rule-strong);
+}
+
+/* --------------------------------------------------------------------------
+   登记册：企业名录 / 集群列表的真身。
+   用细线分隔的行取代卡片网格 —— 字段按列对齐才能横向比价。
+
+   列模板用**具名区域**，行与表头引用同一组名字。此前表头与数据行各写一份
+   grid-template-columns，改宽一处就整体错位；具名区域让错位不可能发生。
+   -------------------------------------------------------------------------- */
+.reg-enterprise {
+  grid-template-areas: 'name region cluster product contact';
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1.5fr) 196px;
+}
+
+.reg-cluster {
+  grid-template-areas: 'name industry region count grade';
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr) minmax(0, 1.4fr) 70px 146px;
+}
+
+/* 中等宽度（笔记本常见宽度）：两行，联系方式独占右列并跨两行 ——
+   它由三四个小标签组成，给窄列会退化成「一行一个标签」，行高翻四倍。
+   表头在这一档收起来：列位换成了两行，表头留在原地只会错位。 */
+@media (max-width: 1080px) {
+  .reg-enterprise {
+    grid-template-areas:
+      'name    region   contact'
+      'cluster product  contact';
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) 208px;
+  }
+  .reg-cluster {
+    grid-template-areas:
+      'name     region  grade'
+      'industry count   grade';
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 146px;
+  }
+  /* 表头在这一档**只隐藏会被重排的列**（集群列表的两行结构），
+     企业名录的表头保留 —— 它的列位没变，留着才能扫读。 */
+  .register-head.reg-cluster {
+    display: none;
+  }
+}
+
+/* 窄屏：登记册退回一条条记录（字段带自己的小标签），但**不丢字段**。 */
+@media (max-width: 760px) {
+  .reg-enterprise,
+  .reg-cluster {
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 14px 4px;
+  }
+  .register-head {
+    display: none;
+  }
+}
+
+.c-name {
+  grid-area: name;
+}
+.c-region {
+  grid-area: region;
+}
+.c-cluster {
+  grid-area: cluster;
+}
+.c-product {
+  grid-area: product;
+}
+.c-contact {
+  grid-area: contact;
+}
+
+/* 长字段必须截断，否则登记册会被一条产品名撑成半屏 ——
+   官方名单里的主营产品常写成「…（MV-HLVS-4K/8k/16k200-L15、…）」，几十个字。
+   登记册的职责是**扫读与比对**，全文在详情页；title 属性保证鼠标悬停仍能看到原文。 */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 联系方式列的标签行：允许换行但保持紧凑，四条小标签不应各占一行。 */
+.contact-tags {
+  row-gap: 3px;
+  column-gap: 4px;
+}
+.c-industry {
+  grid-area: industry;
+}
+.c-grade {
+  grid-area: grade;
+  align-self: center;
+}
+.c-count {
+  grid-area: count;
+  align-self: center;
+}
+
+.register {
+  border-top: 1px solid var(--rule-strong);
+}
+
+.register-row {
+  display: grid;
+  gap: 0 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--rule);
+  /* 顶对齐而不是基线对齐：一条记录里既有单行字段也有多行字段
+     （联系方式会换成两三行），基线对齐会让短字段掉到行底，看起来像换了归属。 */
+  align-items: start;
+}
+
+.register-row:hover {
+  background: #fbfbfa;
+}
+
+.register-row .ent-name {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.register-row .ent-name:hover {
+  color: var(--seal);
+}
+
+.register-head {
+  display: grid;
+  gap: 0 16px;
+  padding: 8px 4px;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+/* 可排序的表头格：外观必须**仍然像一个表头**（小字、灰、无边框），
+   否则登记册顶部会突然冒出三个按钮，与整页的台账气质冲突。
+   可点性靠 hover 变深 + 箭头显示，不靠按钮样式。 */
+.th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.th-sort:hover,
+.th-sort:focus-visible {
+  color: var(--ink);
+}
+
+.th-sort.active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* 未排序时也留一个 ↕，让读者知道「这里可以点」—— 只在 hover 时出现的话，
+   鼠标没移上去之前页面看起来就是一张普通的表头。 */
+.th-sort .arrow {
+  font-size: 10px;
+  opacity: 0.55;
+}
+
+.th-sort.active .arrow {
+  opacity: 1;
+  color: var(--seal);
+}
+
+/* 右对齐的列：按钮跟着单元格一起靠右，否则「企业数」会忽然跳到左边。 */
+.cell-right .th-sort {
+  justify-content: flex-end;
+}
+
+@media (max-width: 1080px) {
+  /* 中等宽度下表头被收起来（列位重排），排序入口改由筛选区的下拉提供 */
+  .register-head .th-sort {
+    pointer-events: none;
+  }
+}
+
+.cell-right {
+  text-align: right;
+}
+
+/* 窄屏下右对齐的单元格要回到左对齐，否则一串右浮动的小标签
+   会和上面的字段错开，看起来像另一个块。 */
+@media (max-width: 760px) {
+  .cell-right {
+    text-align: left;
+  }
+  .contact-tags {
+    justify-content: flex-start !important;
+  }
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.small {
+  font-size: var(--fs-sm);
+}
+
+.tiny {
+  font-size: var(--fs-xs);
+}
+
+/* 等宽数字：这一站到处是计数与号码，对齐了才扫得动。
+   中文语境下不引入独立等宽字体（会中英混排错位），只锁数字宽度。 */
+.mono {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+  background: #fafbfc;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 18px 0 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.notice {
+  border-left: 3px solid var(--accent);
+  background: #f2f8f8;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #2c3a3a;
+}
+
+.notice.warn {
+  border-left-color: var(--stub);
+  background: #fff9f0;
+  color: #5b4423;
+}
+
+.boundary-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #3c4149;
+}
+
+.loading,
+.empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--ink-2);
+}
+
+/* --------------------------------------------------------------------------
+   KPI 数字带：**不是**几张一模一样的卡。
+   做法：一个面板、内部用细线分成几格；数字用宋体（与页面标题同族），
+   这样它读起来像「登记册的合计栏」，而不是仪表盘。
+   第一格是「主体量」，所以它更大 —— 层级靠尺寸，不靠阴影。
+   格数由宽度决定：`auto-fit` 自己折行，分隔线用 1px 的 grid gap 显示，
+   这样加一格、去掉一格都不用再改断点（此前写死 `repeat(4)`，
+   加一格就挤成五列，只能靠手改断点补救）。
+   -------------------------------------------------------------------------- */
+.kpi-band {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.kpi-cell {
+  padding: 13px 16px;
+  border-left: 1px solid var(--rule);
+}
+
+.kpi-cell:first-child {
+  border-left: none;
+  background: #fbfbfa;
+}
+
+.kpi-cell .value {
+  font-family: 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', 'STSong', 'SimSun',
+    Georgia, serif;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.kpi-cell.lead-cell .value {
+  font-size: var(--fs-xl);
+  color: var(--seal);
+}
+
+.kpi-cell .label {
+  font-size: var(--fs-xs);
+  color: var(--ink-2);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+
+/* 数字带的格子数固定（4 格），所以断点可以写死行列数（4 / 2 / 1 列，
+   每种都能铺满整行，不留半行空格）。**加一格或减一格时要同时改这几档里的
+   border 规则**，否则某一行会缺左边线或行线。 */
+@media (max-width: 860px) {
+  .kpi-band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kpi-cell {
+    border-left: 1px solid var(--rule);
+  }
+  .kpi-cell:nth-child(odd) {
+    border-left: none;
+  }
+  .kpi-cell:nth-child(n + 3) {
+    border-top: 1px solid var(--rule);
+  }
+}
+
+@media (max-width: 520px) {
+  .kpi-band {
+    grid-template-columns: 1fr;
+  }
+  .kpi-cell {
+    border-left: none;
+  }
+  .kpi-cell:nth-child(n + 2) {
+    border-top: 1px solid var(--rule);
+  }
+}
+
+/* 面板：真正的独立对象（集群档案、说明块）。不再包住一切。 */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+}
+
+/* 区块说明：竖线是**信息**（这是一段界定边界的说明），不是装饰。 */
+.note-block {
+  border-left: 3px solid var(--jade);
+  background: var(--jade-soft);
+  padding: 12px 16px;
+  border-radius: 0 var(--r-xs) var(--r-xs) 0;
+  font-size: var(--fs-sm);
+  color: #23423a;
+  line-height: 1.7;
+}
+
+/* 一次页面载入的编排动效。刻意**只有一次**：
+   不做逐卡 fade-up、不做每卡 hover 过渡 —— 那是通用的默认款。
+   prefers-reduced-motion 下整体关闭（见文件末尾）。 */
+@keyframes register-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.enter {
+  animation: register-in 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

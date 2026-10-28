@@ -1,0 +1,121 @@
+[
+  {
+    "name": "义乌市伊秀服饰有限公司",
+    "source_label": "第三方调研 · 官网可核（电话待补）",
+    "verify_tier": "B 官网可核·电话待补",
+    "source_url": "http://yixiuclothing.com",
+    "note": "官网联系页；引进意大利圣东尼一次成型全电脑无缝针织机；联系电话均为个人手机（13566967868 等），按原则未收录｜电话未收录：官网仅公示手机号（原文「官网仅公示手机（已剔除）」），按本站边界不采集手机号｜调研清单记录的地址不止一处：官网两处地址不一致：义乌市佛堂镇前案路55号（页头）／义乌市廿三里大通路1230（页脚）",
+    "website": "http://yixiuclothing.com",
+    "public_email": "kikohya@yixiufs.cn",
+    "address": "义乌市佛堂镇前案路55号"
+  },
+  {
+    "name": "义乌市聚通针织有限公司",
+    "source_label": "第三方调研 · 工商可核（联系方式来自第三方）",
+    "verify_tier": "B 工商可核",
+    "source_url": "http://ywjtzz.com",
+    "note": "官网；自述拥有无缝内衣机，采用兄弟／飞马／重机缝制设备；电话与详细地址待补",
+    "website": "http://ywjtzz.com"
+  },
+  {
+    "name": "佛山市南海博鑫服饰有限公司",
+    "source_label": "第三方调研 · 未核线索",
+    "verify_tier": "C 线索（未核）",
+    "source_url": "",
+    "note": "1688工厂页（第三方，未核）；自述座落于「国际内衣之都」南海盐步",
+    "address": "佛山市南海区盐步"
+  },
+  {
+    "name": "博尼国际控股有限公司（浙江博尼时尚控股集团）",
+    "source_label": "第三方调研 · 官网公示（未复核）",
+    "verify_tier": "A 官网公示",
+    "source_url": "http://bonnychina.com",
+    "note": "官网联系页 bonnychina.com/cn/Service.aspx；港股上市主体；年产超4000万件成衣；高新技术企业、专精特新中小企业",
+    "website": "http://bonnychina.com",
+    "public_phone": "0579-85921116",
+    "address": "浙江省义乌市北苑街道春晗路129号"
+  },
+  {
+    "name": "天派针织股份有限公司",
+    "source_label": "第三方调研 · 官网公示（未复核）",
+    "verify_tier": "A 官网公示",
+    "source_url": "http://www.tianpaichina.cn",
+    "note": "官网联系页；官网仅公示该号并标注为「招聘」，未公示业务总机；全球无缝针织龙头，近千台圣东尼电子提花机，日产能35万件，2023年产值破10亿元，中国针织行业30强｜电话未收录：官网仅公示手机号（原文「+86 17336769979」），按本站边界不采集手机号",
+    "website": "http://www.tianpaichina.cn",
+    "public_email": "serena.li@tianpaichina.cn",
+    "address": "浙江省义乌市佛堂镇五洲大道1858号"
+  },
+  {
+    "name": "奥丽侬集团",
+    "source_label": "第三方调研 · 未核线索",
+    "verify_tier": "C 线索（未核）",
+    "source_url": "",
+    "note": "媒体报道（第三方，未核）；「中国内衣拓荒者」何炳祥创立，曾兼广东省内衣协会会长",
+    "address": "佛山市南海区盐步"
+  },
+  {
+    "name": "幂姿内衣（佛山南海盐步）",
+    "source_label": "第三方调研 · 官网可核（电话待补）",
+    "verify_tier": "B 官网可核·电话待补",
+    "source_url": "http://mizibra.com",
+    "note": "官网（抓取超时，信息来自搜索摘要）；集研发、生产、仓储于一体；盐步为「中国内衣名镇」",
+    "website": "http://mizibra.com",
+    "address": "佛山市南海区盐步幂姿大厦"
+  },
+  {
+    "name": "汕头市宇丰针织有限公司",
+    "source_label": "第三方调研 · 官网公示（未复核）",
+    "verify_tier": "A 官网公示",
+    "source_url": "http://www.yufengzhenzhi.com",
+    "note": "官网联系页；厂房25000㎡、员工550人；意大利圣东尼无缝机73台；月产内裤2900打；客户含 Walmart／Primark／JC Penney；官网另公示手机13822806678（张先生），按「不含个人联系方式」原则未收录",
+    "website": "http://www.yufengzhenzhi.com",
+    "public_phone": "0754-87635678",
+    "public_email": "yufeng6678@163.com",
+    "address": "中国广东省汕头市潮阳区谷饶镇华光村东洋沟"
+  },
+  {
+    "name": "汕头市潮阳区谷饶隆翔无缝内衣厂",
+    "source_label": "第三方调研 · 未核线索",
+    "verify_tier": "C 线索（未核）",
+    "source_url": "",
+    "note": "1688工厂页（第三方，未核）；地址被截断",
+    "address": "广东省汕头市潮阳区谷饶镇华光居委"
+  },
+  {
+    "name": "汕头市谷茂纺织有限公司",
+    "source_label": "第三方调研 · 官网公示（未复核）",
+    "verify_tier": "A 官网公示",
+    "source_url": "http://www.stgumao.com",
+    "note": "官网联系页；五大事业部；无缝内衣配60余台圣东尼设备、月产100余万件；GRS／BSCI认证；内衣部门 0754-89938111、无痕部门 0754-83726888、织布部门 0754-89996111、纺纱部门 0754-83712345",
+    "website": "http://www.stgumao.com",
+    "public_phone": "0754-83356789",
+    "public_email": "stgumao@stgumao.com",
+    "address": "广东省汕头市潮阳区谷饶茂二工业区"
+  },
+  {
+    "name": "浙江知音纺织科技有限公司",
+    "source_label": "第三方调研 · 官网可核（电话待补）",
+    "verify_tier": "B 官网可核·电话待补",
+    "source_url": "https://zhiyinest.com",
+    "note": "官网；注册资金1000万元，员工300余人，厂房45000余㎡，年产1000万件；中国民营企业早期引进意大利圣东尼无缝内衣设备；地址矛盾需向企业确认｜调研清单记录的地址不止一处：官网两处地址不一致：义乌市稠江街道同兴路8号（官网首页）／义乌市北苑工业区景三路8号（搜索摘要）",
+    "website": "https://zhiyinest.com",
+    "address": "义乌市稠江街道同兴路8号"
+  },
+  {
+    "name": "浙江芊叶服饰有限公司",
+    "source_label": "第三方调研 · 官网可核（电话待补）",
+    "verify_tier": "B 官网可核·电话待补",
+    "source_url": "https://www.cnqianye.cn",
+    "note": "官网；总投资1.2亿元；2016年省级科技型中小企业；官网联系页抓取失败，电话待补｜调研清单记录的地址不止一处：义乌市徐江工业区（官网）／义乌市佛堂镇培德路50号（工商）",
+    "website": "https://www.cnqianye.cn",
+    "address": "义乌市徐江工业区"
+  },
+  {
+    "name": "百佳（福建）内衣有限公司",
+    "source_label": "第三方调研 · 未核线索",
+    "verify_tier": "C 线索（未核）",
+    "source_url": "",
+    "note": "顺企网（第三方，未核）；晋江深沪镇为男士内裤重点产区",
+    "address": "晋江市深沪镇狮峰工业区"
+  }
+]

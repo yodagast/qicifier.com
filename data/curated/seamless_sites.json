@@ -1,0 +1,51 @@
+{
+  "_note": "全国无缝服装企业清单里调研方给出的官网，**未核实**，仅作候选；须通过 discover_sites.py 的验收门才会以「站方核验 · 已比对官网」入库。",
+  "_source": "docs/全国无缝服装企业清单.csv",
+  "companies": [
+    {
+      "name": "天派针织股份有限公司",
+      "website": "http://www.tianpaichina.cn",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "博尼国际控股有限公司（浙江博尼时尚控股集团）",
+      "website": "http://bonnychina.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "汕头市谷茂纺织有限公司",
+      "website": "http://www.stgumao.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "汕头市宇丰针织有限公司",
+      "website": "http://www.yufengzhenzhi.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "浙江知音纺织科技有限公司",
+      "website": "https://zhiyinest.com",
+      "verify_tier": "B 官网可核·电话待补"
+    },
+    {
+      "name": "义乌市伊秀服饰有限公司",
+      "website": "http://yixiuclothing.com",
+      "verify_tier": "B 官网可核·电话待补"
+    },
+    {
+      "name": "浙江芊叶服饰有限公司",
+      "website": "https://www.cnqianye.cn",
+      "verify_tier": "B 官网可核·电话待补"
+    },
+    {
+      "name": "义乌市聚通针织有限公司",
+      "website": "http://ywjtzz.com",
+      "verify_tier": "B 工商可核"
+    },
+    {
+      "name": "幂姿内衣（佛山南海盐步）",
+      "website": "http://mizibra.com",
+      "verify_tier": "B 官网可核·电话待补"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100" role="img" aria-labelledby="title desc">
+  <title id="title">QICIFIER</title>
+  <desc id="desc">QICIFIER yoga and outdoor logo</desc>
+  <rect width="280" height="100" fill="#fff"/>
+  <!-- viewBox 按文字实测宽度定（Helvetica Neue 46px + 字距 9 = 262px，两侧各留 9px）：
+       宽了字会显小、窄了会被裁掉，不要随手改这两个数值而不实测。 -->
+  <text x="140" y="66" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="500" letter-spacing="9" fill="#080808">QICIFIER</text>
+</svg>

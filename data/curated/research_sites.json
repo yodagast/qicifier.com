@@ -1,0 +1,51 @@
+{
+  "_note": "武义县户外运动与休闲企业清单里调研方给出的官网，**未核实**，仅作候选；须通过 discover_sites.py 的验收门才会以「站方核验 · 已比对官网」入库。",
+  "_source": "data/source/wuyi_outdoor_2026.csv",
+  "companies": [
+    {
+      "name": "浙江圣雪休闲用品有限公司",
+      "website": "https://www.sunshinecn.cn",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "浙江绿洲旅游用品有限公司",
+      "website": "https://cn.oasischina.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "浙江普莱德休闲用品有限公司",
+      "website": "http://cn.zjpride.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "武义鸿森休闲用品有限公司",
+      "website": "http://cn.jhhongsen.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "武义盛彩休闲用品有限公司",
+      "website": "http://www.zjshengcai.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "浙江武义圣泰休闲用品有限公司",
+      "website": "http://www.wuyishengtai.cn",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "武义华拓休闲用品有限公司",
+      "website": "http://www.hike-china.com",
+      "verify_tier": "A 官网公示"
+    },
+    {
+      "name": "浙江武义中茂工艺品制造有限公司",
+      "website": "http://www.zhongmaocraft.com",
+      "verify_tier": "B 工商可核"
+    },
+    {
+      "name": "浙江鹿枫户外用品有限公司（火枫 Fire-Maple）",
+      "website": "https://www.fire-maple.com",
+      "verify_tier": "B 工商可核"
+    }
+  ]
+}

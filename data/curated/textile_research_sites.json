@@ -1,0 +1,1336 @@
+{
+  "_note": "现代纺织与服装企业调研清单（第三方调研·全国）里的官网，**未核实**，仅作候选（须通过本站验收门）。",
+  "_source": "docs/现代纺织与服装企业调研清单.csv",
+  "companies": [
+    {
+      "name": "上海服装（集团）有限公司",
+      "website": "https://shanghai-garment.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "水星家纺股份有限公司",
+      "website": "https://shuixing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上工申贝（集团）股份有限公司",
+      "website": "https://sgsbgroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海沙驰服饰有限公司",
+      "website": "https://satchi.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "罗莱生活科技股份有限公司",
+      "website": "https://luolai.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "上海嘉麟杰纺织科技有限公司",
+      "website": "https://challenge-21c.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南方寝饰科技有限公司",
+      "website": "https://southbedding.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "凯盛家纺股份有限公司",
+      "website": "https://kaisheng.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "地素时尚股份有限公司",
+      "website": "https://dazzle-fashion.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "上海三枪（集团）有限公司",
+      "website": "https://threegun.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "都市丽人（中国）控股有限公司",
+      "website": "https://cosmo-lady.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "新疆天山毛纺织股份有限公司",
+      "website": "https://chinatianshan.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "佛山枫莲内衣集团有限公司",
+      "website": "https://loveesteem.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东奥丽侬内衣集团有限公司",
+      "website": "https://oleno.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "开易（广东）服装配件有限公司",
+      "website": "https://kee.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东健业纺织集团有限公司",
+      "website": "https://jianyechina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "内蒙古鹿王羊绒有限公司",
+      "website": "https://kingdeer.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京大德和隆庆祥服装有限公司",
+      "website": "https://longqingxiang.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京红都集团有限公司",
+      "website": "https://bjhongdu.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京格雷时尚科技有限公司",
+      "website": "https://gelei.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "李宁（中国）体育用品有限公司",
+      "website": "https://lining.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "际华集团股份有限公司",
+      "website": "https://jihuachina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "探路者控股集团股份有限公司",
+      "website": "https://toread.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "爱慕股份有限公司",
+      "website": "https://aimer.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京铁血科技股份公司",
+      "website": "https://tiexue.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "北京嘉曼服饰股份有限公司",
+      "website": "https://jmdress.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏省苏豪控股集团有限公司",
+      "website": "https://meetsoho.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏苏美达轻纺国际贸易有限公司",
+      "website": "https://sumectex.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏卡思迪莱服饰有限公司",
+      "website": "https://casdilly.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏华瑞时尚集团有限公司",
+      "website": "https://ever-glory.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "锦泓时装集团股份有限公司",
+      "website": "https://vgrass.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川依格尔纺织品有限公司",
+      "website": "https://ewchina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南通东润实业有限公司",
+      "website": "https://dongrun.net.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏泰慕士针纺科技股份有限公司",
+      "website": "https://times-clothing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏三润服装集团股份有限公司",
+      "website": "https://solamoda.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏大生集团有限公司",
+      "website": "https://dasheng-group.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏联发纺织股份有限公司",
+      "website": "https://lianfa.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "鑫缘茧丝绸集团股份有限公司",
+      "website": "https://haiansilk.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新野纺织股份有限公司",
+      "website": "https://xinye-tex.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "安踏（中国）有限公司",
+      "website": "https://anta.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "三六一度（中国）有限公司",
+      "website": "https://361sport.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "拓卡奔马机电科技有限公司",
+      "website": "https://bullmer.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江伟星实业发展股份有限公司",
+      "website": "https://weixing.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江严牌过滤技术股份有限公司",
+      "website": "https://yanpai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杰克科技股份有限公司",
+      "website": "https://chinajack.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江中捷资源投资股份有限公司",
+      "website": "https://zoje.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "吉林化纤集团有限责任公司",
+      "website": "https://jlhxjt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "唐山三友集团兴达化纤有限公司",
+      "website": "https://ts-sanyou.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江嘉欣丝绸股份有限公司",
+      "website": "https://jxsilk.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅莹集团股份有限公司",
+      "website": "https://epyaying.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江依爱夫游戏装文化产业有限公司",
+      "website": "https://emf.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新凤鸣控股集团有限公司",
+      "website": "https://xinfengming.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "新凤鸣集团股份有限公司",
+      "website": "https://xinfengming.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐昆控股集团有限公司",
+      "website": "https://zjtkgf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "桐昆集团股份有限公司",
+      "website": "https://zjtkgf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江中鼎纺织股份有限公司",
+      "website": "https://zdtextile.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江新澳纺织股份有限公司",
+      "website": "https://xinaotex.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宏达高科控股股份有限公司",
+      "website": "https://zjhongda.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江恒生印染有限公司",
+      "website": "https://zjhsyr.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江米赛丝绸有限公司",
+      "website": "https://misaisilk.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "海宁纺织机械有限公司",
+      "website": "https://cnhnfj.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江嘉欣金三塔丝绸服饰有限公司",
+      "website": "https://jinsantasilk.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "大杨集团有限责任公司",
+      "website": "https://dayangmtm.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "迪尚集团有限公司",
+      "website": "https://dishang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "威海市联桥国际合作集团有限公司",
+      "website": "https://lianqiaogroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波申洲针织有限公司",
+      "website": "https://shenzhouintl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波长隆国泰集团有限公司",
+      "website": "https://fhguotai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江爱伊美服装有限公司",
+      "website": "https://aiyimeifashion.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "罗蒙集团股份有限公司",
+      "website": "https://romon.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波慈星股份有限公司",
+      "website": "https://ci-xing.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "太平鸟集团有限公司",
+      "website": "https://peacebird.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "宁波博洋控股集团有限公司",
+      "website": "https://beyondgroup.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波博洋服饰集团有限公司",
+      "website": "https://beyond.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "洛兹服饰科技有限公司",
+      "website": "https://rousegroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "狮丹努集团股份有限公司",
+      "website": "https://seduno.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅戈尔集团有限公司",
+      "website": "https://youngor.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅戈尔集团股份有限公司",
+      "website": "https://youngor.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波培罗成集团有限公司",
+      "website": "https://progengroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "慕尚控股集团有限公司",
+      "website": "https://gxggroup.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杉杉品牌运营股份有限公司",
+      "website": "https://chinafirs.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "百隆东方股份有限公司",
+      "website": "https://bros.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁波康赛妮新纤维科技有限公司",
+      "website": "https://dyeing-fashion.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "安徽华茂纺织股份有限公司",
+      "website": "https://chinahuamao.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "四川豪尔泰服饰有限公司",
+      "website": "https://szhet.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏箭鹿毛纺股份有限公司",
+      "website": "https://chinajianlu.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "新疆利泰丝路投资有限公司",
+      "website": "https://litaisilkroad.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "常州东奥服装有限公司",
+      "website": "https://jdunited.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "黑牡丹（集团）股份有限公司",
+      "website": "https://blackpeony.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏中纺联针织有限公司",
+      "website": "https://flashine.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "神马实业股份有限公司",
+      "website": "https://shenma.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州纺织工贸企业集团有限公司",
+      "website": "https://gztit.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "互太（番禺）纺织印染有限公司",
+      "website": "https://pacific-textiles.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "广州幸棉网络科技有限公司",
+      "website": "https://luckmeey.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州市汇美时尚集团股份有限公司",
+      "website": "https://inman.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广州领英定制通科技有限公司",
+      "website": "https://ladzt.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "比音勒芬服饰股份有限公司",
+      "website": "https://biemlf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川琪达实业集团有限公司",
+      "website": "https://cheeda.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "富绅集团有限公司",
+      "website": "https://virtue.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "四川祥和鸟服饰有限公司",
+      "website": "https://xiangheniao.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "雷迪波尔服饰股份有限公司",
+      "website": "https://raidyboer.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "四川圣山白玉兰实业有限公司",
+      "website": "https://whitemagnolia.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "中国石化仪征化纤有限责任公司",
+      "website": "https://ycfc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏笛莎公主文化产业股份有限公司",
+      "website": "https://deesha.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏虎豹集团有限公司",
+      "website": "https://hubao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "新乡化纤股份有限公司",
+      "website": "https://bailu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡一棉纺织集团有限公司",
+      "website": "https://talaktex.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "无锡市金茂对外贸易有限公司",
+      "website": "https://wuxijinmao.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "三房巷集团有限公司",
+      "website": "https://sanfame.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏三房巷股份有限公司",
+      "website": "https://sanfame.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏阳光集团有限公司",
+      "website": "https://china-sunshine.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "海澜之家集团股份有限公司",
+      "website": "https://hla.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "海澜集团有限公司",
+      "website": "https://heilan.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "贝德服装集团股份有限公司",
+      "website": "https://bestgarmentgroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏红豆实业股份有限公司",
+      "website": "https://hodo.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "邦威防护科技股份有限公司",
+      "website": "https://bw-fh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "杭州万事利丝绸文化股份有限公司",
+      "website": "https://wensli.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江恒强科技股份有限公司",
+      "website": "https://hqcnc.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "杭州千芝雅卫生用品有限公司",
+      "website": "https://hzqianzhiya.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江健盛集团股份有限公司",
+      "website": "https://jasangroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江恒逸石化有限公司",
+      "website": "https://hengyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江航民股份有限公司",
+      "website": "https://hmgf.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江荣盛控股集团有限公司",
+      "website": "https://rong-sheng.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "荣盛石化股份有限公司",
+      "website": "https://cnrspc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "蓝天智慧科技集团有限公司",
+      "website": "https://zjltzy.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "达利（中国）有限公司",
+      "website": "https://highfashion.com.hk",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江南布衣有限公司",
+      "website": "https://jnbygroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖南省韶峰服饰有限公司",
+      "website": "https://shao-feng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "武汉猫人云商科技有限公司",
+      "website": "https://miiow.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "广东新会美达锦纶股份有限公司",
+      "website": "https://h-tech.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "利郎（中国）有限公司",
+      "website": "https://lilanz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "福建七匹狼实业股份有限公司",
+      "website": "https://septwolves.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "福建凤竹纺织科技股份有限公司",
+      "website": "https://fynex.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "福建柒牌时装科技股份有限公司",
+      "website": "https://qipai.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "福建浔兴拉链科技股份有限公司",
+      "website": "https://sbszipper.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "福建百宏聚纤科技实业有限公司",
+      "website": "https://baihong.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "卡宾服饰（中国）有限公司",
+      "website": "https://cabbeen.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "石狮市大帝集团有限公司",
+      "website": "https://diking.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "九牧王股份有限公司",
+      "website": "https://joeone.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "特步（中国）有限公司",
+      "website": "https://xtep.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东岱银纺织集团股份有限公司",
+      "website": "https://daiyin.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东傲饰集团有限公司",
+      "website": "https://sdasjt.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东泰鹏环保材料股份有限公司",
+      "website": "https://sdtaipeng.net",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东宏业纺织股份有限公司",
+      "website": "https://hongyegroup.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东如意毛纺服装集团股份有限公司",
+      "website": "https://shandongruyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东如意科技集团有限公司",
+      "website": "https://chinaruyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "鲁泰纺织股份有限公司",
+      "website": "https://lttc.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "云创设计（深圳）集团有限公司",
+      "website": "https://ccuniverse.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳华丝企业股份有限公司",
+      "website": "https://chinasilk-ltd.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "华孚时尚股份有限公司",
+      "website": "https://e-huafu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市娜尔思时装有限公司",
+      "website": "https://naersi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市珂莱蒂尔服饰有限公司",
+      "website": "https://koradior.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳市蒙黛尔实业有限公司",
+      "website": "https://cadidl.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "深圳汇洁集团股份有限公司",
+      "website": "https://huijiegroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳市富安娜家居用品股份有限公司",
+      "website": "https://fuanna.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "深圳玛丝菲尔时装股份有限公司",
+      "website": "https://marisfrolg.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "稳健医疗用品股份有限公司",
+      "website": "https://winnermedical.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江乔治白服饰股份有限公司",
+      "website": "https://giuseppe.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "报喜鸟控股股份有限公司",
+      "website": "https://bxn.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "华峰化学股份有限公司",
+      "website": "https://spandex.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江朝隆纺织机械有限公司",
+      "website": "https://clchina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江森马服饰股份有限公司",
+      "website": "https://semir.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "法派服饰股份有限公司",
+      "website": "https://fapai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江乔顿服饰股份有限公司",
+      "website": "https://jodoll.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖州翔顺工贸有限公司",
+      "website": "https://chinaxiangshun.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江尤夫高新纤维股份有限公司",
+      "website": "https://unifull.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "桐昆集团浙江恒腾差别化纤维有限公司",
+      "website": "https://zjtkgf.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江兆新纺织科技股份有限公司",
+      "website": "https://zjzhaoxin.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江凯瑞博科技股份有限公司",
+      "website": "https://king-grp.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江盛发纺织印染有限公司",
+      "website": "https://zjsftc.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江金三发集团有限公司",
+      "website": "https://kingsafe.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "湖州冠炯机电科技有限公司",
+      "website": "https://championdevice.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "莱美科技股份有限公司",
+      "website": "https://lymmi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "长兴金发纺织股份有限公司",
+      "website": "https://jinfatextiles.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "滨州亚光家纺有限公司",
+      "website": "https://loftex.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东魏桥创业集团有限公司",
+      "website": "https://weiqiaocy.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "魏桥纺织股份有限公司",
+      "website": "https://wqfz.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东仙霞服装有限公司",
+      "website": "https://sunsay.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东耶莉娅服装集团有限公司",
+      "website": "https://yeliya.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东希努尔男装有限公司",
+      "website": "https://sinoer.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "孚日集团股份有限公司",
+      "website": "https://sunvim.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "南山集团有限公司",
+      "website": "https://nanshan.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "山东南山智尚科技股份有限公司",
+      "website": "https://nanshanchina.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "永荣控股集团有限公司",
+      "website": "https://eversun-chn.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "恒申控股集团有限公司",
+      "website": "https://hscc.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江金汇纺织有限公司",
+      "website": "https://zj-jh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江达成凯悦纺织服装有限公司",
+      "website": "https://reachingkayo.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江日发纺织机械股份有限公司",
+      "website": "https://rifatm.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江东进新材料有限公司",
+      "website": "https://dry-tex.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江宝纺印染有限公司",
+      "website": "https://baofanggroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江梅盛新材料有限公司",
+      "website": "https://meishenggroup.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江精工集成科技股份有限公司",
+      "website": "https://jgtec.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江越新科技股份有限公司",
+      "website": "https://yuexinyinran.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江迎丰科技股份有限公司",
+      "website": "https://zj-yfkj.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江维艺实业股份有限公司",
+      "website": "https://cnweiyi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江信胜科技股份有限公司",
+      "website": "https://sinsim.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江洁丽雅股份有限公司",
+      "website": "https://gracechina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江古纤道绿色纤维有限公司",
+      "website": "https://guxiandao.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山东金号家纺集团有限公司",
+      "website": "https://kingshoretex.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "恒力石化股份有限公司",
+      "website": "https://hengli.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "恒力集团有限公司",
+      "website": "https://hengli.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏东方盛虹股份有限公司",
+      "website": "https://jsessh.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "江苏华佳控股集团有限公司",
+      "website": "https://huajiasilk.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "盛虹控股集团有限公司",
+      "website": "https://shenghongholding.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "苏州市青田企业发展有限公司",
+      "website": "https://e-chint.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅鹿控股股份有限公司",
+      "website": "https://yalu.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "日禾戎美股份有限公司",
+      "website": "https://rumere.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "波司登股份有限公司",
+      "website": "https://bosideng.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "华芳集团有限公司",
+      "website": "https://hfang.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏东渡纺织集团有限公司",
+      "website": "https://dongdutextile.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏鹿港科技有限公司",
+      "website": "https://lugangwool.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "苏州天源服装有限公司",
+      "website": "https://tianyuangarments.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "才子服饰股份有限公司",
+      "website": "https://cntries.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "河北格雷服装股份有限公司",
+      "website": "https://gelei-garment.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "山西兵娟实业（集团）有限公司",
+      "website": "https://bingjuan.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "际华三五三四制衣有限公司",
+      "website": "https://3534.jihuachina.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "郑州云顶服饰有限公司",
+      "website": "https://esey.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "郑州市娅丽达服饰有限公司",
+      "website": "https://yldfs.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "内蒙古鄂尔多斯投资控股集团有限公司",
+      "website": "https://chinaerdos.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "内蒙古鄂尔多斯资源股份有限公司",
+      "website": "https://chinaerdos.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "重庆立泰服饰集团有限公司",
+      "website": "https://litaifushi.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "义乌华鼎锦纶股份有限公司",
+      "website": "https://hdnylon.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "天派针织股份有限公司",
+      "website": "https://tianpaichina.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江三鼎织造有限公司",
+      "website": "https://ribbon.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江梦娜袜业股份有限公司",
+      "website": "https://mengna.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江棒杰数码针织品有限公司",
+      "website": "https://bangjie.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江爱美莱纤体服饰有限公司",
+      "website": "https://amriy.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浪莎针织有限公司",
+      "website": "https://langsha.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江双灯家纺有限公司",
+      "website": "https://twin-lantern.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江亚特新材料有限公司",
+      "website": "https://yatexincai.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宁夏中银绒业股份有限公司",
+      "website": "https://zhongyinrongye.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "江苏堂皇集团有限公司",
+      "website": "https://tevel.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "宜禾股份有限公司",
+      "website": "https://chinayihe.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "吉林省荣发服装服饰有限公司",
+      "website": "https://rongfachina.com.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南省忘不了服饰有限公司",
+      "website": "https://wonbly.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南东方时装有限公司",
+      "website": "https://sundance.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "湖南梦洁家纺股份有限公司",
+      "website": "https://mendale.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "即发集团有限公司",
+      "website": "https://chinajifa.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "青岛酷特智能股份有限公司",
+      "website": "https://kutesmart.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "青岛雪达集团有限公司",
+      "website": "https://xuedagroup.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "青岛环球集团股份有限公司",
+      "website": "https://hicorp.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江台州雅特标志服饰有限公司",
+      "website": "https://zjyate.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江蓝途户外用品股份有限公司",
+      "website": "https://lantu-china.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江万舟控股集团有限公司",
+      "website": "https://zjwzkg.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江腾马纺织有限公司",
+      "website": "https://tmtextile.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江金梭纺织有限公司",
+      "website": "https://chinajinsuo.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江大唐袜业集团有限公司",
+      "website": "https://zhejiangsocks.com",
+      "verify_tier": "C"
+    },
+    {
+      "name": "诸暨市步鑫袜业有限公司",
+      "website": "https://bxsocks.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "诸暨市缘华针纺袜业有限公司",
+      "website": "https://yhsocks.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "诸暨美杜莎贸易有限公司",
+      "website": "https://meidushashop.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "义乌市名盛服饰有限公司",
+      "website": "https://ywmingsheng.cn",
+      "verify_tier": "B"
+    },
+    {
+      "name": "嵊州欣立领带服饰有限公司",
+      "website": "https://xinlineckwear.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江加佳领带服装有限公司",
+      "website": "https://chinajiajia.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江好运来集团有限公司",
+      "website": "https://zjhaoyunlai.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "雅士林集团有限公司",
+      "website": "https://yashilin.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "兔皇羊绒有限公司",
+      "website": "https://tuhuang.net",
+      "verify_tier": "A"
+    },
+    {
+      "name": "嘉兴貂帅服饰有限公司",
+      "website": "https://allenmaison.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江浅秋针织服饰有限公司",
+      "website": "https://qianqiu.com.cn",
+      "verify_tier": "A"
+    },
+    {
+      "name": "鄂尔多斯资源股份有限公司",
+      "website": "https://chinaerdos.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "象山环安针织有限公司",
+      "website": "https://xshuanan.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江珍贝有限公司",
+      "website": "https://zhenbei.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "兴惠化纤集团有限公司",
+      "website": "https://chinaxinghui.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江恒逸聚合物有限公司",
+      "website": "https://hengyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江恒逸集团有限公司",
+      "website": "https://hengyi.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江华德利纺织印染有限公司",
+      "website": "https://wondray.com",
+      "verify_tier": "A"
+    },
+    {
+      "name": "浙江玛雅布业有限公司",
+      "website": "https://mayafab.com",
+      "verify_tier": "B"
+    },
+    {
+      "name": "浙江艾诺纺织科技有限公司",
+      "website": "https://ainuotex.com",
+      "verify_tier": "A"
+    }
+  ]
+}

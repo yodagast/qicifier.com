@@ -1,0 +1,415 @@
+{
+  "核心区": [
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 1,
+      "city": "杭州市",
+      "district": "余杭区",
+      "cluster": "人工智能",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 2,
+      "city": "台州市",
+      "district": "黄岩区",
+      "cluster": "工业母机与机器人",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 3,
+      "city": "宁波市",
+      "district": "北仑区",
+      "cluster": "工业母机与机器人",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 4,
+      "city": "杭州市",
+      "district": "西湖区",
+      "cluster": "低空经济与航空航天",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 5,
+      "city": "台州市",
+      "district": "台州湾新区",
+      "cluster": "低空经济与航空航天",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 6,
+      "city": "绍兴市",
+      "district": "新昌县",
+      "cluster": "低空经济与航空航天",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 7,
+      "city": "金华市",
+      "district": "永康市",
+      "cluster": "电气与农机装备",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 8,
+      "city": "台州市",
+      "district": "温岭市",
+      "cluster": "电气与农机装备",
+      "highland": ""
+    }
+  ],
+  "协同区": [
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 1,
+      "city": "嘉兴市",
+      "district": "嘉善县",
+      "cluster": "人工智能",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 2,
+      "city": "温州市",
+      "district": "鹿城区",
+      "cluster": "高端软件",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 3,
+      "city": "杭州市",
+      "district": "钱塘区",
+      "cluster": "低空经济与航空航天",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 4,
+      "city": "绍兴市",
+      "district": "诸暨市",
+      "cluster": "低空经济与航空航天",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 5,
+      "city": "绍兴市",
+      "district": "上虞区",
+      "cluster": "生物医药与医疗器械",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 6,
+      "city": "金华市",
+      "district": "东阳市",
+      "cluster": "生物医药与医疗器械",
+      "highland": ""
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 7,
+      "city": "湖州市",
+      "district": "长兴县",
+      "cluster": "现代纺织与服装",
+      "highland": ""
+    }
+  ],
+  "新星产业群": [
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 1,
+      "city": "杭州市",
+      "district": "拱墅区",
+      "cluster": "算力产业",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 2,
+      "city": "湖州市",
+      "district": "安吉县",
+      "cluster": "光电（半导体）",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 3,
+      "city": "嘉兴市",
+      "district": "秀洲区",
+      "cluster": "光电（半导体）",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 4,
+      "city": "嘉兴市",
+      "district": "海盐县",
+      "cluster": "算力基础零部件",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 5,
+      "city": "绍兴市",
+      "district": "柯桥区",
+      "cluster": "光电（半导体）",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 6,
+      "city": "衢州市",
+      "district": "柯城区",
+      "cluster": "光电（半导体）",
+      "highland": "新一代信息技术"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 7,
+      "city": "宁波市",
+      "district": "奉化区",
+      "cluster": "精密泵阀",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 8,
+      "city": "温州市",
+      "district": "龙湾区",
+      "cluster": "激光装备与增材制造",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 9,
+      "city": "湖州市",
+      "district": "长兴县",
+      "cluster": "工业母机",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 10,
+      "city": "衢州市",
+      "district": "龙游县",
+      "cluster": "机器人精密部组件",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 11,
+      "city": "台州市",
+      "district": "天台经济开发区",
+      "cluster": "仪器仪表",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 12,
+      "city": "丽水市",
+      "district": "遂昌县",
+      "cluster": "新型电池与储能",
+      "highland": "高端装备"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 13,
+      "city": "杭州市",
+      "district": "富阳经济开发区",
+      "cluster": "创新药与医疗器械",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 14,
+      "city": "杭州市",
+      "district": "临安区",
+      "cluster": "创新药与医疗器械",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 15,
+      "city": "湖州市",
+      "district": "吴兴区",
+      "cluster": "生物美妆",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 16,
+      "city": "嘉兴市",
+      "district": "海宁市",
+      "cluster": "医疗器械",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 17,
+      "city": "金华市",
+      "district": "兰溪市",
+      "cluster": "中医药大健康",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 18,
+      "city": "金华市",
+      "district": "义乌市",
+      "cluster": "无缝服装",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 19,
+      "city": "金华市",
+      "district": "武义县",
+      "cluster": "户外运动与休闲",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 20,
+      "city": "衢州市",
+      "district": "开化县",
+      "cluster": "文体用品",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 21,
+      "city": "台州市",
+      "district": "天台县",
+      "cluster": "中医药大健康",
+      "highland": "现代消费与健康"
+    },
+    {
+      "list_name": "第四批省级重点产业集群核心区协同区和“新星”产业群公示名单",
+      "publisher": "浙江省经济和信息化厅",
+      "published_at": "2026-09-23",
+      "source_url": "https://jxt.zj.gov.cn/col/col1229892974/art/2026/art_f0a2cbb8f7e64b608edb8f25794b04f3.html",
+      "seq": 22,
+      "city": "温州市",
+      "district": "龙港市",
+      "cluster": "合成材料",
+      "highland": "绿色石化与新材料"
+    }
+  ]
+}

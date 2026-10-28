@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+.run/*
+.venv/
+.vscode/*
+*.py[cod]
+
+*.env*
+docs/*
+# Node
+node_modules/
+dist/
+.vite/
+
+# 抓取缓存（可随时重建）
+data/cache/
+
+# macOS
+.DS_Store
+*.log
+
+# 人工补充的填写模板（含全部企业名，可由 tools/manual_csv.py export 重新生成）
+data/curated/manual_sites_template.csv
+
+# 启停脚本的运行产物（PID、日志）
+.run/
