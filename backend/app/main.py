@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
-from fastapi import FastAPI
+import logging
+
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
@@ -39,6 +41,24 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+logger = logging.getLogger("zanzhu")
+
+
+@app.exception_handler(Exception)
+async def unhandled_exception_handler(request: Request, exc: Exception) -> JSONResponse:
+    """未捕获异常也返回 JSON，而不是 Starlette 默认的纯文本 `Internal Server Error`。
+
+    前端（以及任何脚本）失败时都要能读到 `detail`，否则 `JSON.parse` 会抛出
+    `Unexpected token 'I'` —— 把「服务端 500」显示成一个看不懂的语法错误。
+    纯文本 body 只说得出「坏了」，JSON 至少能说清是哪个请求坏了。
+    """
+    logger.exception("未处理异常：%s %s", request.method, request.url.path)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": f"服务端处理 {request.method} {request.url.path} 时出错：{type(exc).__name__}"},
+    )
+
 
 app.include_router(stats.router)
 app.include_router(tracks.router)

@@ -30,13 +30,51 @@ export function isAuthError(error) {
   return error instanceof ApiError && (error.status === 401 || error.status === 403)
 }
 
-async function request(path, options = {}) {
+/**
+ * 把一次失败的响应说成人话。
+ *
+ * **绝不能把 `JSON.parse` 的异常抛给用户**。后端 500 时 Starlette 回的是
+ * `text/plain` 的 `Internal Server Error`；Vite 代理在后端重启的那几秒回 500
+ * 也是纯文本。以前调用方自己 `JSON.parse(text)`，于是用户看到的报错是
+ * `Unexpected token 'I', "Internal S"... is not valid JSON` —— 既不说明发生了什么，
+ * 也无法判断该不该重试（而这恰恰是唯一有用的信息）。
+ *
+ * 现在的顺序：优先用后端给的 `detail`（那是**我们**写的、可执行的说明），
+ * 其次认出「非 JSON 的 5xx」= 服务端/代理挂了这类可重试的情况，最后才退回状态码。
+ */
+function describeFailure(response, payload, text) {
+  const detail = payload?.detail
+  const problems = typeof detail === 'object' ? detail.problems || detail.failures : detail
+  if (Array.isArray(problems) && problems.length) return problems.join('；')
+  if (typeof problems === 'string' && problems) return problems
+
+  // 网关 / 代理 / 应用崩溃：body 不是 JSON，且状态码是 5xx。
+  // 这类失败**几乎都是暂态**（后端重启、灌库期间连接被断），值得明确说「可重试」。
+  if (response.status >= 500) {
+    const snippet = (text || '').trim().slice(0, 120)
+    return (
+      `服务端暂时不可用（HTTP ${response.status}）` +
+      (snippet && !snippet.startsWith('<') ? `：${snippet}` : '') +
+      '。这通常是后端正在重启或灌库，稍等几秒重试即可'
+    )
+  }
+  return `HTTP ${response.status}${response.statusText ? ` ${response.statusText}` : ''}`
+}
+
+/**
+ * 底层请求。**导出是为了让管理页复用它**，而不是各自再写一份
+ * `fetch` + `JSON.parse`：重复实现的那一份漏了「非 JSON 的失败响应」处理，
+ * 于是后端 500 时用户看到的是 `Unexpected token 'I'...`（真实事故，见 describeFailure）。
+ */
+export async function request(path, options = {}) {
   let response
   try {
     response = await fetch(`${BASE}${path}`, {
       ...options,
       headers: {
-        ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+        // 只有**字符串** body 才是我们自己序列化的 JSON；FormData（名单 CSV 上传）
+        // 的 Content-Type 必须由浏览器带着 boundary 自己填，写死成 JSON 会让后端 422。
+        ...(typeof options.body === 'string' ? { 'Content-Type': 'application/json' } : {}),
         ...authHeaders(),
         ...(options.headers || {}),
       },
@@ -55,10 +93,7 @@ async function request(path, options = {}) {
     unauthorizedHandler()
   }
   if (!response.ok) {
-    const detail = payload?.detail
-    const problems = typeof detail === 'object' ? detail.problems || detail.failures : detail
-    const message = Array.isArray(problems) ? problems.join('；') : problems || `${response.status}`
-    throw new ApiError(message, response.status, payload)
+    throw new ApiError(describeFailure(response, payload, text), response.status, payload)
   }
   return payload
 }

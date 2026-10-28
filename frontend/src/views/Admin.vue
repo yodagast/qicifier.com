@@ -1,8 +1,13 @@
 <script setup>
 import { computed, onMounted, ref, nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
+// 复用 api.js 的底层请求（它把「非 JSON 的失败响应」处理好了）。
+// 本页原先自己写了一份 fetch + `JSON.parse(text)`，漏了那一层：后端 500 时
+// Starlette 回的是纯文本 `Internal Server Error`，于是用户看到的报错是
+// `Unexpected token 'I', "Internal S"... is not valid JSON` —— 既看不出发生了什么，
+// 也看不出「该不该重试」。同一个坑不要再有第二份实现。
+import { request } from '../api'
 
-const BASE = import.meta.env.VITE_API_BASE || '/api'
 const TOKEN_KEY = 'zanzhu.adminToken'
 
 const route = useRoute()
@@ -78,23 +83,12 @@ const filtered = computed(() => {
   return gaps.value.filter((row) => row.name.includes(key))
 })
 
-async function call(path, options = {}) {
-  const response = await fetch(`${BASE}${path}`, {
+/** 管理接口共用一个令牌头；其余（含失败响应的解读）交给 `request`。 */
+function call(path, options = {}) {
+  return request(path, {
     ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Admin-Token': token.value,
-      ...(options.headers || {}),
-    },
+    headers: { 'X-Admin-Token': token.value, ...(options.headers || {}) },
   })
-  const text = await response.text()
-  const payload = text ? JSON.parse(text) : null
-  if (!response.ok) {
-    const detail = payload?.detail
-    const problems = typeof detail === 'object' ? detail.problems || detail.failures : detail
-    throw new Error(Array.isArray(problems) ? problems.join('；') : problems || `${response.status}`)
-  }
-  return payload
 }
 
 async function load() {
@@ -174,15 +168,9 @@ async function upload(dryRun) {
     body.append('file', importFile.value)
     for (const [key, value] of Object.entries(importForm.value)) body.append(key, value)
     body.append('dry_run', dryRun ? 'true' : 'false')
-    // FormData 的 Content-Type 必须由浏览器自己带（含 boundary），不能写成 application/json
-    const response = await fetch(`${BASE}/admin/lists/import`, {
-      method: 'POST',
-      headers: { 'X-Admin-Token': token.value },
-      body,
-    })
-    const text = await response.text()
-    const payload = text ? JSON.parse(text) : null
-    if (!response.ok) throw new Error(payload?.detail || `${response.status}`)
+    // FormData 的 Content-Type 必须由浏览器自己带（含 boundary）；`request`
+    // 只在 body 是字符串时才写 application/json，所以这里可以直接传 FormData。
+    const payload = await call('/admin/lists/import', { method: 'POST', body })
     importReport.value = payload
     if (dryRun) {
       message.value = '干跑完成，未写入任何文件。'
@@ -236,12 +224,13 @@ async function reseed({ confirmFirst = true } = {}) {
   const startedAt = Date.now()
   try {
     setFlow('busy', '正在按 data/ 清单重建数据层…（约 1 分钟，账号与收藏保留）')
-    const result = await call('/admin/lists/reseed', { method: 'POST' })
-    const counts = result.counts || {}
+    const result = await reseedWithRetry()
+    const counts = result.payload.counts || {}
     const seconds = Math.round((Date.now() - startedAt) / 1000)
     setFlow(
       'ok',
-      `已生效（用时 ${seconds} 秒）：地区 ${counts.regions} · 集群 ${counts.clusters} · 企业 ${counts.enterprises}。` +
+      `已生效（用时 ${seconds} 秒${result.retried ? '，第 2 次成功' : ''}）：` +
+        `地区 ${counts.regions} · 集群 ${counts.clusters} · 企业 ${counts.enterprises}。` +
         '首页「已收录企业」等数字在刷新后即为最新。',
     )
     // 灌库会重建数据层，待补充名单与已有联系方式都可能变，顺手刷新
@@ -257,6 +246,35 @@ async function reseed({ confirmFirst = true } = {}) {
     return false
   } finally {
     reseeding.value = false
+  }
+}
+
+/**
+ * 这次失败值不值得再试一次？
+ *
+ * 判据要**窄**：灌库本身要跑一分钟以上，对着一个真错误重试只是把等待翻倍。
+ *   0        —— 网络断了（后端正在重启时最常见）
+ *   502/503/504 —— 网关/代理层，后端没在听
+ *   500 且**没有 JSON body** —— Starlette 的纯文本 `Internal Server Error`：
+ *              说明异常没进到我们自己的 try/except（进程正在重启 / 崩了），
+ *              而不是「灌库跑完但失败」（那种是 HTTPException，带 detail，**不重试**）。
+ */
+function isTransient(err) {
+  if (!err || typeof err.status !== 'number') return false
+  if (err.status === 0) return true
+  if ([502, 503, 504].includes(err.status)) return true
+  return err.status === 500 && !err.payload
+}
+
+/** 灌库是幂等的（每次按 data/ 重建），所以暂态失败重试一次是安全的。 */
+async function reseedWithRetry() {
+  try {
+    return { payload: await call('/admin/lists/reseed', { method: 'POST' }), retried: false }
+  } catch (err) {
+    if (!isTransient(err)) throw err
+    setFlow('busy', `服务端刚刚不可用（${err.status || '网络'}），3 秒后自动重试一次…`)
+    await new Promise((resolve) => setTimeout(resolve, 3000))
+    return { payload: await call('/admin/lists/reseed', { method: 'POST' }), retried: true }
   }
 }
 

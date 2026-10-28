@@ -1430,6 +1430,42 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 差的 11 家是「海运集装箱制造」「模块化建筑」这类跨省产业带里的浙江企业 ——
 产业带级的省内外与行级的省内外是两个层级，不是数据错。
 
+### 4.8o 纯文本 500 被当成 JSON 解析 —— 报错说「不是有效 JSON」
+
+现象：点「按 data/ 清单重新灌库」，页面报
+`灌库失败：Unexpected token 'I', "Internal S"... is not valid JSON`。
+
+**这句话里没有一条关于真实故障的信息**：它没说哪个请求失败、为什么失败、要不要重试
+（而这恰恰是用户唯一需要知道的）。根因有两层，只修第二层等于没修：
+
+1. **后端**：Starlette 对未捕获异常回的是 `text/plain` 的 `Internal Server Error`。
+   我们的 `try/except` 只包住了 `cli.reseed`，进程正在重启 / 崩了这类异常根本进不来。
+   → `main.py` 注册 `@app.exception_handler(Exception)`，统一返回
+   `{"detail": "服务端处理 GET /api/x 时出错：RuntimeError"}`（已用一次真实 500 验证
+   `content-type: application/json`）。
+2. **前端**：`Admin.vue` 自己写了一份 `fetch` + **无保护的 `JSON.parse(text)`**。
+   `internal_error_handler` 帮不到没进到后端的请求 —— Vite 代理在后端重启的那几秒回
+   的也是 `500 text/plain`。→ 删掉这份实现，改为复用 `api.js` 导出的 `request()`，
+   失败响应只有**一处**解读逻辑（`describeFailure`）。
+
+**判据要窄**：`request()` 里有自动重试的 `isTransient()`，只认「网络断开 / 502-504 /
+500 且 body 不是 JSON」。**带 `detail` 的 500 一律不重试** —— 灌库本身要跑一分钟以上，
+对着一个真错误重试只是把等待翻倍。
+
+两个坑：
+
+* `request()` 原先「有 body 就写 `application/json`」。名单 CSV 上传用的是 `FormData`，
+  Content-Type 必须由浏览器带 `boundary`，写死会让后端 422。现在只在
+  `typeof options.body === 'string'` 时才写（我们自己的 JSON 一定是字符串）。
+* 验收不能只看构建通过。**把后端停掉、让 Vite 代理回 500 纯文本**，再点一次灌库，
+  页面显示的是「服务端暂时不可用（HTTP 500）。这通常是后端正在重启或灌库，稍等几秒
+  重试即可」，并且日志里两个 500 相隔 3 秒（重试真的发生了）。
+
+教训：**「失败响应怎么解读」不能有第二份实现**。谁都能写 `JSON.parse`，但只有一份
+知道「非 JSON 的 5xx 是暂态、可以重试」。`tests/test_tools.py` 现在断言
+`Admin.vue` 里既没有 `JSON.parse` 也没有 `fetch(`。
+
+
 ## 6. 还没做的（后续追补）
 
 1. **联系方式覆盖率仍不理想**：浏览器搜索把命中率从约 5% 提到约 30%，
@@ -1481,7 +1517,7 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 | `python3 tools/discover_sites.py [--measure N] [--list-name X] [--workers N] [--timeout S] [--revalidate] [--recontacts] [--refresh]` | 确定性候选 → 强验收（规则 v4，候选并发校验；`--list-name` 可只跑某个来源名单） |
 | `python3 tools/directory_contacts.py [--max-share N]` | 从已缓存的搜索摘要里取电话/地址（离线，不发请求）→ `directory_contacts.json`（**已暂缓扩展**） |
 | `python3 tests/test_api.py` | 回归测试（账号 / 收藏 / 数据完整性 / 名单口径 / 集群列表排序 / 导入接口 / 产业带编辑 / 人工补充往返 / 对外文案用词 / 医疗器械 9 产区落位，156 项（不带令牌时 149 项），需后端在跑） |
-| `python3 tests/test_tools.py` | 回归测试（验收规则 / 复验降级 / 摘要抽取 / 名单导入与注册表 / **CLI `seed --csv`** / 产业带编辑 / 镇街级与临安底表 / 产区与集群类型落位 / 整份归属 / 对外文案与档位取值扫描，210 项，离线） |
+| `python3 tests/test_tools.py` | 回归测试（验收规则 / 复验降级 / 摘要抽取 / 名单导入与注册表 / **CLI `seed --csv`** / 产业带编辑 / 镇街级与临安底表 / 产区与集群类型落位 / 整份归属 / 对外文案与档位取值扫描 / 失败响应只走一处解读，214 项，离线） |
 | `python3 tools/build_container_clusters.py [--dry-run]` | 《全国集装箱移动房企业调研清单》的 46 条产业带 → 46 条派生档案（浙江 4 / 省外 42）；**导入这份清单前必须先跑它** |
 | `python3 tools/build_qidong_clusters.py [--dry-run]` | 《全国气动元件企业调研清单》的 30 条产业带 → 27 条派生档案（浙江 6 + 省外 21）；`奉化气动元件` 指向已有骨架档案，2 条跨产区企业池不建档案。**导入这份清单前必须先跑它**，否则 355 行静默无归属 |
 | `python3 tools/contacts.py [--list-empty] [--template]` | 联系方式合并报告 / 手工补充校验 |

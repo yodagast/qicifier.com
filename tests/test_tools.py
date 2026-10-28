@@ -1770,6 +1770,43 @@ def main() -> int:
         or [line.strip() for line in map_markup.splitlines() if "按县汇总" in line],
     )
 
+    # ------------------------------------------------------------------
+    # 失败响应必须走同一套解读逻辑。
+    #
+    # 真实事故：管理页自己写了一份 `fetch` + `JSON.parse(text)`。后端 500 时
+    # Starlette 回的是 `text/plain` 的 `Internal Server Error`，用户看到的报错是
+    # `Unexpected token 'I', "Internal S"... is not valid JSON` —— 既说不清发生了什么，
+    # 也看不出「重试一下就好」。修法必须是**只有一处**处理失败响应：
+    # api.js 的 `request()` 负责解读，页面只负责展示。
+    # ------------------------------------------------------------------
+    admin_vue = (ROOT / "frontend" / "src" / "views" / "Admin.vue").read_text(encoding="utf-8")
+    admin_code = "\n".join(
+        line for line in re.sub(r"<!--.*?-->", "", admin_vue, flags=re.S).splitlines()
+        if not line.lstrip().startswith("//")
+    )
+    api_js = (ROOT / "frontend" / "src" / "api.js").read_text(encoding="utf-8")
+    check(
+        "管理页不再自己 JSON.parse 响应体（交给 api.js 的 request）",
+        "JSON.parse" not in admin_code,
+        [line.strip() for line in admin_code.splitlines() if "JSON.parse" in line],
+    )
+    check(
+        "管理页不再自己 fetch（避免出现第二份漏掉失败处理的实现）",
+        "fetch(" not in admin_code,
+        [line.strip() for line in admin_code.splitlines() if "fetch(" in line],
+    )
+    check(
+        "api.js 只在字符串 body 时才写 application/json（FormData 要留 boundary）",
+        "typeof options.body === 'string'" in api_js and "application/json" in api_js,
+        "",
+    )
+    main_py = (ROOT / "backend" / "app" / "main.py").read_text(encoding="utf-8")
+    check(
+        "后端未捕获异常也返回 JSON（detail 可读），不是纯文本 Internal Server Error",
+        "@app.exception_handler(Exception)" in main_py and '"detail"' in main_py,
+        "",
+    )
+
     print(f"\n=== {passed} passed, {failed} failed ===")
     if failures:
         print("失败项：")
