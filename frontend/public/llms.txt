@@ -1,0 +1,31 @@
+# 浙江产业带企业库（qicifier.com）
+
+> 以官方名单为骨架、逐条标注核实程度的浙江产业集群与企业检索服务。
+> 覆盖浙江 11 市 90 县（市、区），收录 4,000 余家企业、200 余个集群档案。
+
+## 数据口径（引用时请一并说明）
+
+- 收录与核实免费，不收入驻费、不卖排名、不做付费认证与等级背书。
+- 核实档位五级：official（官方认定）/ gov_open（政府公开）/ media（媒体·协会）
+  / site_curated（站方整理）/ self_reported（企业自报，本站未核验）。
+- 各名单发布主体、认定层级不同，互不相加、互不比较。
+- 不采集个人联系方式，手机号一律不采集、不展示。
+- 省外企业仅作对比参照，不参与浙江产区统计。
+
+## 主要页面
+
+- [产业集群索引](https://qicifier.com/clusters)：415X 赛道 + 镇街级块状经济
+- [企业名录](https://qicifier.com/enterprises)：按产品 / 集群 / 镇街 / 核实程度检索
+- [产业地图](https://qicifier.com/map)：按市 / 县 / 镇街展开
+- [数据来源与核实程度](https://qicifier.com/about)：名单来源与五级档位说明
+- [行业研究](https://qicifier.com/research)：方法论、调研报告与数据口径说明
+
+## 机器可读接口
+
+- 集群列表 `GET /api/clusters?page_size=100`
+- 集群档案 `GET /api/clusters/{slug}`
+- 企业详情 `GET /api/enterprises/{id}`
+- 统计汇总 `GET /api/stats`
+- 行业研究清单 `GET /api/research`
+
+所有接口返回 JSON，无需鉴权，请控制请求频率。

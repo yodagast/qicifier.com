@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>浙江产业集群收录体系搭建方案</title>
+<style>
+  :root{
+    --bg:#f8f7f4;--surface:#fff;--surface-2:#f2efe9;
+    --ink:#221c16;--ink-2:#4a4038;--muted:#7d7369;
+    --line:#e6e0d7;--line-2:#d5ccbf;
+    --accent:#a8562c;--accent-soft:#fbeee6;
+    --teal:#2c6b66;--teal-soft:#e5f0ef;
+    --amber:#9a7415;--amber-soft:#fbf3dd;
+    --red:#a8382c;--red-soft:#fbeae7;
+    --gray:#8b8178;--gray-soft:#f0ece6;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(34,28,22,.04), 0 8px 24px -12px rgba(34,28,22,.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px;line-height:1.72;letter-spacing:.01em;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px 96px;}
+
+  header.hero{
+    background:
+      radial-gradient(900px 320px at 10% -10%, #f6e7dc 0%, rgba(246,231,220,0) 70%),
+      radial-gradient(700px 300px at 92% 0%, #e3efee 0%, rgba(227,239,238,0) 70%),
+      var(--surface);
+    border-bottom:1px solid var(--line);padding:52px 0 40px;margin-bottom:36px;}
+  .hero-inner{max-width:1140px;margin:0 auto;padding:0 24px;}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+    border:1px solid #f0dbcd;border-radius:999px;padding:5px 13px;margin-bottom:18px;}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  h1{font-size:36px;line-height:1.24;margin:0 0 14px;letter-spacing:-.01em;font-weight:700;}
+  h1 .sub{display:block;font-size:19px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:0;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--muted);font-size:13.5px;margin-top:22px;}
+  .hero-meta b{color:var(--ink-2);font-weight:600;}
+
+  section{margin-bottom:52px;scroll-margin-top:24px;}
+  h2{font-size:23px;margin:0 0 6px;font-weight:700;display:flex;align-items:baseline;gap:12px;}
+  h2 .num{font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);
+    border-radius:7px;padding:3px 9px;flex:none;font-variant-numeric:tabular-nums;}
+  .lede{color:var(--muted);font-size:14px;margin:0 0 20px;}
+  h3{font-size:16.5px;margin:32px 0 12px;font-weight:650;}
+  h3 .tag{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:8px;letter-spacing:.04em;}
+  p{margin:0 0 14px;}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;box-shadow:var(--shadow);}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:880px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;box-shadow:var(--shadow);}
+  .stat .k{font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:6px;display:block;}
+  .stat .v{font-size:25px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15;}
+  .stat .d{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5;}
+  .up{color:var(--teal);font-weight:650;}
+  .down{color:var(--red);font-weight:650;}
+
+  .findings{counter-reset:f;list-style:none;padding:0;margin:0;display:grid;gap:12px;}
+  .findings li{counter-increment:f;position:relative;padding:16px 20px 16px 58px;
+    background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;box-shadow:var(--shadow);font-size:14.5px;}
+  .findings li::before{content:counter(f);position:absolute;left:18px;top:15px;width:24px;height:24px;
+    border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;}
+  .findings li b{font-weight:650;}
+
+  .table-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden;margin:14px 0 8px;}
+  .table-scroll{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px;}
+  thead th{background:var(--surface-2);text-align:left;font-weight:650;color:var(--ink-2);
+    padding:11px 14px;border-bottom:1px solid var(--line-2);white-space:nowrap;font-size:12.5px;}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#fdfbf9;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  td.brand{font-weight:600;white-space:nowrap;}
+  tr.hi td{background:#fdf6f1;}
+  tr.hi:hover td{background:#fbeee6;}
+  .tbl-cap{font-size:12px;color:var(--muted);padding:10px 15px;border-top:1px solid var(--line);
+    background:var(--surface-2);line-height:1.6;}
+
+  .pill{display:inline-block;font-size:11px;font-weight:700;line-height:1;padding:4px 8px;
+    border-radius:999px;white-space:nowrap;letter-spacing:.02em;}
+  .p-yes{background:var(--teal-soft);color:var(--teal);border:1px solid #cbe2e0;}
+  .p-part{background:var(--amber-soft);color:var(--amber);border:1px solid #ecdcb4;}
+  .p-no{background:var(--gray-soft);color:var(--gray);border:1px solid #e2dbd1;}
+  .p-risk{background:var(--red-soft);color:var(--red);border:1px solid #f2cfc9;}
+
+  .cb{display:inline-block;font-size:10.5px;font-weight:700;line-height:1;padding:3px 6px;
+    border-radius:5px;letter-spacing:.03em;white-space:nowrap;}
+  .cb-h{background:var(--teal-soft);color:var(--teal);border:1px solid #cbe2e0;}
+  .cb-m{background:var(--amber-soft);color:var(--amber);border:1px solid #ecdcb4;}
+  .cb-l{background:var(--red-soft);color:var(--red);border:1px solid #f2cfc9;}
+
+  .legend{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12.5px;color:var(--muted);
+    margin:12px 0 0;background:var(--surface-2);border:1px dashed var(--line-2);
+    border-radius:10px;padding:12px 16px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+
+  .chart{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px 18px;box-shadow:var(--shadow);margin:14px 0;}
+  .chart-title{font-size:14px;font-weight:650;margin-bottom:4px;}
+  .chart-sub{font-size:12px;color:var(--muted);margin-bottom:18px;}
+  .bars{display:grid;gap:9px;}
+  .bar-item{display:grid;grid-template-columns:190px 1fr 92px;align-items:center;gap:12px;}
+  .bar-name{font-size:12.5px;color:var(--ink-2);text-align:right;line-height:1.3;}
+  .bar-name em{display:block;font-style:normal;font-size:10.5px;color:var(--muted);}
+  .bar-track{background:var(--surface-2);border-radius:6px;height:20px;overflow:hidden;position:relative;}
+  .bar-fill{height:100%;border-radius:6px;background:var(--accent);}
+  .bar-fill.t{background:var(--teal);}
+  .bar-fill.a{background:var(--amber);}
+  .bar-fill.gray{background:#b6ada2;}
+  .bar-fill.r{background:var(--red);}
+  .bar-val{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink-2);font-weight:600;}
+  .baseline{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--red);border-radius:2px;}
+  @media(max-width:640px){
+    .bar-item{grid-template-columns:110px 1fr 74px;gap:8px;}
+    .bar-name{font-size:11px;}
+  }
+
+  .note{border-left:3px solid var(--amber);background:var(--amber-soft);border-radius:0 10px 10px 0;
+    padding:14px 18px;font-size:13.5px;color:#5f4810;margin:16px 0;}
+  .note.info{border-left-color:var(--teal);background:var(--teal-soft);color:#1c4b47;}
+  .note.good{border-left-color:var(--accent);background:var(--accent-soft);color:#6b3419;}
+  .note.risk{border-left-color:var(--red);background:var(--red-soft);color:#7a2a20;}
+  .note b{font-weight:700;}
+  .note p{margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
+  .insight{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;box-shadow:var(--shadow);}
+  .insight h4{margin:0 0 8px;font-size:15px;font-weight:650;display:flex;align-items:center;gap:9px;}
+  .insight h4 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;}
+  .insight h4 .dot.t{background:var(--teal);}
+  .insight h4 .dot.a{background:var(--amber);}
+  .insight h4 .dot.r{background:var(--red);}
+  .insight p{font-size:13.5px;color:var(--ink-2);margin:0 0 10px;}
+  .insight p:last-child{margin-bottom:0;}
+  .insight ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2);}
+  .insight li{margin-bottom:6px;}
+
+  .kv{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;font-size:13.5px;}
+  .kv dt{color:var(--muted);font-weight:500;}
+  .kv dd{margin:0;color:var(--ink-2);}
+  @media(max-width:560px){.kv{grid-template-columns:1fr;gap:2px 0;} .kv dd{margin-bottom:10px;}}
+
+  .src-list{list-style:none;padding:0;margin:0;display:grid;gap:9px;}
+  .src-list li{background:var(--surface);border:1px solid var(--line);border-radius:9px;
+    padding:11px 15px;font-size:13px;color:var(--ink-2);display:flex;gap:10px;align-items:flex-start;}
+  .src-list li .idx{color:var(--muted);font-variant-numeric:tabular-nums;font-weight:600;flex:none;}
+
+  footer{border-top:1px solid var(--line);padding-top:22px;margin-top:20px;font-size:12.5px;color:var(--muted);}
+  .anchor-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+  .anchor-nav a{font-size:12.5px;text-decoration:none;color:var(--ink-2);background:var(--surface);
+    border:1px solid var(--line);border-radius:999px;padding:6px 13px;}
+  .anchor-nav a:hover{border-color:var(--accent);color:var(--accent);}
+
+  .arch{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;box-shadow:var(--shadow);margin:16px 0;}
+  .arch-title{font-size:14px;font-weight:650;margin-bottom:6px;}
+  .arch-sub{font-size:12px;color:var(--muted);margin-bottom:22px;}
+  .layer{border-radius:12px;padding:16px 18px;margin-bottom:6px;border:1px solid var(--line-2);}
+  .layer .lh{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;
+    margin-bottom:10px;flex-wrap:wrap;}
+  .layer .lh .badge{font-size:10.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:rgba(255,255,255,.72);}
+  .layer .body{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .layer .body.three{grid-template-columns:repeat(3,1fr);}
+  .layer .body.two{grid-template-columns:repeat(2,1fr);}
+  @media(max-width:820px){.layer .body,.layer .body.three,.layer .body.two{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.layer .body,.layer .body.three,.layer .body.two{grid-template-columns:1fr;}}
+  .node{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
+    font-size:12.5px;line-height:1.5;box-shadow:0 1px 2px rgba(34,28,22,.04);}
+  .node b{display:block;font-size:13px;font-weight:650;margin-bottom:3px;color:var(--ink);}
+  .node span{color:var(--muted);font-size:11.5px;}
+  .l1{background:var(--accent-soft);border-color:#f0dbcd;}
+  .l1 .lh{color:#6b3419;}
+  .l2{background:var(--teal-soft);border-color:#cbe2e0;}
+  .l2 .lh{color:#1c4b47;}
+  .l3{background:var(--amber-soft);border-color:#ecdcb4;}
+  .l3 .lh{color:#5f4810;}
+  .l4{background:var(--gray-soft);border-color:#e2dbd1;}
+  .l4 .lh{color:#5b544c;}
+  .arrow{text-align:center;color:var(--muted);font-size:12.5px;line-height:1.5;margin:4px 0 10px;}
+
+  .flow{display:grid;gap:10px;margin:14px 0;}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--surface);
+    border:1px solid var(--line);border-radius:11px;padding:15px 18px;box-shadow:var(--shadow);}
+  .step .sn{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);
+    font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;}
+  .step .sb{font-size:13.5px;color:var(--ink-2);}
+  .step .sb b{display:block;font-size:14.5px;font-weight:650;color:var(--ink);margin-bottom:4px;}
+
+  .tree{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;box-shadow:var(--shadow);margin:14px 0;font-size:13.5px;}
+  .tree .q{font-weight:650;color:var(--ink);margin-bottom:6px;}
+  .tree .branch{padding-left:18px;border-left:2px solid var(--line-2);margin:10px 0 16px;color:var(--ink-2);}
+  .tree .branch b{color:var(--accent);font-weight:650;}
+
+  .checklist{list-style:none;padding:0;margin:0;display:grid;gap:8px;}
+  .checklist li{background:var(--surface);border:1px solid var(--line);border-radius:9px;
+    padding:11px 15px 11px 42px;position:relative;font-size:13.5px;color:var(--ink-2);}
+  .checklist li::before{content:"\25A1";position:absolute;left:16px;top:9px;color:var(--accent);
+    font-size:15px;font-weight:700;}
+  .checklist li b{color:var(--ink);font-weight:650;}
+
+  code{background:var(--surface-2);border:1px solid var(--line);border-radius:5px;
+    padding:1px 6px;font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink-2);}
+
+  pre.codeblock{background:#2b241d;color:#efe7dd;border-radius:11px;padding:18px 20px;
+    overflow-x:auto;font-size:12.5px;line-height:1.75;margin:14px 0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;tab-size:2;}
+  pre.codeblock .c{color:#a89a8a;}
+  pre.codeblock .k{color:#e6b475;}
+  pre.codeblock .s{color:#8fc9a8;}
+  pre.codeblock .v{color:#d8b4fe;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">方法论迁移 · 体系搭建方案</div>
+    <h1>浙江产业集群收录体系搭建方案
+      <span class="sub">参照河北工厂网的公司调研方法，把浙江的「块状经济」做成可检索、可核验、可直连的产业带骨架</span>
+    </h1>
+    <div class="hero-meta">
+      <span>参照站点：<b>河北工厂网 hebei.mengkai.ren</b></span>
+      <span>参照日期：<b>2026-10-09</b></span>
+      <span>目标区域：<b>浙江省 11 市 · 90 个县级行政区</b></span>
+      <span>方法内核：<b>官方名单当骨架 + 三层数据分离 + 逐条标核实程度</b></span>
+    </div>
+    <nav class="anchor-nav">
+      <a href="#s00">执行摘要</a>
+      <a href="#s01">河北方法拆解</a>
+      <a href="#s02">浙冀结构性差异</a>
+      <a href="#s03">名单矩阵</a>
+      <a href="#s04">实体模型</a>
+      <a href="#s05">字段与核实程度</a>
+      <a href="#s06">收录优先级</a>
+      <a href="#s07">采集流程</a>
+      <a href="#s08">口径陷阱</a>
+      <a href="#s09">落地路线</a>
+      <a href="#s10">来源地图</a>
+      <a href="#s11">边界与免责</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ================= 00 ================= -->
+<section id="s00">
+  <h2><span class="num">00</span>执行摘要</h2>
+  <p class="lede">如果只从河北那套站点里学一件事，那应该是「把公开信息做扎实」这件事本身；如果只抄一样东西，那应该是它的数据分层，而不是它的 107 个集群名单。</p>
+
+  <ol class="findings">
+    <li><b>河北方法的内核不是「收录企业」，而是三层数据分离 + 逐条标来源。</b>区县与产业数据来自省级名单；产业集群档案逐条附来源与核验日期；企业记录分「官方来源 / 媒体·协会来源 / 企业自报」三档。三类数据的责任主体、更新频率、可信度完全不同，必须分开建模——这是整套体系可信度的地基。</li>
+    <li><b>浙江不能只换名单，层级必须从三级加到四级。</b>河北是「县域特色产业集群」形态（省级重点名单 107 个，覆盖 167 个区县）；浙江是「块状经济」形态，大量集群以<b>镇/街道</b>为单位命名——大唐袜业、濮院毛衫、柳市电器、织里童装、店口五金、山下湖珍珠、分水制笔。「镇街」必须成为一等公民实体，否则浙江最值钱的那部分产业带全部落不进系统。</li>
+    <li><b>浙江没有单一权威名单，需要五份名单组成「名单矩阵」。</b>「415X」体系、省级特色产业集群核心区/协同区、国家级中小企业特色产业集群、省级特色小镇清单、传统制造业改造提升分行业试点——五份名单的口径、层级、发布主体都不同，<b>绝不能相加成一个「集群总数」</b>。</li>
+    <li><b>建议以「省级特色产业集群核心区/协同区」名单作为主骨架</b>，它最接近河北那份 107 名单的功能：官方发布、分批更新、能落到具体县（市、区）。但要注意——核心区/协同区是<b>认定主体</b>而非地理边界，一个千亿级集群可能横跨多个县，所以集群实体与行政区实体必须分开建模、用关系表互链。</li>
+    <li><b>浙江的官方信息密度远高于河北，可以把「官方来源」企业占比做得更高。</b>省级专精特新、制造业单项冠军、隐形冠军、未来工厂、上市/新三板公示名单都可直接反查企业。策略应从「等企业自报」转为<b>「用名单反查企业」</b>——河北 15,179 家里有大量自报记录，浙江有条件让官方来源成为主力。</li>
+    <li><b>核实程度建议由三档扩为四档。</b>官方认定 / 政府公开信息 / 媒体·协会 / 企业自报。浙江的政府公开材料体量极大（统计公报、政府工作报告、新闻发布会、经信局公示），其权威性与「省级名单认定」差别明显，混成一档会稀释「官方」这个标签的价值。</li>
+    <li><b>最大的数据风险是产值口径混乱，不是数据缺失。</b>浙江同一集群常见「规上工业产值 / 全产业链产值 / 集群营收 / 市场成交额（义乌式）/ 网络零售额」五种口径混用，年份跨度可达 5–8 年。每个规模数字必须存成<b>「数值 + 口径 + 年份 + 来源」四元组</b>，禁止跨口径比较与加总。</li>
+    <li><b>收录优先级按「可核性」分 A/B/C 三级，而不是按名气。</b>A 级 = 15 个千亿级集群的核心区/协同区 + 31 个国家级中小企业特色产业集群；B 级 = 产业型特色小镇 + 传统制造业改造提升试点 + 有协会「中国 XX 之都/之乡」称号且规模可核的镇级块状经济；C 级 = 有明确主营、有可核企业的长尾镇街产业。判据是三条：有官方或协会认定、有可核的规模数字、能在企业库匹配到不少于 10 家企业。</li>
+  </ol>
+</section>
+
+<!-- ================= 01 ================= -->
+<section id="s01">
+  <h2><span class="num">01</span>参照系拆解：河北那套方法到底在做什么</h2>
+  <p class="lede">把它拆成可迁移的内核与不可直接搬的前提，是决定浙江方案形态的第一步。</p>
+
+  <h3>八条可迁移内核 <span class="tag">照搬</span></h3>
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:170px">内核</th><th>河北的做法</th><th style="width:270px">浙江怎么迁移</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="brand">① 官方名单当骨架</td>
+            <td>不自己发明分类。以省工信厅《河北省 107 个省级重点县域特色产业集群名单》为骨架，向下展开到 11 市 / 167 区县 / 497 条区县产业。</td>
+            <td>同样不自建分类。以省级特色产业集群核心区/协同区名单为主骨架，415X 体系作顶层产业分类。</td>
+          </tr>
+          <tr>
+            <td class="brand">② 三层数据分离</td>
+            <td>区县产业数据（官方名单）／集群档案（逐条附来源+核验日期）／企业记录（三档核实程度）——三类分开存、分开标。</td>
+            <td>完全照搬，并增加第四层「镇街块状经济」实体（浙江特有，多数无官方名单，必须单独标档）。</td>
+          </tr>
+          <tr>
+            <td class="brand">③ 核实程度显式分档</td>
+            <td>官方来源 / 媒体·协会来源 / 企业自报，页面上写清楚是哪一档；排序只看公开可核验程度与资料完整度。</td>
+            <td>扩为四档（见 05 节）。分档标签是整套体系唯一的信任凭证，不能含糊。</td>
+          </tr>
+          <tr>
+            <td class="brand">④ 数字带来源+年份+口径</td>
+            <td>如「（来源：河北省工信厅，2025 年）」「2023 年名单（2026 年新版有调整）」；两源矛盾时并列，如盐山管道 1,700 家 vs 6,000 多家并注明口径不同。</td>
+            <td>必须照搬，且要更严——浙江口径混用更严重。矛盾并列不是缺点，是可信度资产。</td>
+          </tr>
+          <tr>
+            <td class="brand">⑤ 图谱字段单独声明</td>
+            <td>产品、出口方向、适配度等字段标为「站方整理，未逐条核实，仅作为检索线索使用」。</td>
+            <td>照搬。浙江可增加「产业大脑/未来工厂/数字化车间」等标签，同样标为站方整理。</td>
+          </tr>
+          <tr>
+            <td class="brand">⑥ 收录原则不可购买</td>
+            <td>不收入驻门票、不卖排名、不接受竞价、不做付费认证与等级背书；排序规则公开且对每家企业一样。</td>
+            <td>必须照搬。这是前面所有分档标签能成立的前提——一旦排名可买，分档就失去意义。</td>
+          </tr>
+          <tr>
+            <td class="brand">⑦ 在「直连」处退出</td>
+            <td>不下单、不收款、不展示报价、不撮合、不抽成；只按企业留下的邮箱转一封需求，并给提交人可查询进度的回执；邮件不含提交人联系方式。</td>
+            <td>照搬。浙江外贸与批发比例高，采购需求转达的价值甚至更大，但越界风险也更大，边界要写得更死。</td>
+          </tr>
+          <tr>
+            <td class="brand">⑧ 问答只检索站内库</td>
+            <td>站内问答只检索本站实体数据与企业库，不访问外部网络，回答区标注「内容由 AI 生成」，并公示算法备案。</td>
+            <td>照搬，并前置算法备案与登记。这是「不编造」的技术兜底。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">来源：河北工厂网「关于我们」收录原则、数据来源章节与《服务条款》第 2 节（抓取于 2026-10-09）。内核归纳为本报告作者整理。</div>
+  </div>
+
+  <h3>三条不可直接搬的前提 <span class="tag">必须改</span></h3>
+  <div class="grid-3">
+    <div class="insight">
+      <h4><span class="dot r"></span>前提 A：单一权威名单</h4>
+      <p>河北有一份省工信厅的 107 名单，站点的数字口径几乎全部挂在它上面。</p>
+      <p><b>浙江没有这样一份名单。</b>必须做名单矩阵 + 指定主骨架 + 明确每份名单各自的层级与口径，并反复声明不可相加。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>前提 B：集群粒度 = 县</h4>
+      <p>河北的集群名与县名高度对应（安平丝网、清河羊绒、白沟箱包）。</p>
+      <p><b>浙江的集群名常对应镇/街道</b>（大唐、濮院、柳市、织里）。地理层级要加一级，URL 与检索都要支持「按镇街」这条路径。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>前提 C：产业条目由名单派生</h4>
+      <p>河北的 497 条「区县产业」基本能从官方名单与各市公开发布材料派生出来。</p>
+      <p><b>浙江大量镇级块状经济没有官方名单</b>。这部分只能站方整理，必须单独建实体、单独标档，绝不能混进「官方来源」里。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 ================= -->
+<section id="s02">
+  <h2><span class="num">02</span>结构性差异：浙江不是「河北加量」</h2>
+  <p class="lede">两个省的产业组织形态不同，决定了同一套方法论会长出两个不同的骨架。</p>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:130px">维度</th><th style="width:290px">河北</th><th style="width:330px">浙江</th><th>对收录体系的影响</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td class="brand">主导形态</td>
+            <td>县域特色产业集群，一县一主业为主</td>
+            <td>块状经济，一镇一品 / 一乡一业为主，正在向「现代产业集群」话术迁移</td>
+            <td><b>层级从三级加到四级</b>，镇街成为一等公民</td>
+          </tr>
+          <tr class="hi">
+            <td class="brand">官方名单</td>
+            <td>单一权威名单（省工信厅，107 个）</td>
+            <td>多套并存：415X、核心区/协同区、国家级中小企业特色产业集群、特色小镇、传统制造业试点</td>
+            <td><b>需要名单矩阵</b>，并显式声明不可相加</td>
+          </tr>
+          <tr>
+            <td class="brand">数量级</td>
+            <td>107 省级 + 77 份集群档案 + 15,179 家企业</td>
+            <td>仅核心区/协同区前三批累计 108 个、新星产业群 37 个；国家级中小企业特色产业集群 31 个；特色小镇 140 家</td>
+            <td>收录量级大 3–5 倍，<b>必须分 A/B/C 级排优先级</b></td>
+          </tr>
+          <tr>
+            <td class="brand">命名单位</td>
+            <td>多以县命名（安平丝网、清河羊绒、沙河玻璃）</td>
+            <td>大量以镇/街道命名（大唐袜业、濮院毛衫、柳市电器、织里童装、店口五金、山下湖珍珠、分水制笔）</td>
+            <td>实体 ID 与 URL 要同时支持「县」与「镇街」两条检索路径</td>
+          </tr>
+          <tr>
+            <td class="brand">产业与地域关系</td>
+            <td>一县一主业较清晰，边界基本不重叠</td>
+            <td>同一产业多镇分布（袜业横跨诸暨大唐与义乌；纺织覆盖柯桥、萧山、桐乡、海宁）；一镇也可能多业</td>
+            <td>必须建<b>多对多关系表</b>（集群 × 地理 × 角色）</td>
+          </tr>
+          <tr>
+            <td class="brand">称号体系</td>
+            <td>以国家级中小企业特色产业集群等政府认定为主</td>
+            <td>政府认定 + 行业协会称号并存，「中国 XX 之都/之乡/基地」多由中国轻工业联合会、中国纺织工业联合会等授予</td>
+            <td>称号必须<b>注明授予单位与年份</b>，区分政府认定与协会称号</td>
+          </tr>
+          <tr>
+            <td class="brand">数据可得性</td>
+            <td>一般，依赖省级名单与各市公开发布</td>
+            <td>高：政务公开规范、县市统计公报齐全、专精特新/单项冠军/未来工厂均有公示名单</td>
+            <td>可<b>用官方名单反查企业</b>，提高官方来源占比，减少自报依赖</td>
+          </tr>
+          <tr>
+            <td class="brand">规模数字口径</td>
+            <td>多为集群总产值，口径相对统一</td>
+            <td>混用五种：规上工业产值 / 全产业链产值 / 集群营收 / 市场成交额 / 网络零售额；年份跨度可达 5–8 年</td>
+            <td>规模字段必须结构化存「数值+口径+年份+来源」</td>
+          </tr>
+          <tr>
+            <td class="brand">企业归属判定</td>
+            <td>多数企业归属单一县集群，判定简单</td>
+            <td>企业跨集群经营常见（既做袜机又做袜子），且集团化程度高、跨镇设厂</td>
+            <td>需要<b>归属规则与主/次集群字段</b>，并保留一企多集群</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">说明：河北侧数据来自河北工厂网首页与「关于我们」页（抓取于 2026-10-09）。浙江侧数据来自浙江省政府门户、浙江省经信厅公开材料、工信部中小企业局公示名单与浙江省发改委特色小镇名单（详见第 10 节来源地图）。两侧口径不同，本表只作结构性对比，不作数量对比。</div>
+  </div>
+
+  <div class="note risk">
+    <p><b>最容易踩的坑：把浙江的集群数量说成一个数。</b>河北可以写「107 个省级重点产业集群」，因为那是一份名单。浙江如果写「浙江有 XXX 个产业集群」，无论填什么数都错——因为你无法说明它出自哪份名单、什么口径、什么时点。正确写法是<b>逐份名单分别陈述</b>，并说明它们不可相加。</p>
+  </div>
+</section>
+
+<!-- ================= 03 ================= -->
+<section id="s03">
+  <h2><span class="num">03</span>骨架：五份官方名单构成的名单矩阵</h2>
+  <p class="lede">先把权威名单吃透并结构化，再谈收录企业。骨架错了，后面全错。</p>
+
+  <div class="grid-4" style="margin-bottom:22px">
+    <div class="stat"><span class="k">省级特色产业集群核心区</span><div class="v">41</div><div class="d">前三批累计（第 1–3 批）。第 4 批 2026-09 起遴选</div></div>
+    <div class="stat"><span class="k">省级特色产业集群协同区</span><div class="v">67</div><div class="d">前三批累计，合计核心区+协同区 108 个</div></div>
+    <div class="stat"><span class="k">「新星」产业群</span><div class="v">37</div><div class="d">前三批累计，百亿级后备军</div></div>
+    <div class="stat"><span class="k">国家级中小企业特色产业集群</span><div class="v">31</div><div class="d">工信部口径，2025-10 新增 8 个后</div></div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:22px">
+    <div class="stat"><span class="k">省级特色小镇（2025 年度）</span><div class="v">140</div><div class="d">命名类 90 + 创建类 50，清单化动态调整</div></div>
+    <div class="stat"><span class="k">千亿级特色产业集群</span><div class="v">15</div><div class="d">「415X」中的「15」</div></div>
+    <div class="stat"><span class="k">世界级先进产业群</span><div class="v">4</div><div class="d">新一代信息技术、高端装备、现代消费与健康、绿色石化与新材料</div></div>
+    <div class="stat"><span class="k">浙江县级行政区</span><div class="v">90</div><div class="d">37 市辖区 + 20 县级市 + 32 县 + 1 自治县</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:210px">名单</th><th style="width:150px">发布主体</th><th style="width:130px">数量（口径）</th><th style="width:110px">层级</th><th>在体系中的角色</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td class="brand">「415X」先进制造业集群体系</td>
+            <td>浙江省人民政府</td>
+            <td>4 + 15 + X</td>
+            <td>省级顶层</td>
+            <td><b>产业分类骨架。</b>提供「行业板块」的一级分类（对应河北那 16 个板块的位置）。4 个世界级产业群是万亿级，不落到具体县，只作分类与统计口径。</td>
+          </tr>
+          <tr class="hi">
+            <td class="brand">省级特色产业集群核心区 / 协同区</td>
+            <td>省制造业高质量发展领导小组办公室 / 省经信厅</td>
+            <td>核心区 41 + 协同区 67 = 108（前三批累计）</td>
+            <td>县（市、区）</td>
+            <td><b>主骨架。</b>功能上最接近河北那份 107 名单：官方发布、分批更新、能落到具体县（市、区），且自带「核心区 / 协同区」两层角色。第一批覆盖 11 市 59 县，可直接复用为收录清单。</td>
+          </tr>
+          <tr class="hi">
+            <td class="brand">「新星」产业群</td>
+            <td>省经信厅</td>
+            <td>37（前三批累计）</td>
+            <td>县（市、区）</td>
+            <td><b>增量与前沿层。</b>百亿级后备军，是「未来可能变大的集群」。梯次规则为「新星产业群 → 协同区 → 核心区」，可做成集群档案里的「成长阶段」字段。</td>
+          </tr>
+          <tr>
+            <td class="brand">国家级中小企业特色产业集群</td>
+            <td>工业和信息化部</td>
+            <td>31（2025-10 后）</td>
+            <td>县（市、区）/ 园区</td>
+            <td><b>最高背书层。</b>与河北「安平丝网=国家级中小企业特色产业集群」的写法一致，可直接作为集群档案的「荣誉」字段最高一档，逐条可核。</td>
+          </tr>
+          <tr>
+            <td class="brand">浙江省特色小镇清单</td>
+            <td>浙江省发展和改革委员会</td>
+            <td>140（2025 年度：命名 90 + 创建 50）</td>
+            <td>小镇（非行政单位）</td>
+            <td><b>补充层，需筛选。</b>特色小镇 ≠ 产业集群，其中含文旅、历史经典、双创等类型。<b>只把产业型/制造业型映射进集群</b>，其余另立「特色小镇」实体，不与集群混表。</td>
+          </tr>
+          <tr>
+            <td class="brand">传统制造业改造提升分行业省级试点</td>
+            <td>浙江省人民政府办公厅</td>
+            <td>多批</td>
+            <td>县（市、区）+ 行业</td>
+            <td><b>传统块状经济的官方承认清单。</b>浙江大量镇级传统产业正是通过这份名单获得官方身份的，可作为 C 级集群升级为 B 级的依据。</td>
+          </tr>
+          <tr>
+            <td class="brand">「万亩千亿」新产业平台 / 未来产业先导区</td>
+            <td>省发改委 / 省经信厅</td>
+            <td>多批 / 规划 30 个</td>
+            <td>平台级</td>
+            <td><b>平台层，不是集群层。</b>用于顶层导航与「新产业平台」单独一类，不要与县域集群混排。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">数据来源：浙江省人民政府门户《浙江省「415X」先进制造业集群建设行动方案》（2023-01 印发）；潮新闻/省经信厅第三批核心区协同区名单（2025-01-03）；浙江省经信厅第四批遴选通知（2026-09-23）；工信部中小企业局 2025 年度中小企业特色产业集群公示；浙江省发改委 2025 年度浙江省特色小镇名单（2025-12）。时点：2026-10-09。各名单口径不同，<b>数量不可相加</b>。</div>
+  </div>
+
+  <div class="note info">
+    <p><b>为什么要指定「主骨架」。</b>河北的经验是：站点上所有数字（107 / 167 / 497 / 15,179）都能追到一份可引用的名单，所以读者能自己判断可信度。浙江如果五份名单并列而无所侧重，读者就无法判断「这个集群为什么被收录、为什么没被收录」。指定核心区/协同区名单为主骨架后，收录规则就变成一句可检验的话：<b>「凡是核心区/协同区，必收录；其余名单作为补充与标注层；站方整理的块状经济单独标档。」</b></p>
+  </div>
+</section>
+
+<!-- ================= 04 ================= -->
+<section id="s04">
+  <h2><span class="num">04</span>实体模型：把「镇街」提升为一等公民</h2>
+  <p class="lede">河北的模型是「集群挂在县上」。浙江的模型必须是「集群与地理多对多，镇街是一等实体」。</p>
+
+  <div class="arch">
+    <div class="arch-title">浙江产业带收录的四层实体模型</div>
+    <div class="arch-sub">上层是骨架（官方名单），下层是内容（集群档案与企业）。每层单独标核实程度。</div>
+
+    <div class="layer l1">
+      <div class="lh"><span>① 骨架层 · 官方名单</span><span class="badge">可引用来源</span></div>
+      <div class="body">
+        <div class="node"><b>415X 体系</b><span>4 世界级 + 15 千亿级 + X 新星</span></div>
+        <div class="node"><b>核心区 / 协同区</b><span>前三批累计 108 个</span></div>
+        <div class="node"><b>国家级特色产业集群</b><span>工信部口径 31 个</span></div>
+        <div class="node"><b>特色小镇 / 传统制造业试点</b><span>140 家 / 多批</span></div>
+      </div>
+    </div>
+    <div class="arrow">↓ 骨架派生出一级产业分类与收录清单</div>
+
+    <div class="layer l2">
+      <div class="lh"><span>② 地理层 · 四级行政区</span><span class="badge">浙江独有的一级</span></div>
+      <div class="body">
+        <div class="node"><b>省</b><span>浙江省</span></div>
+        <div class="node"><b>市</b><span>11 个设区市</span></div>
+        <div class="node"><b>县（市、区）</b><span>90 个县级行政区</span></div>
+        <div class="node"><b>镇 / 街道</b><span>浙江 1,300+ 个乡级单位，只收有产业的</span></div>
+      </div>
+    </div>
+    <div class="arrow">↓ 地理层与集群层通过「角色关系表」互链，而非树形从属</div>
+
+    <div class="layer l3">
+      <div class="lh"><span>③ 集群层 · 产业带实体</span><span class="badge">核心资产</span></div>
+      <div class="body">
+        <div class="node"><b>官方认定集群</b><span>有名单可引，标「官方认定」</span></div>
+        <div class="node"><b>特色小镇（产业型）</b><span>从 140 家里筛出制造业型</span></div>
+        <div class="node"><b>镇级块状经济</b><span>无官方名单，标「站方整理」</span></div>
+        <div class="node"><b>新星产业群 / 未来产业</b><span>标「成长阶段」字段</span></div>
+      </div>
+    </div>
+    <div class="arrow">↓ 每个集群档案向下挂企业；企业可与多个集群建立主/次归属</div>
+
+    <div class="layer l4">
+      <div class="lh"><span>④ 企业层 · 工厂记录</span><span class="badge">四档核实程度</span></div>
+      <div class="body">
+        <div class="node"><b>官方认定来源</b><span>公示名单、上市公告、政府公开</span></div>
+        <div class="node"><b>政府公开信息</b><span>统计公报、政府工作报告</span></div>
+        <div class="node"><b>媒体 · 协会来源</b><span>署名报道、行业协会材料</span></div>
+        <div class="node"><b>企业自报</b><span>未核验，页面明示</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>四张主表与两张关系表 <span class="tag">可直接落库</span></h3>
+  <p>河北的实体模型是「集群挂在县上」的树。浙江必须改成「集群与地理多对多」，因为同一产业横跨多镇、同一镇有多个产业。下面这套结构可以直接照着建表。</p>
+
+<pre class="codeblock"><span class="c">// ① 地理表 region —— 四级，带行政区划代码</span>
+<span class="k">region</span> {
+  id, name, level(<span class="s">"province"|"city"|"county"|"town"</span>),
+  parent_id, admin_code,        <span class="c">// 镇街级无国标代码，用自定义 code</span>
+  has_industry(boolean)         <span class="c">// 只收录有产业的镇街，其余不建实体</span>
+}
+
+<span class="c">// ② 集群表 cluster —— 一等公民，与行政区解耦</span>
+<span class="k">cluster</span> {
+  id, name, aliases[],          <span class="c">// 别名必填：大唐袜业 / 诸暨袜业 同一实体</span>
+  industry_l1,                  <span class="c">// 对应 415X 的 15 个千亿级集群</span>
+  industry_l2,                  <span class="c">// 二级细分，如"袜业""低压电器"</span>
+  tier(<span class="s">"A"|"B"|"C"</span>),            <span class="c">// 收录优先级，见第 06 节</span>
+  scale_tier(<span class="s">"千亿级"|"百亿级"|"新星"</span>),
+  stage,                        <span class="c">// 新星产业群 → 协同区 → 核心区</span>
+  honors[],                     <span class="c">// 每项含 granted_by + year，区分政府/协会</span>
+  metrics[],                    <span class="c">// 见下方 metrics 结构，禁止裸数字</span>
+  sources[], verified_at,
+  data_grade(<span class="s">"official"|"gov_open"|"media"|"site_curated"</span>)
+}
+
+<span class="c">// ③ 规模指标 metrics —— 四元组，强制拆开</span>
+<span class="k">metrics</span>[] { value, unit,
+  <span class="v">caliber</span>,   <span class="c">// "规上工业产值"|"全产业链产值"|"集群营收"|"市场成交额"|"网络零售额"</span>
+  year, source_name, source_url, verified_at }
+
+<span class="c">// ④ 关系表 cluster_region —— 多对多，带角色</span>
+<span class="k">cluster_region</span> {
+  cluster_id, region_id,
+  role(<span class="s">"核心区"|"协同区"|"辐射区"|"唯一产地"</span>),
+  is_primary(boolean)           <span class="c">// 一个集群可能横跨多县，标主产区</span>
+}
+
+<span class="c">// ⑤ 企业表 enterprise</span>
+<span class="k">enterprise</span> {
+  id, name, name_en, region_id, town_id,
+  main_cluster_id, other_cluster_ids[],   <span class="c">// 一企多集群，标主集群</span>
+  products[], honors[],
+  founded_year, website, public_phone, public_email,
+  data_grade(<span class="s">"official"|"gov_open"|"media"|"self_reported"</span>),
+  source_url, verified_at,
+  purchase_terms_self_reported{}          <span class="c">// 8 项，标"企业自报·未核验"</span>
+}
+
+<span class="c">// ⑥ 企业-集群关系表（允许一企多集群）</span>
+<span class="k">enterprise_cluster</span> { enterprise_id, cluster_id, is_primary(boolean) }</pre>
+
+  <div class="note good">
+    <p><b>为什么集群表要和行政区解耦。</b>河北可以用 <code>/cluster/{city}/{slug}</code> 这样的 URL，因为集群基本落在一个县里。浙江不行：一个「现代纺织与服装」千亿级集群的核心区在柯桥、协同区可能还有萧山与桐乡；「袜业」的主产区在诸暨大唐，但义乌也有大量袜企。如果集群实体直接绑在行政区上，跨镇产业带会被切碎，检索也会漏。所以：<b>URL 用 <code>/cluster/{slug}</code>，地理只作关系与检索维度</b>。</p>
+  </div>
+
+  <h3>企业归属判定规则 <span class="tag">必须有明文规则</span></h3>
+  <div class="tree">
+    <div class="q">一家企业属于哪个集群？</div>
+    <div class="branch">
+      <b>主判据：</b>注册地所在镇/街道 + 主营产品（两者都指向同一集群时，直接归属）<br>
+      <b>次判据：</b>当注册地与主营产品指向不同集群时，以<b>主营产品</b>为准，注册地仅作地理归属<br>
+      <b>多归属：</b>企业确实跨集群经营（既做袜机又做袜子）时，允许一企多集群，但必须指定一个 <code>is_primary</code><br>
+      <b>兜底：</b>无法判定时归入注册地所在县的主导集群，并在页面标注「归属待确认」
+    </div>
+    <div class="q">这条规则为什么要写进公开页面？</div>
+    <div class="branch">
+      因为归属会直接影响企业的曝光，也是企业最可能提出异议的地方。规则公开 = 异议有据可依 = 更正流程可执行。这与河北「排序只看事实、规则对每家企业一样」的原则同源。
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 ================= -->
+<section id="s05">
+  <h2><span class="num">05</span>字段与核实程度</h2>
+  <p class="lede">字段设计照抄河北的「够用就好」，核实程度则要从三档扩为四档。</p>
+
+  <h3>集群档案字段 <span class="tag">对照河北的集群档案页</span></h3>
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:150px">字段组</th><th style="width:320px">字段</th><th style="width:110px">核实程度</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="brand">基本信息</td><td>名称、英文名、别名、所属市、所属县（市、区）、核心产区镇街</td><td><span class="cb cb-h">官方</span></td><td>别名是浙江必需项（大唐袜业 / 诸暨袜业）</td></tr>
+          <tr><td class="brand">产业分类</td><td>415X 一级分类、二级细分、行业板块</td><td><span class="cb cb-h">官方</span></td><td>一级分类照 415X，不自造</td></tr>
+          <tr><td class="brand">称号与荣誉</td><td>称号名、授予单位、年份、级别（国家/省/协会）</td><td><span class="cb cb-h">官方</span> <span class="cb cb-m">协会</span></td><td><b>必须拆分政府认定与协会称号</b>，协会称号注明授予单位</td></tr>
+          <tr><td class="brand">规模指标</td><td>数值 + 单位 + 口径 + 年份 + 来源 + 核验日期</td><td><span class="cb cb-h">官方</span></td><td>六元组强制，禁止裸数字（见第 08 节）</td></tr>
+          <tr><td class="brand">产业概况</td><td>起源、发展沿革、产业链结构、产品系列、集散与外贸情况</td><td><span class="cb cb-m">媒体/政府</span></td><td>每个事实句尽量挂来源，做不到就整段标「站方整理」</td></tr>
+          <tr><td class="brand">代表企业</td><td>企业名、英文名、一句话主营、产品标签、官网、成立年、核实程度</td><td><span class="cb cb-h">官方</span> <span class="cb cb-m">媒体</span> <span class="cb cb-l">自报</span></td><td>只展示公开地址与官网公示联系方式，不含个人联系方式</td></tr>
+          <tr><td class="brand">采购指南</td><td>产品系列、常见规格、典型用途、验厂注意事项、交通指南</td><td><span class="cb cb-l">站方整理</span></td><td>照河北做法：明确标「采集于某年某月，具体以各厂报价单为准」</td></tr>
+          <tr><td class="brand">关联集群</td><td>同市其他集群、同品类其他产区</td><td><span class="cb cb-l">站方整理</span></td><td>由关系表自动生成，不需要人工填</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">对照来源：河北工厂网集群档案页（以「安平丝网」为例，抓取于 2026-10-09）。字段组划分沿用其结构，核实程度列为本报告建议。</div>
+  </div>
+
+  <h3>核实程度：三档扩为四档 <span class="tag">本报告的核心改动之一</span></h3>
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:140px">档位</th><th style="width:250px">含义</th><th style="width:280px">浙江的典型来源</th><th>页面呈现</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td class="brand"><span class="cb cb-h">A 官方认定</span></td>
+            <td>来自官方名单、政府公示、上市/新三板公告等具有认定效力的材料</td>
+            <td>省经信厅核心区/协同区名单、工信部中小企业特色产业集群公示、专精特新/单项冠军/隐形冠军公示、未来工厂名单、上市公告、国家企业信用信息公示系统</td>
+            <td>标「官方认定 · 附来源链接与核验日期」</td>
+          </tr>
+          <tr>
+            <td class="brand"><span class="cb cb-m">B 政府公开信息</span></td>
+            <td>来自政府发布的描述性材料，权威但非认定</td>
+            <td>县（市、区）统计公报、政府工作报告、新闻发布会实录、市经信局工作动态、地方志/年鉴</td>
+            <td>标「政府公开信息 · 附来源链接与核验日期」</td>
+          </tr>
+          <tr>
+            <td class="brand"><span class="cb cb-m">C 媒体 · 协会来源</span></td>
+            <td>署名媒体报道或行业协会公开材料</td>
+            <td>浙江日报/潮新闻、涌金楼、各市发布、县融媒；浙江省服装/皮革/经编等行业协会；中国轻工业联合会等</td>
+            <td>标「媒体 · 协会来源 · 附来源链接与核验日期」</td>
+          </tr>
+          <tr>
+            <td class="brand"><span class="cb cb-l">D 企业自报</span></td>
+            <td>企业通过入驻表单自行填写，本站未核验</td>
+            <td>企业入驻申请、「完善资料」提交内容</td>
+            <td>标「企业自报 · 本站未核验」，并在页面顶部再次说明</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">河北为三档（官方来源 / 媒体·协会来源 / 企业自报）。本报告建议增加「政府公开信息」一档，理由见下方说明。</div>
+  </div>
+
+  <div class="note">
+    <p><b>为什么值得多加一档。</b>河北的「官方来源」在页面上被定义得很清楚——官网、政府公开信息或上市公告。但这两类东西在浙江的量级差别很大：一份《省级特色产业集群核心区名单》是<b>认定</b>，一篇县政府工作报告里的产业描述是<b>陈述</b>。把它们压在同一档里，会同时造成两个后果：一是「官方」标签被稀释，读者不再认真对待；二是当企业质疑某个数字时，你无法说明这个数字的效力等级。</p>
+    <p>拆成 A/B 两档后，「官方认定」这一档的含金量可以真正被当成卖点——它对应的是企业能拿去用的东西。</p>
+  </div>
+
+  <h3>企业记录字段 <span class="tag">沿用河北，补两个浙江字段</span></h3>
+  <div class="grid-2">
+    <div class="card">
+      <h4 style="margin:0 0 10px;font-size:15px">沿用河北的字段</h4>
+      <ul style="margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2)">
+        <li>中文名 / 英文名（河北每个企业都给英文名，对海外采购商友好）</li>
+        <li>所属市 · 县（市、区）· 所属集群</li>
+        <li>一句话主营 + 产品标签（3–5 个，超出折叠为「+N」）</li>
+        <li>成立年份、官网、官网公示电话/邮箱、公开地址</li>
+        <li>资质与称号（逐条注明授予单位与年份）</li>
+        <li>采购条件 8 项：统一社会信用代码、年产能、资质认证、起订量、交货周期、能否 OEM/ODM、进出口经营权、欢迎到厂</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 10px;font-size:15px">浙江需补的字段</h4>
+      <ul style="margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2)">
+        <li><b>所在镇 / 街道</b>——浙江检索的主入口之一（「大唐的袜厂」比「诸暨的袜厂」更接近采购商的说法）</li>
+        <li><b>主集群 + 次集群</b>——支持一企多集群，避免跨镇企业被漏检</li>
+        <li>可选：产业大脑 / 未来工厂 / 数字化车间等标签（标为站方整理）</li>
+        <li>可选：内外销结构（浙江外贸比例高，但此项多需自报，默认不展示）</li>
+      </ul>
+      <p style="font-size:13px;color:var(--muted);margin-top:10px">河北的「采购条件 8 项」设计值得完整照搬：它把「企业未填」和「企业填了但未核验」区分得很清楚，并明确写「填写项数只影响可比性，不代表工厂优劣」——这一句是防止自报字段变成变相排名。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 ================= -->
+<section id="s06">
+  <h2><span class="num">06</span>收录优先级：按「可核性」分 A/B/C 三级</h2>
+  <p class="lede">浙江的集群数量级远大于河北，全量收录会拖垮质量。分级的作用是决定「先做什么」和「什么可以标成站方整理」。</p>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:80px">级别</th><th style="width:330px">范围</th><th style="width:150px">档案要求</th><th>数据等级</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td class="brand">A 级<br><span class="pill p-yes">必收</span></td>
+            <td>15 个千亿级特色产业集群的核心区 / 协同区（前三批 108 个中的制造业部分）<br>31 个国家级中小企业特色产业集群</td>
+            <td>完整集群档案：规模六元组、称号、产业链、代表企业、采购指南</td>
+            <td><span class="cb cb-h">官方认定</span> <span class="cb cb-m">政府公开</span></td>
+          </tr>
+          <tr>
+            <td class="brand">B 级<br><span class="pill p-part">应收</span></td>
+            <td>省级特色小镇中的产业型 / 制造业型<br>传统制造业改造提升分行业省级试点<br>有协会「中国 XX 之都/之乡/基地」称号且规模可核的镇级块状经济</td>
+            <td>简化档案：规模、称号、核心产区、代表企业 10–20 家</td>
+            <td><span class="cb cb-h">官方认定</span> <span class="cb cb-m">协会/媒体</span></td>
+          </tr>
+          <tr>
+            <td class="brand">C 级<br><span class="pill p-no">长尾</span></td>
+            <td>有明确主营、有本地企业集聚、可核实的镇街产业（如「XX 镇 制笔」「XX 镇 珍珠」）</td>
+            <td>轻档案：产业名、所在镇街、主营范围、已收录企业数</td>
+            <td><span class="cb cb-l">站方整理</span> + 逐条企业来源</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">分级为本报告建议，非官方分类。A/B 级的划分依据是「是否有可引用的官方认定」，C 级的核心纪律是<b>必须单独标为站方整理，不得混入官方来源</b>。</div>
+  </div>
+
+  <h3>三条收录判据 <span class="tag">缺一不可</span></h3>
+  <div class="grid-3">
+    <div class="insight">
+      <h4><span class="dot t"></span>① 有认定</h4>
+      <p>有官方名单认定，或有可查证的行业协会称号（注明授予单位与年份）。</p>
+      <p>只有地方宣传语、没有可引用的授予主体的，不进 A/B 级。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot t"></span>② 有可核规模</h4>
+      <p>至少有一个带来源、口径、年份的规模数字。</p>
+      <p>只有「远近闻名」「全国领先」这类描述而无数字的，降级或只进 C 级。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot t"></span>③ 有企业可挂</h4>
+      <p>在企业库中能匹配到不少于 10 家企业。</p>
+      <p>低于 10 家的，说明企业库还没铺到这一层——先补企业，再建集群档案，否则会得到一堆空壳页面。</p>
+    </div>
+  </div>
+
+  <div class="note risk">
+    <p><b>空壳集群是这类站点最常见的失败模式。</b>河北的做法是「为 77 个产业集群建档案，收录 15,179 家企业」——平均每个集群 197 家，页面是实的。浙江如果先追求「收录 300 个集群」而企业库只铺到几个市，会得到大量只有一段简介、没有一家企业的页面。搜索引擎不收录，采购商点进来就走。<b>宁可先做 30 个实的，不要做 300 个空的。</b></p>
+  </div>
+</section>
+
+<!-- ================= 07 ================= -->
+<section id="s07">
+  <h2><span class="num">07</span>采集流程</h2>
+  <p class="lede">顺序很重要：先把名单结构化，再建关系，最后铺企业。反过来做会返工。</p>
+
+  <div class="flow">
+    <div class="step">
+      <div class="sn">0</div>
+      <div class="sb"><b>吃透骨架名单</b>
+        把五份官方名单（415X、核心区/协同区、国家级特色产业集群、特色小镇、传统制造业试点）逐份转成结构化表：条目名、发布主体、批次、年份、对应县（市、区）、原文链接、原文数字。这一步只做转写，不做判断，产出是一张「名单原始表」。</div>
+    </div>
+    <div class="step">
+      <div class="sn">1</div>
+      <div class="sb"><b>建立地理层与主骨架互链</b>
+        建四级地理表（省 / 11 市 / 90 县 / 有产业的镇街），把核心区/协同区名单落到具体县（市、区）并标角色。同时确定每个集群的主产区镇街——这一步是浙江特有的、也是最耗人工的一步。产出是「集群 × 地理关系表」。</div>
+    </div>
+    <div class="step">
+      <div class="sn">2</div>
+      <div class="sb"><b>为 A/B 级集群建档案</b>
+        按第 05 节字段建档案。规模数字逐条追到原始来源，写成「数值 + 口径 + 年份 + 来源」六元组；称号逐条追到授予单位与年份。遇到两源矛盾（如某集群企业数在两个来源差 3 倍）时<b>并列展示并注明口径差异</b>，不要择一。</div>
+    </div>
+    <div class="step">
+      <div class="sn">3</div>
+      <div class="sb"><b>用官方名单反查企业</b>
+        这是浙江相对河北的最大优势。逐份拉取省级专精特新、制造业单项冠军、隐形冠军、未来工厂、上市/新三板、国家级特色产业集群内的企业名单，按注册地匹配到集群与镇街。这一步产出的企业全部是 <span class="cb cb-h">官方认定</span> 档，质量远高于自报。</div>
+    </div>
+    <div class="step">
+      <div class="sn">4</div>
+      <div class="sb"><b>企业库与集群库互链，开检索入口</b>
+        至少四个入口：按产品、按集群、按镇街、按核实程度。镇街入口是浙江特有且必须有的——采购商的检索习惯常常是「大唐的袜厂」而不是「袜业集群」。</div>
+    </div>
+    <div class="step">
+      <div class="sn">5</div>
+      <div class="sb"><b>开放自报与更正</b>
+        免费入驻需通过公开信息核对（官网、工商公示、行业名录）+ 一次电话确认；不通过时说明原因。已收录企业可「完善资料」。同时建立更正与下线通道，附页面链接、需更正字段与可核依据。</div>
+    </div>
+  </div>
+
+  <div class="note info">
+    <p><b>一个可以省掉大量人工的技巧。</b>浙江各县（市、区）的统计公报与政府工作报告里，通常有当地主导产业的表述与数字。把「集群 → 对应县（市、区）→ 该县近三年统计公报/政府工作报告」做成一张任务表，逐条摘录并标注年份与口径，可以一次性把 B 级档的来源覆盖率做上去，而且全部是「政府公开信息」及以上等级。</p>
+  </div>
+</section>
+
+<!-- ================= 08 ================= -->
+<section id="s08">
+  <h2><span class="num">08</span>浙江特有的口径陷阱</h2>
+  <p class="lede">河北那套体系最大的价值在于「不编造、不混算」。浙江的数据更多，混算的风险也更大。</p>
+
+  <div class="grid-2">
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 1 · 产值口径五选一</h4>
+      <p>同一集群常见五种口径：<b>规上工业产值、全产业链产值、集群营收、市场成交额、网络零售额</b>。义乌式的「市场成交额」与工业产值根本不是一回事，量级可以差一个数量级。</p>
+      <p><b>处理：</b>规模字段强制存「数值 + 单位 + 口径 + 年份 + 来源 + 核验日期」。页面上每个数字后面必须带口径标签。禁止跨口径比较，禁止把多个口径的数字加总成一个「总规模」。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 2 · 核心区不是地理边界</h4>
+      <p>「核心区」是省里认定的<b>建设主体</b>（通常是某个县或开发区），不是这个产业的地理范围。一个千亿级集群可能有一个核心区、三个协同区，产业实际还辐射到周边若干镇。</p>
+      <p><b>处理：</b>集群实体与行政区实体解耦，用关系表带角色（核心区 / 协同区 / 辐射区 / 唯一产地）。不要把「核心区所在县」当成「集群所在地」写死。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 3 · 协会称号 ≠ 政府认定</h4>
+      <p>浙江的「中国 XX 之都 / 之乡 / 基地」称号多由中国轻工业联合会、中国纺织工业联合会、中国五金制品协会等授予，与工信部、省政府的认定效力不同。</p>
+      <p><b>处理：</b>称号字段必须拆出「授予单位」与「授予单位类型（政府 / 行业协会）」，并注明年份。协会称号不能写进「官方认定」档，也不能包装成政府背书。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 4 · 特色小镇 ≠ 产业集群</h4>
+      <p>140 家省级特色小镇里含文旅、历史经典、双创、金融等类型，只有一部分是产业型/制造业型。</p>
+      <p><b>处理：</b>逐条判定类型，只把产业型映射进集群；其余另立「特色小镇」实体。两个实体类型不要混在同一张列表里，否则「浙江有 140 个产业集群」这种错话很容易被写出来。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 5 · 集群更名与沿革</h4>
+      <p>浙江近年把「块状经济」话术逐步换成「现代产业集群」，同一地区同一产业在不同年份名单里可能以不同名称出现（大唐袜业 / 诸暨袜业；柳市低压电器 / 乐清智能电气）。</p>
+      <p><b>处理：</b>集群表必须有 <code>aliases[]</code> 与沿革说明字段，并记录名称变更的年份与依据。否则会重复建档，或让老采购商搜不到。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 6 · 年份跨度造成的「伪增长」</h4>
+      <p>浙江不少镇级集群的规模数字来自 2017–2019 年的报道，而新数字可能是 2025–2026 年口径。把两者放在一起比较会得出虚假的增长率。</p>
+      <p><b>处理：</b>每个规模数字强制带年份，页面上显示「该数字为 XXXX 年口径」；跨年份对比时标注「口径与时点不同，不可直接比较」。这比给一个漂亮但错误的增长率有价值得多。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 7 · 企业跨集群的归属争议</h4>
+      <p>浙江企业集团化、跨镇设厂普遍，一家企业可能同时属于两个集群。</p>
+      <p><b>处理：</b>允许一企多集群，但必须指定主集群；归属规则（第 04 节）写进公开页面；页面提供「归属有误？点此更正」入口。这是最可能收到企业投诉的字段，必须一开始就设计好出口。</p>
+    </div>
+    <div class="insight">
+      <h4><span class="dot r"></span>陷阱 8 · 站方整理内容混入官方档</h4>
+      <p>浙江大量镇级块状经济没有官方名单，只能站方整理。如果这些内容被放在和官方认定一样的样式里，整个分档体系就废了。</p>
+      <p><b>处理：</b>站方整理内容用不同的视觉标记（如整段灰底 + 「站方整理」角标），并在服务条款里明确写「未逐条核实，仅作检索线索使用」。河北对这一点的处理是全文里做得最克制、也最值得学的一处。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 ================= -->
+<section id="s09">
+  <h2><span class="num">09</span>落地路线与自检清单</h2>
+  <p class="lede">分三阶段。每一阶段的验收标准是「页面是实的」，不是「条数是多的」。</p>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th style="width:110px">阶段</th><th style="width:300px">做什么</th><th style="width:220px">验收标准</th><th>关键风险</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td class="brand">第一阶段<br>骨架期</td>
+            <td>五份名单结构化；四级地理表建成；核心区/协同区落到县（市、区）与镇街；产业分类按 415X 定稿</td>
+            <td>能回答「浙江有哪些官方认定的产业集群、分别在哪个县哪个镇」</td>
+            <td>把五份名单相加成一个总数</td>
+          </tr>
+          <tr>
+            <td class="brand">第二阶段<br>档案期</td>
+            <td>完成 A 级全部 + B 级大部分的集群档案；规模数字全部追到原始来源；用官方名单反查企业，铺满 A/B 级集群</td>
+            <td>每个 A/B 级集群页面至少挂 20 家可核企业，且每个规模数字都有来源、口径、年份</td>
+            <td>空壳集群页；规模数字无口径</td>
+          </tr>
+          <tr>
+            <td class="brand">第三阶段<br>长尾与自报期</td>
+            <td>补 C 级镇街块状经济；开放免费入驻与资料完善；上线更正/下线通道；接入站内问答（只检索站内库）</td>
+            <td>C 级内容全部带「站方整理」标记；更正通道有可查进度的回执</td>
+            <td>站方整理混入官方档；自报字段变成变相排名</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-cap">阶段划分为本报告建议。阶段名称借用河北「先把产业推广出去、产生真实价值之后再谈商业化」的顺序观。</div>
+  </div>
+
+  <h3>上线前自检清单</h3>
+  <ul class="checklist">
+    <li><b>口径声明</b>：五份名单是否逐份标明发布主体、数量、时点，并显式声明「不可相加」？</li>
+    <li><b>主骨架规则</b>：是否写明了「哪些必收、哪些是补充层、哪些是站方整理」这一句可检验的规则？</li>
+    <li><b>镇街实体</b>：检索入口是否支持「按镇街」？镇街级 URL 是否可访问？</li>
+    <li><b>规模数字</b>：每个数字是否都带「数值 + 口径 + 年份 + 来源 + 核验日期」？有没有裸数字？</li>
+    <li><b>矛盾并列</b>：遇到两源冲突的数字，是否并列展示并说明差异原因，而不是静默择一？</li>
+    <li><b>称号拆分</b>：协会称号是否与政府认定分列，并注明授予单位与年份？</li>
+    <li><b>核实程度</b>：四档是否逐条标注在页面上，而不是整页一个标签？</li>
+    <li><b>站方整理隔离</b>：站方整理的内容是否有独立的视觉标记，且不与官方档同款式呈现？</li>
+    <li><b>联系方式边界</b>：是否只展示公开地址与官网公示联系方式，不含任何个人联系方式？</li>
+    <li><b>排序规则</b>：排序依据是否公开、是否只依据可核验程度与资料完整度、是否对所有企业一致？</li>
+    <li><b>退出边界</b>：是否明确写下「不下单、不收款、不展示报价、不撮合、不抽成、不保证回复」？</li>
+    <li><b>更正通道</b>：企业信息更正与下线的入口是否可达，且更正流程有可查进度的回执？</li>
+    <li><b>企业归属</b>：企业-集群归属规则是否写进公开页面，并提供「归属有误」的反馈入口？</li>
+    <li><b>问答边界</b>：站内问答是否只检索站内实体库、是否标注「内容由 AI 生成」、算法备案是否已办结并公示？</li>
+    <li><b>空壳检查</b>：是否存在已建档但挂 0 家企业的集群页面？如有，是否已下线或合并？</li>
+  </ul>
+</section>
+
+<!-- ================= 10 ================= -->
+<section id="s10">
+  <h2><span class="num">10</span>来源地图</h2>
+  <p class="lede">按可用等级排序。前四类是骨架来源，必须用；后三类是补充，使用时要标档。</p>
+
+  <ul class="src-list">
+    <li><span class="idx">01</span><span><b>浙江省人民政府门户（zj.gov.cn）</b>——《浙江省「415X」先进制造业集群建设行动方案》（2023-01 印发）、各类省政府办公厅文件。用于 415X 分类骨架与顶层口径。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">02</span><span><b>浙江省经济和信息化厅（jxt.zj.gov.cn）</b>——省级特色产业集群核心区/协同区与「新星」产业群名单（第一批至第四批）、专精特新与单项冠军公示、未来工厂名单。前三批累计核心区 41 + 协同区 67 = 108 个，新星产业群 37 个；第四批于 2026-09 起遴选。用于主骨架。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">03</span><span><b>工业和信息化部中小企业局</b>——中小企业特色产业集群名单。浙江 2025 年度新增 8 个，累计 31 个。用于集群荣誉字段最高一档。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">04</span><span><b>浙江省发展和改革委员会</b>——浙江省特色小镇名单（2025 年度 140 家：命名类 90 + 创建类 50，清单化动态调整）、「万亩千亿」新产业平台。特色小镇需先做类型筛选。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">05</span><span><b>各设区市 / 县（市、区）政府门户与统计局</b>——统计公报、政府工作报告、新闻发布会实录、地方志与年鉴。是 B 级档规模数字的主要来源，也是判定镇街产业的主要依据。<span class="cb cb-m">政府公开信息</span></span></li>
+    <li><span class="idx">06</span><span><b>浙江省民政厅区划地名处 / 行政区划网</b>——11 个设区市、90 个县级行政区（37 市辖区 + 20 县级市 + 32 县 + 1 自治县）、1,300+ 个乡级行政单位。用于地理层建模与行政区划代码。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">07</span><span><b>行业协会</b>——浙江省服装行业协会、浙江省皮革行业协会、浙江省经编行业协会、中国轻工业联合会、中国纺织工业联合会、中国五金制品协会等。协会称号与行业数据的主要来源，必须注明授予主体。<span class="cb cb-m">媒体 · 协会来源</span></span></li>
+    <li><span class="idx">08</span><span><b>地方媒体</b>——浙江日报 / 潮新闻、涌金楼、各市发布、县级融媒体。用于集群沿革、规模数字与代表企业线索，需逐条署名与核验日期。<span class="cb cb-m">媒体 · 协会来源</span></span></li>
+    <li><span class="idx">09</span><span><b>企业侧公开材料</b>——企业官网、国家企业信用信息公示系统、上市/新三板公告。用于企业记录与工商信息核对。<span class="cb cb-h">官方认定</span></span></li>
+    <li><span class="idx">10</span><span><b>商业查询平台（企查查 / 天眼查等）</b>——仅作线索发现，不作为「官方来源」引用。工商信息需回溯到国家企业信用信息公示系统核实后再标档。<span class="cb cb-l">仅作线索</span></span></li>
+  </ul>
+</section>
+
+<!-- ================= 11 ================= -->
+<section id="s11">
+  <h2><span class="num">11</span>边界与免责</h2>
+  <p class="lede">这一节不能省。河北把口径与边界写在明面上，是它能被采购商当作可信工具的原因。</p>
+
+  <div class="note risk">
+    <p><b>时点。</b>本报告所有浙江侧数字的抓取时点为 <b>2026-10-09</b>。其中「415X」体系出自 2023-01 印发的行动方案（其规划目标年为 2025 年，2025 年后的进展需以最新官方通报为准）；核心区/协同区与新星产业群为前三批累计值，第四批遴选于 2026-09 启动、结果尚未公布；国家级中小企业特色产业集群为 2025 年度公示后的累计数；特色小镇为 2025 年度名单。</p>
+    <p><b>口径。</b>本报告中浙江各项「集群数量」出自不同名单、不同发布主体、不同认定层级，<b>互不相加、互不比较</b>。文中已逐处标明来源与口径。</p>
+    <p><b>未覆盖范围。</b>本报告只做方法论与体系设计，未逐条核验任何一个具体集群的规模数字，也未产出任何集群或企业记录。所有示例性集群名称（大唐袜业、濮院毛衫、柳市电器、织里童装等）仅用于说明「镇街级集群」这一形态特征，其名称归属、称号与规模均需按第 07 节流程逐条核验后方可使用。</p>
+    <p><b>与参照站点的关系。</b>本报告的方法论提炼基于对河北工厂网公开页面（首页、关于我们、服务条款、产业地图、工厂名录、集群档案、企业详情）的阅读与归纳，不表示与该站点运营方存在任何合作、授权或背书关系。其页面设计与文案的著作权归原权利人所有。</p>
+    <p><b>免责。</b>本报告为体系设计建议，不构成对任何产业集群、企业或交易的建议。收录体系上线前，数据来源的合规性、企业信息的展示边界（尤其是不公开个人联系方式这一条）以及 AI 问答的算法备案，均需另行完成法律与合规审查。</p>
+  </div>
+</section>
+
+<footer>
+  浙江产业集群收录体系搭建方案 · 参照河北工厂网（hebei.mengkai.ren）公开方法论整理 · 数据抓取时点 2026-10-09 · 本报告为方法论设计文件，非数据收录成果
+</footer>
+
+</div>
+</body>
+</html>

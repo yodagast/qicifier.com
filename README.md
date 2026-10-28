@@ -36,9 +36,9 @@
 > 但仍属浙江，所以分开记（`region_source = benchmark`）。
 >
 > 浙江那 2626 家里，**114 家落不到县一级**（名单没给地址、企业名里也不含地名；
-> 其中 3 家是对标龙头，它们的所在地只有市级），所以地图按县求和是 **2512 家**。
-> 这个差额在产业地图的第一格副标题里写出来
-> （「其中 114 家…落不到县一级（地图可汇总 2512 家）」），不让读者自己发现矛盾。
+> 其中 3 家是对标龙头，它们的所在地只有市级），所以地图按县求和是 **2512 家**
+> （2512 + 114 = 2626）。这个差额只写在 `/about` 的「口径与边界」里：产业地图的
+> 数字带**不重复**它 —— 读者来地图是找产区，不是来做减法。
 
 ### 调研清单的 C 档：照常展示，但标签必须降级
 
@@ -1052,6 +1052,9 @@ cd backend && ../.venv/bin/python -m app.cli seed --drop && cd ..            # �
 详见下面的「启停：`./zanzhu.sh`」。
 
 前端产物：`cd frontend && npm run build` → `dist/`。
+要让内容被搜索引擎 / AI 抓取（预渲染 125 页并生成 404.html）：
+`cd frontend && npm run build:seo`（= `vite build` + `tools/prerender.py`，需后端在跑）。
+详见「搜索可见性：预渲染 / sitemap / robots / 行业研究」一节。
 
 ---
 
@@ -1413,18 +1416,23 @@ manual_sites.json ────────────────────�
 
 **撤掉之后又发现它撤得不对**：读者的第一反应本来就是「逐个点开 11 个市、把数字加起来」
 （2136），再跟第一格的 2699 比。差额不写在页面上，这个矛盾就仍然由读者自己发现，
-而他们的结论不会往「有 109 家没有地址」上想。所以差额现在写在第 1 格的副标题里，
-**只说差额有多少、为什么**，不占格位、不进总量：
+而他们的结论不会往「有 109 家没有地址」上想。所以差额曾写进第 1 格的副标题
+（「其中 114 家名单未给地址…落不到县一级（地图可汇总 2512 家）」）。
+
+**这一行最终又按站方要求撤掉了**：它解释的是我们自己的口径缝，而读者来地图是找产区，
+不是来做减法；一句话带三个数字，反而让第一格读不下去。差额的算式与说明仍在
+`/about` 的「口径与边界」里 —— **口径要能核对，但不必在每一页重复**：
 
 | 格 | 数字 | 含义 |
 | --- | --- | --- |
-| 1 | 4228 | 已收录企业（副标签：浙江 2626 · 省外对比 1602；再一行「其中 114 家名单未给地址、企业名里也不含地名，落不到县一级（地图可汇总 2512 家）」） |
+| 1 | 4228 | 已收录企业（副标签：浙江 2626 · 省外对比 1602） |
 | 2~4 | 11 / 90 / 79 | 设区市 / 县级行政区 / 有产业的镇街道 |
 
-`/about` 的「口径与边界」里保留同一条说明
+`/about` 的「口径与边界」保留这条说明
 （「地图按县级政区汇总：来源名单没给地址、企业名里也不含地名的浙江企业落不到县一级，
-地图上点不到，但它们仍在企业名录里可检索 —— 地图装得下的家数不等于收录总数」）；
-地图页那一行是这条声明的**入口版本**，两处数字由同一批数据算出来。
+地图上点不到，但它们仍在企业名录里可检索 —— 地图装得下的家数不等于收录总数」）。
+它是这条口径的**唯一**落点；`tests/test_tools.py` 断言地图数字带里不再出现
+「落不到县一级 / 地图可汇总」，防止它被「顺手补回去」。
 
 数字带是**固定 4 格 + 三档断点**（4 / 2 / 1 列，每种都铺满整行）。
 加减格子时要同时改断点里的 `border` 规则，否则某一行会缺左边线或行线 ——
@@ -1504,6 +1512,134 @@ manual_sites.json ────────────────────�
 
 ---
 
+## 搜索可见性：预渲染 / sitemap / robots / 行业研究
+
+2026-10-28 的 SEO/GEO 审计只得出一个结论：**搜索引擎和 AI 爬虫拿到的页面是空的**。
+全站是客户端渲染的 SPA，nginx 对任何路径都回同一份 `index.html`，正文要等浏览器执行 JS
+再向后端取数。Google 有钱渲染 JS（排队、不保证），百度 / Bing 中文 / 微博微信内搜基本不执行，
+GPTBot / ClaudeBot / PerplexityBot / Bytespider 更是不执行 —— 4,000 多家企业与 200 多个集群
+档案，一个字都进不了语料。
+
+现在的分工是两层，各管一段，**不要互相替代**：
+
+| 层 | 覆盖 | 产出 | 谁在维护 |
+| --- | --- | --- | --- |
+| 预渲染 | 首页 + 6 个说明/列表页 + 118 个非薄页集群 + 行业研究列表与每篇文章 | `dist/<path>/index.html` | `tools/prerender.py` |
+| 页面 head | 全站 | title / description / canonical / OG / JSON-LD | `frontend/src/seo.js` 的 `applySeo` |
+
+行业研究**不走**「后端直出整份 HTML」那条老路：它是站点的内容栏目，正文要嵌在页头 /
+页脚 / 导航之间，所以由 Vue 页面渲染、靠预渲染保证可被读到（见第 4 节）。
+
+### 1. 预渲染（`tools/prerender.py`）
+
+```bash
+cd frontend && npm run build        # 或一步到位：npm run build:seo
+cd .. && .venv/bin/python tools/prerender.py
+```
+
+- 用 Playwright 打开 `vite preview`（它把 `/api` 代理到后端），等页面**真的加载完**
+  再把 `page.content()` 写成 `dist/<path>/index.html`：
+  `h1` 只证明「页面挂上了」，列表页的 h1 是同步渲染的，数据还在路上 ——
+  所以还要等 `.loading` 占位消失，最后一页 `.loading` 还在就报「仍在加载态」，
+  不静默写出一份没有数据的快照；
+- 预览服务每次**现取空闲端口**并独立进程组，用完整组收掉：复用「4173 上有人在响应」
+  的那个进程是陷阱 —— 它手里是旧 dist（`npm run build` 会换掉所有带哈希的文件名），
+  表现成随机某一页等不到 `h1`；
+- 单页失败重试一次；只想补渲染几页时用 `--only /clusters --only /enterprises`；
+- URL 清单**从后端拉**（`/api/clusters` 与 `/api/research`），不手写 —— 集群增删、
+  研究文章导入都是常态，
+  手写清单会让「sitemap 里的 URL」与「磁盘上的产物」对不上，那正是软 404 的来源；
+- **跳过薄页集群**（`is_stub`，挂载企业 < 10 家，当前 94 个）：提交一堆「集群名 + 一句话」
+  的页面只会让搜索引擎判定整站质量偏低。企业数补到 10 家以上自动进来，不需要人工维护名单；
+- 落盘目录要用**解码后**的路径：集群 slug 带中文（`415X-人工智能`），URL 里是百分号编码的，
+  而 nginx 是解码后去文件系统找目录的。落成 `415X-%E4%BA%BA.../` 的话线上永远命不中；
+- 顺带写 `dist/404.html`（`noindex`），给 nginx 的 `try_files … =404` 兜底。
+
+**关键约束：head 里的东西只能由 `src/seo.js` 一份实现写。** 预渲染跑的是同一套 Vue 代码，
+所以 `applySeo` 在预渲染时写进 HTML、在站内导航时改写 DOM，天然一致。谁再写一份
+「构建时注入 meta」的逻辑，两边一定漂移，最典型的事故是预渲染 HTML 里是 A 标题、
+用户进来后 JS 改成 B 标题。
+
+详情页（集群 / 企业）拿到数据后覆盖 head：标题用真实名字（4,000 多个企业页共用一个
+「企业详情 · 杭州波动粒子」等于放弃了标题），描述用页面上已有的事实拼（产业 / 产区 /
+家数 / 核实档位），不写模板空话；集群页挂 `CollectionPage` + `ItemList`，企业页挂
+`Organization`（**不用 `LocalBusiness`**；集团站 / 母公司站不进 `url`），`/about` 挂
+`Dataset` + `FAQPage`。JSON-LD 不随页面切换残留，`applySeo(null)` 会清掉上一页那段。
+
+### 2. `/sitemap.xml` 由库生成
+
+`backend/app/routers/sitemap.py`：静态页 + 非薄页集群 + 已发布的研究文档。
+薄页不进 sitemap（理由同上）；中文 slug 用 `quote()` 编码（XML 不接受裸中文 URL）。
+不写成构建时静态文件，因为集群与企业是**灌库之后才会变**的 —— 静态文件必然滞后，
+而 sitemap 唯一的价值是「列出来的 URL 一定存在」。
+
+### 3. `robots.txt` 与 `llms.txt`
+
+都在 `frontend/public/`（构建时原样复制到 `dist/`）。robots 挡住 `/login`、`/favorites`、
+`/admin`、`/api/admin` 与 `?q=` / `?page=` 参数页；**不挡 AI 抓取器** ——
+那一组正是 GEO 的入口，被白嫖的风险靠 `/api` 限流解决。`llms.txt` 写清数据口径与
+机器可读接口，供 AI 引擎直接引用。
+
+### 4. 行业研究（`/research`）
+
+**正文嵌在站点页面里**，不是一份独立文档：`/research` 是博客列表，`/research/<slug>`
+把文章正文渲染进页头 / 页脚 / 导航之间。文档由后台导入，存成文件而不是入库：
+
+```
+data/research/index.json      # 清单：slug / title / summary / published_at / updated_at / source_file
+data/research/<slug>.html     # 文档原文（自带 <style>，原样保存）
+```
+
+与名单导入同一条原则（产物文件才是数据源），但**导入即生效，不需要灌库** ——
+它不进数据库。接口：
+
+| 方法 | 路径 | 说明 |
+| --- | --- | --- |
+| `GET` | `/api/research` | 清单（JSON，公开）：标题 / 摘要 / 日期 / slug |
+| `GET` | `/api/research/<slug>` | 单篇：`article` 元数据 + `body`（正文片段）+ `styles`（文档自带 CSS） |
+| `GET` | `/api/admin/research` | 清单（管理视图） |
+| `POST` | `/api/admin/research/import` | multipart：`file` + 可选 `slug` / `title` / `summary` / `published_at` |
+| `DELETE` | `/api/admin/research/<slug>` | 下线（文件一起删，链接立刻 404） |
+
+```bash
+curl -X POST $BASE/api/admin/research/import -H "X-Admin-Token: $TOKEN" \
+  -F file=@docs/浙江产业集群收录体系搭建方案.html \
+  -F summary='三层数据分离、五档核实程度、集群与行政区解耦。' \
+  -F published_at=2026-10-09
+```
+
+页面：`/admin/contacts` 底部的「行业研究文档」（与名单导入是两条链路，别混）。
+
+**为什么拆 `body` / `styles` 而不是直出整份 HTML**：整份文档塞进页面会带上它自己的
+`<html>` / `<head>` / `<title>`；而文档的 CSS 里有 `:root{}` / `body{}` / `*{}`，
+原样注入会改掉全站排版。所以正文与样式分开返回，样式由
+[researchDoc.js](frontend/src/researchDoc.js) 统一加 `.research-doc` 作用域前缀
+（`@media` 递归进去、`@font-face`/`@keyframes` 原样保留），只影响文章那一块。
+
+**两层清洗**：服务端先把 `<script>` 从正文里剥掉；前端再用 `DOMParser`（不执行脚本）
+走一遍，去掉 `on*` 事件、`javascript:` 链接与 `iframe`/`object`/`embed`，然后才交给
+`v-html`。之所以要两层，是因为这份内容最终进的是**同源**页面，而登录令牌就在 localStorage 里。
+
+**slug** 允许中文（与集群 slug 同风格，`slug` 留空取文件名），但必须挡住
+`/`、`..` 等路径字符，否则能写到 `data/research/` 之外。
+
+**发布后要重跑预渲染**：页面立刻可看（前端实时取接口），但收录引擎拿到的仍是旧快照；
+`npm run build:seo` 会把 `/research` 与每篇文章一起渲染进 `dist/`。新 slug 在下次预渲染
+之前没有产物，nginx 用列表页骨架兜底（见第 5 节），所以不会 404。
+
+### 5. nginx
+
+参考配置在 `deploy/nginx.qicifier.com.conf`（**不在部署链路上**，要人工同步到服务器）。
+四处必须改：`gzip`（现在 200KB+ 的 JS 是裸传的）、`robots.txt` 命中真文件、
+`sitemap.xml` 反代到后端、`try_files $uri/index.html … =404`（现在不存在的路径返回 200 + 空白页）。
+`/research` **不要**反代：它是站点路游，靠预渲染；只加一条「新 slug 退回列表页骨架」的
+`try_files`，让后台刚导入、还没重新预渲染的文章也能打开。
+`deploy/nginx.qicifier.com.conf` 文件头写了上线后的 `curl` 验收命令。
+
+改完先确认**发布的确实是新 dist**：审计实测线上引用 `index-Dpbpy29H.js`，而本地
+`dist/` 建出来是另一个哈希 —— 部署链路不同步时，所有改动都"看不见效果"，
+先查这条，别怀疑代码。
+
 ## 目录结构
 
 ```
@@ -1514,7 +1650,8 @@ backend/
     schemas.py            响应模型 + 核实程度标签 + 空壳集群阈值
     routers/              stats / tracks / clusters / enterprises / regions /
                           admin（人工补充） / admin_lists（名单批量导入 + 重新灌库） /
-                          admin_clusters（产业带档案编辑）
+                          admin_clusters（产业带档案编辑） /
+                          research（行业研究文档，直出） / sitemap（/sitemap.xml）
     services/queries.py   公共聚合查询
     services/contacts.py  联系方式分层合并（人工 > 自动 > 名单 > 摘要），唯一实现
     services/list_import.py  名单 CSV 的通用解析与落盘（导入接口与 tools/parse_*.py 共用）
@@ -1528,19 +1665,25 @@ frontend/
   src/
     api.js                接口封装 + 核实程度样式映射 + 五档标签（GRADE_LABELS）与档位展开（tierLabel）
     site.js               备案主体信息（主办单位全称 / ICP / 公安备案 / 盾牌图标 / 联系邮箱）唯一出处
+    seo.js                head 的唯一实现：title / description / canonical / OG / robots / JSON-LD
+    researchDoc.js        行业研究：正文清洗（DOMParser）+ 文档 CSS 加 .research-doc 作用域
     App.vue               版式、导航、页脚（三列 + 备案信息栏）
     styles.css            设计令牌与全站形制（档案台账风格，见「界面设计」一节）
     views/                Home / MapView / ClusterList / ClusterDetail /
-                          EnterpriseList / EnterpriseDetail / About /
+                          EnterpriseList / EnterpriseDetail / ResearchList / ResearchArticle / About /
                           CustomerService（客户服务）/ Company（关于我们）/
                           Admin（人工补充）/ AdminClusters（产业带档案）
     components/           GradeTag / SourceTag / Pager /
                           EnterpriseRow / ClusterRow（登记册的行，名录与列表用）
                           EnterpriseCard（单条记录的场景，如集群页挂载企业）
   img/                    备案图标.png（公安备案官方盾牌，勿改名）
+  public/                 robots.txt / llms.txt（构建时原样复制到 dist 根目录）
+  scripts/                （预留；预渲染脚本在 tools/prerender.py，用 .venv 的 Playwright）
 .run/                    启停脚本的运行产物：api.pid / web.pid / 日志（已 gitignore）
+deploy/                  服务器配置参考（nginx.qicifier.com.conf，不在部署链路上）
 zanzhu.sh                启停脚本（start / stop / restart / status / logs）
 tools/
+  prerender.py            预渲染需要被搜索抓到的页面 → dist/<path>/index.html
   parse_juren.py          解析“小巨人”名单 PDF
   parse_mingpin.py        解析制造精品目录 PDF（列错位、赛道名跨行、序号粘连均已处理）
   build_seed.py           生成 415X 赛道与镇街块状经济种子
@@ -1553,6 +1696,7 @@ tools/
 data/
   source/                 名单原文解析结果
   curated/                站方整理（候选官网清单、骨架种子、发现结果、人工补充、CSV 模板）
+  research/               行业研究文档（index.json + <slug>.html），由后台导入，正文嵌在 /research 页面里
   cache/                  抓取缓存（可删；改验收规则需配合 --revalidate）
 docs/                     调研文件（方法论来源）
 ```
@@ -1624,7 +1768,7 @@ docs/                     调研文件（方法论来源）
 | 位置 | 作用 |
 | --- | --- |
 | `frontend/index.html` 的静态 `<title>` | JS 执行前 / 无 JS 时的兜底，也是搜索引擎看到的那份 |
-| `frontend/src/main.js` 的 `SITE_TITLE` 常量 | 路由切换时改写 `document.title` |
+| `frontend/src/site.js` 的 `SITE_TITLE` 常量 | 路由切换时改写 `document.title`（由 `src/seo.js` 的 `applySeo` 统一写入） |
 
 不一致的后果很具体：首屏会先闪一下旧名字，搜索结果里会出现两个站名。
 
@@ -1634,22 +1778,26 @@ docs/                     调研文件（方法论来源）
 
 ### 页脚结构（三列）
 
-客户服务 / 网站地图 / 关于我们，下方是主体声明与备案信息栏。五条内容约定：
+客户服务 / 网站地图 / 关于我们，下方是主体声明与备案信息栏。六条内容约定：
 
 - **网站地图列只放通用入口**（首页 / 产业地图 / 产业集群 / 企业名录 / 关于我们），不列具体类目 —— 类目随运营增删，写死在页脚必然过期。
 - **账户流（登录 / 收藏）不进页脚**：未登录点进去只会被踢回登录框，等于制造无效点击；账户入口在顶栏。
 - **客户服务列直接公开联系邮箱** `contact@qicifier.com`，保证这一列每一项都点得动（邮箱是 `mailto:`，不是死文本）。
 - **页脚不放订阅表单**：留资入口已撤下，改成公开邮箱，用户想联系直接写信即可。
-- **关于我们列放说明性页面**，顺序为「关于本站」（`/company#about-us`）→「数据导入」（`/admin/contacts#import`）→「数据来源与核实程度」（`/about`）。
-  这个顺序是刻意的：**站是什么 → 数据怎么进来的 → 进来的数据有多可信**。
+- **关于我们列放说明性页面**，顺序为「关于本站」（`/company#about-us`）→「数据导入」（`/admin/contacts#import`）→「数据来源与核实程度」（`/about`）→「行业研究」（`/research`）。
+  这个顺序是刻意的：**站是什么 → 数据怎么进来的 → 进来的数据有多可信 → 站方自己怎么看这个行业**。
   「数据导入」指向管理页的批量导入段落（导入功能一直在那里，此前没有能直达的地址）；
   `/admin/contacts#import` 的区块要解锁后才渲染，所以 `main.js` 的 `scrollBehavior`
   在目标不存在时返回 `false`（不把选择器交给 router，避免那条
   `Couldn't find element using selector` 告警），由该页在解锁后自己补滚一次。
   运营性栏目（用户故事 / 公司故事 / 公司新闻）已全部移除，页面上只留能长期维护的备案类信息。
-- **顶部导航只放内容入口**（产业地图 / 产业集群 / 企业名录 / 关于我们）：
-  `/about` 是说明性页面，归页脚「关于我们」列，不在导航里重复一遍 —— 同一个东西出现在两处，
-  读者会以为它们是两个不同的页面。
+- **「行业研究」用 `RouterLink`**（`/research`）：正文嵌在站点页面里，是普通站点路由。
+  早先它是后端直出的独立文档，当时必须用原生 `<a>`；改成嵌入后，那条约束自然消失 ——
+  现在顶部导航与页脚指的是同一个路由，两处不要一个走 `<a>`、一个走 `RouterLink`。
+- **顶部导航放五个内容入口**（产业地图 / 产业集群 / 企业名录 / **行业研究** / 关于我们）：
+  前三个是查数据的入口，行业研究是读观点的入口，关于我们是站务入口。
+  `/about` 是说明性页面，仍归页脚「关于我们」列，不在导航里重复一遍 ——
+  同一个东西出现在两处，读者会以为它们是两个不同的页面。
 
 ### 口径与边界声明的位置约定
 

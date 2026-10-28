@@ -2,6 +2,7 @@
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { api, GRADE_CLASS, GRADE_LABELS } from '../api'
+import { applySeo, clusterJsonLd, clusterSeoDescription } from '../seo'
 import EnterpriseCard from '../components/EnterpriseCard.vue'
 import GradeTag from '../components/GradeTag.vue'
 
@@ -16,6 +17,16 @@ async function load(slug) {
   cluster.value = null
   try {
     cluster.value = await api.cluster(slug)
+    // head 跟着**取到的数据**走，不是跟着路由 meta 走：4,228 家企业页共用
+    // 一个「企业详情 · 杭州波动粒子」等于放弃了标题里的信息。
+    // 薄页（is_stub）先不索引，等企业数补到 10 家以上由 is_stub 自动放开。
+    applySeo({
+      title: cluster.value.name,
+      description: clusterSeoDescription(cluster.value),
+      path: `/clusters/${encodeURIComponent(cluster.value.slug)}`,
+      jsonLd: clusterJsonLd(cluster.value),
+      noindex: cluster.value.is_stub,
+    })
   } catch (err) {
     error.value = String(err.message || err)
   } finally {

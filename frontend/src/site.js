@@ -44,6 +44,18 @@ export const GONGAN_ICON = gonganIcon
 export const COPYRIGHT_YEAR = '2026'
 
 /**
+ * 站名的短名，用于浏览器标签页、「行业研究」页等处。
+ *
+ * 与 ``index.html`` 里的静态 ``<title>``（``杭州波动粒子 · 产业集群与企业检索``）
+ * 必须共用这个名字：静态标题是 JS 执行前 / 无 JS 时的兜底，写别的名字会让首屏
+ * 闪一下旧名，搜索结果里也会出现两个不同的站名。
+ */
+export const SITE_TITLE = '杭州波动粒子'
+
+/** 站点部署域名，canonical / sitemap / JSON-LD 里的绝对 URL 都以它为准。 */
+export const SITE_ORIGIN = 'https://qicifier.com'
+
+/**
  * 对外公开的联系邮箱。与 qicifier.cn 同主体，共用这个地址。
  *
  * ⚠️ 这是本站**唯一**对外公开的联系方式：本站不采集个人联系方式，

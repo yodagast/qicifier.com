@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { api, GRADE_CLASS, GRADE_LABELS } from '../api'
+import { aboutJsonLd, applySeo } from '../seo'
 
 const payload = ref(null)
 const stats = ref(null)
@@ -24,6 +25,15 @@ onMounted(async () => {
     const [sources, statsData] = await Promise.all([api.sources(), api.stats()])
     payload.value = sources
     stats.value = statsData
+    // 本页是全站唯一适合挂 Dataset 的地方（它讲的就是「这份数据是什么、由谁整理、
+    // 怎么核实的」）；FAQPage 顺手带上，因为正文本身就是问答结构。
+    applySeo({
+      title: '数据来源与核实程度',
+      description:
+        '五级核实档位（官方认定 / 政府公开 / 媒体·协会 / 站方整理 / 企业自报）的判定口径，以及本站收录的每一份名单的来源披露。',
+      path: '/about',
+      jsonLd: aboutJsonLd(statsData),
+    })
   } catch (err) {
     error.value = String(err.message || err)
   }

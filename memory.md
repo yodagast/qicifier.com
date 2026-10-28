@@ -1149,7 +1149,8 @@ DETAIL: constraint favorite_enterprise_id_fkey on table favorite depends on tabl
    + 现代纺织与服装的省外 167 + 医疗器械的省外 175 + 415X 2 + 产业带 4 + 气动元件 231
    + 集装箱 917），省外单独计数、不混进浙江；2626 + 1602 = 4228 必须逐项对得上
    地图按县级政区汇总能点到 2512 家；114 家浙江企业的来源名单没有地址、企业名也不含地名，
-   落不到县一级（仍可在企业名录检索）；2512 + 114 = 2626 —— 这个差额写在地图第 1 格副标题里
+   落不到县一级（仍可在企业名录检索）；2512 + 114 = 2626 —— 这个差额只写进「口径与边界」，
+   地图数字带不重复它（见 4.8g 末尾）
    集群 212 = 15 赛道 + 22 新星（含调研叠加）+ 88 镇街 + 14 已有省内/省外调研产区
    + 气动元件 27 条派生产区（浙江 6 + 省外 21）+ 集装箱 46 条（浙江 4 / 省外 42）
    （汕头谷饶、潮南、佛山盐步、晋江深沪、浦江针织服装 + 医疗器械 9 个产区）
@@ -1264,8 +1265,19 @@ DETAIL: constraint favorite_enterprise_id_fkey on table favorite depends on tabl
 **后来又发现撤得不彻底**：读者的第一反应本来就是「逐个点开 11 个市、把数字加起来」
 （2131），再跟第一格的 2699 比。差额不在页面上，这个矛盾就仍由读者自己发现，
 而他们的结论不会往「有 109 家没有地址」上想 —— 于是以「地图数字不变 / 少了企业」
-的形式报回来。现在差额写在第 1 格的**副标题**里（只说差额有多少、为什么，
+的形式报回来。差额因此写进过第 1 格的**副标题**（只说差额有多少、为什么，
 不占格位、不进总量），`/about` 的「口径与边界」保留同一条声明的完整版本。
+
+**最后那一行也撤掉了**（站方第三次就这一格给意见，所以这个位置的结论要写清楚）：
+「其中 114 家名单未给地址、企业名里也不含地名，落不到县一级（地图可汇总 2512 家）」
+解释的是**我们自己**的口径缝，而读者来地图是找产区、不是来做减法；一句话带三个数字，
+第一格反而读不下去。**口径要能核对，但不必在每一页重复** —— 算式
+（2512 + 114 = 2626）与说明只留在「口径与边界」，地图数字带只报总量与省内外。
+
+这跟上面那条「撤掉一个数字之前先想清楚读者会用什么替代它」并不冲突：
+**第 1 格的数字没有再变**（一直是收录总数 4228），撤掉的只是对差额的解释。
+会变回「看起来少了企业」的，是那种把 `province.enterprise_count` 放回总量位、
+或者把省内外拆开的改法 —— `tests/test_tools.py` 两条断言分别守住这两种。
 
 **教训的修正**：撤掉一个数字之前，先想清楚读者会用什么替代它去算 ——
 如果替代品（11 个市的和）就在同一页上，撤掉等于把矛盾留给他们。
@@ -1465,6 +1477,45 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 知道「非 JSON 的 5xx 是暂态、可以重试」。`tests/test_tools.py` 现在断言
 `Admin.vue` 里既没有 `JSON.parse` 也没有 `fetch(`。
 
+### 4.8p 预渲染：中文 slug 落盘要解码，`docs/` 是被 gitignore 的
+
+2026-10-28 的 SEO/GEO 审计结论只有一句：**爬虫拿到的页面是空的**。修法分三层
+（预渲染 / 后端直出 / 统一 head），每层各有一个「看起来能做、其实做错」的地方：
+
+1. **预渲染的落盘目录必须 `unquote`。** 集群 slug 带中文（`415X-人工智能`），URL 里是
+   百分号编码的，而 nginx 是**解码后**去文件系统找目录。照 URL 原样建目录会得到
+   `dist/clusters/415X-%E4%BA%BA.../index.html` —— 125 页全部白渲染，而日志显示
+   「125/125 成功」。判据不是脚本的成功计数，是 `ls dist/clusters` 里看得见中文目录。
+2. **`docs/*` 在 `.gitignore` 里**（调研原始文件不入库）。所以行业研究文档**不能**直接
+   从 `docs/` 引用 —— 复制进 `data/research/` 才是发布；`data/research/` 不在忽略列表里，
+   发布过的研究因此进版本库（对外承诺要可追溯）。
+3. **同源 HTML 是脚本载体，且它的 CSS 会污染全站。** 行业研究最初是「后端直出整份文档」，
+   站方看过后改成**嵌进站点页面**（要页头页脚导航），于是多出两个必须处理的点：
+   * 正文：服务端先剥 `<script>`，前端再用 `DOMParser`（不执行脚本）走一遍去掉
+     `on*` / `javascript:` / `iframe`，然后才 `v-html`；
+   * 样式：文档的 `:root{}` / `body{}` / `*{}` 直接注入会改掉全站排版，所以
+     `frontend/src/researchDoc.js` 给每条选择器加 `.research-doc` 前缀
+     （`@media` 递归、`@font-face`/`@keyframes` 原样保留）。验收判据是**看 body 的
+     背景色是否还是 `--paper`**、以及 `.research-doc .wrap` 这类规则是否真的带前缀。
+   同时 slug 必须挡住 `/` 与 `..`，否则能写到 `data/research/` 之外。
+
+4. **`h1` 出现 ≠ 数据到位。** 列表页（`/clusters`、`/enterprises`）的 h1 是同步
+   渲染的，企业/集群要等接口回来。只用 `wait_for_selector('h1')` 抓到过一份
+   「h1 + 加载中…」的快照：页面能打开、标题正确、正文是空的 —— 正是这次要消除的那种页。
+   判据要加上 `.loading` 占位消失，并保留「最后一页还有加载中 → 报失败」的兜底。
+5. **不要复用「4173 上有人在响应」的 preview。** 它可能是上一次运行残留的进程，
+   手里是旧 dist，而 `npm run build` 会换掉所有带哈希的文件名 —— 于是新页面在它那儿
+   404，表现成随机某一页等不到 `h1`。现在每次现取空闲端口 + `start_new_session`
+   + `killpg` 整组收掉。
+
+还有两条踩在测试工具上的：
+
+* `urllib` 的 `dict(response.headers)` 拿到的是**小写头名**（h11 发的就是小写），
+  断言 `headers["Content-Type"]` 会以「没这个头」的形式失败。用 `response.headers`
+  本身（大小写不敏感）。
+* 行业研究导入用例必须在 `finally` 里删掉测试文档：一次断言失败把
+  `data/research/itest-research.html` 留在库里，下次列表页就会多出一条「测试用行业研究」。
+
 
 ## 6. 还没做的（后续追补）
 
@@ -1484,7 +1535,7 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 7. **账号体系的运维面**：已有注册/登录/收藏 + 登录失败限流（按 用户名×IP，15 分钟窗口 8 次）；
    仍缺改密码、找回密码、管理后台封禁，以及**注册**侧的限速（目前只在登录侧限流，
    批量刷号仍可绕过）。
-8. **测试**：`tests/test_api.py`（120 项；带 `ADMIN_TOKEN` 时 142 项，含名单导入与产业带编辑往返）+ `tests/test_tools.py`（183 项，离线规则用例）
+8. **测试**：`tests/test_api.py`（127 项；带 `ADMIN_TOKEN` 时 177 项，含名单导入、产业带编辑、行业研究导入下线往返）+ `tests/test_tools.py`（215 项，离线规则用例）
    已就绪；仍缺前端组件测试与数据管线其余部分的 pytest。
 
 9. **（已暂缓）搜索摘要层**：`directory_contacts.json` 的 4 行是历史跑批的冻结点，
@@ -1495,6 +1546,15 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 10. **备案信息尚未与真实证书核对**：`frontend/src/site.js` 里的 ICP 号（浙ICP备2026077052号-3）
    与公安备案号（沿用 qicifier.cn 的 33011002020794）是**按同一主办单位推定的值**，
    上线前必须与工信部、公安部系统里的登记内容逐字核对；备案号只能跳转官方查询页，不能自建页。
+
+11. **路径化聚合页（下一轮，审计里 ROI 最高的一块）**：现在「按地区看」全是查询参数
+    （`/enterprises?city=诸暨市&town=大唐街道`），这类 URL 不能索引（robots 里挡了 `?q=`/`?page=`），
+    于是「大唐袜业有哪些企业」这类高频查询一个都接不住。计划新增
+    `/cities/<slug>`、`/districts/<slug>`、`/towns/<slug>`、`/tracks/<slug>` 四类静态路径页
+    （每页：一句话定义 → 行政区路径 → 该地集群列表 → 代表企业 8–15 家 → 来源与核验日期），
+    并把它们加进 `sitemap.py` 与 `tools/prerender.py` 的 URL 清单。
+    企业详情页的 `/enterprises/<id>` → `/enterprises/<slug>-<id>`（301 旧链接）也在这一轮，
+    注意 `enterprise.name` 是唯一约束，slug 生成要一并处理重名。
 
 ## 7. 交付物速查
 
@@ -1511,12 +1571,17 @@ JUKI / 新秀丽 / Herman Miller / 鄂尔多斯的地址列写的是「日本」
 | `PATCH /api/admin/clusters/{slug}` | 产业带档案编辑（简介/别名/指标/荣誉/简介档位），三项硬校验；页面入口 `/admin/clusters` |
 | `POST /api/admin/lists/import` | 批量导入名单 CSV（multipart，需 `X-Admin-Token`）：解析 → 三份产物 + 注册表；同一 `source_key` 再导入即覆盖。归属优先级：逐行「块状经济/产区/集群类型」列 → 整份 `default_cluster_slug`（拼错 422）；带「产区」列时按 `PRODUCTION_AREA_INDEX` 判定省内外。`used_for`（怎么用）与 `role`（在库里承担什么，显示在来源地图每行）都写进注册表，重导时不填沿用旧值 |
 | `GET /api/admin/lists` | 已导入名单（注册表）。页面入口：`/admin/contacts` 底部的「批量导入名单 CSV」 |
+| `GET /sitemap.xml` | 由库生成：静态页 + 非薄页集群 + 已发布研究文档；薄页（`is_stub`）不进 |
+| `GET /api/research` | 行业研究清单（公开 JSON：标题 / 摘要 / 日期 / slug） |
+| `GET /api/research/<slug>` | 单篇：`article` + `body`（正文片段，已剥 `<script>`）+ `styles`（文档自带 CSS，前端加作用域）。页面 `/research` 与 `/research/<slug>` 把它嵌进站点外壳 |
+| `POST /api/admin/research/import` | 导入 / 覆盖一篇研究文档（multipart：`file` + 可选 `slug`/`title`/`summary`/`published_at`）。写 `data/research/`，**导入即生效，不需要灌库**。页面入口：`/admin/contacts` 底部的「行业研究文档」 |
+| `DELETE /api/admin/research/<slug>` | 下线一篇（文件一起删，链接立刻 404） |
 | `frontend/src/site.js` | 备案主体信息唯一出处：主办单位全称 / ICP 号 / 公安备案号 / 盾牌图标 / 联系邮箱。换域名或换主体只改这里 |
 | `python3 tools/build_seed.py` | 生成 415X 赛道与镇街骨架 |
 | `python3 tools/search_discover.py [--limit N] [--delay S]` | 浏览器搜索候选 → 强验收（**已暂缓**，非标准管线） |
 | `python3 tools/discover_sites.py [--measure N] [--list-name X] [--workers N] [--timeout S] [--revalidate] [--recontacts] [--refresh]` | 确定性候选 → 强验收（规则 v4，候选并发校验；`--list-name` 可只跑某个来源名单） |
 | `python3 tools/directory_contacts.py [--max-share N]` | 从已缓存的搜索摘要里取电话/地址（离线，不发请求）→ `directory_contacts.json`（**已暂缓扩展**） |
-| `python3 tests/test_api.py` | 回归测试（账号 / 收藏 / 数据完整性 / 名单口径 / 集群列表排序 / 导入接口 / 产业带编辑 / 人工补充往返 / 对外文案用词 / 医疗器械 9 产区落位，156 项（不带令牌时 149 项），需后端在跑） |
+| `python3 tests/test_api.py` | 回归测试（账号 / 收藏 / 数据完整性 / 名单口径 / 集群列表排序 / 导入接口 / 产业带编辑 / 人工补充往返 / 搜索可见性（sitemap、robots、行业研究导入下线）/ 对外文案用词 / 医疗器械 9 产区落位，177 项（不带令牌时 127 项），需后端在跑） |
 | `python3 tests/test_tools.py` | 回归测试（验收规则 / 复验降级 / 摘要抽取 / 名单导入与注册表 / **CLI `seed --csv`** / 产业带编辑 / 镇街级与临安底表 / 产区与集群类型落位 / 整份归属 / 对外文案与档位取值扫描 / 失败响应只走一处解读，214 项，离线） |
 | `python3 tools/build_container_clusters.py [--dry-run]` | 《全国集装箱移动房企业调研清单》的 46 条产业带 → 46 条派生档案（浙江 4 / 省外 42）；**导入这份清单前必须先跑它** |
 | `python3 tools/build_qidong_clusters.py [--dry-run]` | 《全国气动元件企业调研清单》的 30 条产业带 → 27 条派生档案（浙江 6 + 省外 21）；`奉化气动元件` 指向已有骨架档案，2 条跨产区企业池不建档案。**导入这份清单前必须先跑它**，否则 355 行静默无归属 |

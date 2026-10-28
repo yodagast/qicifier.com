@@ -119,6 +119,10 @@ export const api = {
   enterprises: (params = {}) => request(`/enterprises${qs(params)}`),
   enterprise: (id) => request(`/enterprises/${id}`),
 
+  // 行业研究（后台导入的 HTML 文档，正文嵌在站点页面里）
+  researchList: () => request('/research'),
+  research: (slug) => request(`/research/${encodeURIComponent(slug)}`),
+
   // 账号与收藏
   register: (payload) => request('/account/register', { method: 'POST', body: JSON.stringify(payload) }),
   login: (payload) => request('/account/login', { method: 'POST', body: JSON.stringify(payload) }),

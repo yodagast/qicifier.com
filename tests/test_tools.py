@@ -1770,6 +1770,17 @@ def main() -> int:
         or [line.strip() for line in map_markup.splitlines() if "按县汇总" in line],
     )
 
+    # 同一格的副标题曾写着「其中 114 家名单未给地址、企业名里也不含地名，
+    # 落不到县一级（地图可汇总 2512 家）」。它解释的是**我们自己**的口径缝，
+    # 读者来地图是找产区，不是来做减法；一句话带三个数字反而让第一格读不下去。
+    # 差额的算式仍留在「口径与边界」（backend/app/routers/stats.py 的地图注记），
+    # 那里才是需要说明口径的地方。这条断言守的同样是「别再放回去」。
+    check(
+        "地图数字带不再解释「落不到县一级」的差额外（改由口径与边界说明）",
+        "落不到县一级" not in kpi_block and "地图可汇总" not in kpi_block,
+        [line.strip() for line in kpi_block.splitlines() if "落不到县一级" in line or "地图可汇总" in line],
+    )
+
     # ------------------------------------------------------------------
     # 失败响应必须走同一套解读逻辑。
     #

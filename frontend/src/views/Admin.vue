@@ -101,6 +101,7 @@ async function load() {
     unlocked.value = true
     localStorage.setItem(TOKEN_KEY, token.value)
     loadLists()
+    loadResearch()
   } catch (err) {
     unlocked.value = false
     error.value = String(err.message || err)
@@ -335,6 +336,75 @@ const overwriteTarget = computed(() =>
   overwriteKey.value ? lists.value.find((row) => row.source_key === overwriteKey.value) : null,
 )
 
+// ── 行业研究（/api/admin/research）────────────────────────────────────
+//
+// 与名单导入**不同**：研究文档导入即生效，不需要灌库 —— 它不进数据库，
+// 由 FastAPI 直接读出 data/research/<slug>.html 直出给浏览器与爬虫。
+//
+// 也正因为直出，导入的是**整份 HTML 文档**（自带 <style>），不是正文片段；
+// 后端会用 CSP 封掉文档里的脚本，导入时若检测到 <script> 会明确告警。
+const researchDocs = ref([])
+const researchForm = ref({ slug: '', title: '', summary: '', published_at: '' })
+const researchFile = ref(null)
+// 与 fileInput 同理：上传成功后必须清空 input.value，
+// 否则重复点上传会用**旧文件**覆盖，而屏幕上显示的是新选的文件名。
+const researchInput = ref(null)
+const researchBusy = ref(false)
+const researchFlow = ref({ tone: 'idle', text: '' })
+
+async function loadResearch() {
+  try {
+    const data = await call('/admin/research')
+    researchDocs.value = data.items || []
+  } catch (err) {
+    error.value = String(err.message || err)
+  }
+}
+
+async function importResearch() {
+  if (!researchFile.value) {
+    researchFlow.value = { tone: 'error', text: '请先选择一份 HTML 文档' }
+    return
+  }
+  researchBusy.value = true
+  researchFlow.value = { tone: 'busy', text: '正在导入…' }
+  try {
+    const body = new FormData()
+    body.append('file', researchFile.value)
+    for (const [key, value] of Object.entries(researchForm.value)) body.append(key, value)
+    const payload = await call('/admin/research/import', { method: 'POST', body })
+    const warnings = payload.warnings || []
+    researchFlow.value = {
+      tone: 'ok',
+      text:
+        `已导入「${payload.article.title}」，地址 ${payload.url}（导入即生效，不需要灌库）` +
+        (warnings.length ? `。注意：${warnings.join('；')}` : ''),
+    }
+    researchFile.value = null
+    if (researchInput.value) researchInput.value.value = ''
+    researchForm.value = { slug: '', title: '', summary: '', published_at: '' }
+    loadResearch()
+  } catch (err) {
+    researchFlow.value = { tone: 'error', text: `导入失败：${err.message || err}` }
+  } finally {
+    researchBusy.value = false
+  }
+}
+
+async function removeResearch(doc) {
+  if (!window.confirm(`下线「${doc.title}」？文档文件会一起删除，链接立即 404。`)) return
+  researchBusy.value = true
+  try {
+    await call(`/admin/research/${encodeURIComponent(doc.slug)}`, { method: 'DELETE' })
+    researchFlow.value = { tone: 'ok', text: `已下线「${doc.title}」` }
+    loadResearch()
+  } catch (err) {
+    researchFlow.value = { tone: 'error', text: `下线失败：${err.message || err}` }
+  } finally {
+    researchBusy.value = false
+  }
+}
+
 // 页脚的「数据导入」用 hash 落到 #import，但那个锚点在**解锁之后**才渲染出来
 // （未解锁时只有一个令牌输入框），于是 RouterLink 的滚动找不到元素、
 // 控制台报 "Couldn't find element using selector \"#import\""，用户看到的则是
@@ -357,6 +427,7 @@ onMounted(() => {
     load()
     loadLists()
     loadManual()
+    loadResearch()
     // 令牌已在本地：模板会立刻展开，无需等 watch
     scrollToImportIfAsked()
   }
@@ -647,6 +718,84 @@ onMounted(() => {
                 <td class="small muted mono">{{ entry.rows }} / {{ entry.companies }}</td>
                 <td class="small muted">{{ entry.source_file || '—' }}</td>
                 <td class="small muted mono">{{ entry.imported_at }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 行业研究：导入 HTML 文档，正文由 /research/<slug> 页面**嵌进站点外壳**显示。
+             与上面「批量导入名单」是两条完全不同的链路（那条要灌库，这条不用），
+             所以单独一块、单独一段说明 —— 混在一起会让人以为导入文档也要等一分钟。 -->
+        <div id="research" class="row" style="margin-top: 26px">
+          <h3>行业研究文档</h3>
+        </div>
+        <p class="hint">
+          上传整份 HTML 文档（自带样式，例如 <code>docs/</code> 下的方案与调研报告），
+          写入 <code>data/research/&lt;slug&gt;.html</code> 并登记到 <code>data/research/index.json</code>。
+          <strong>导入即生效，不需要灌库</strong>；顶部导航与页脚的「行业研究」就是它的入口。
+          正文会嵌在站点页面里显示（页头、页脚、导航都在），文档自带的样式只作用于正文区域。
+          <strong>同一个 slug 再导入 = 覆盖该篇</strong>。
+          <strong>发布后要跑一次 <code>npm run build:seo</code></strong>，新文章才会进入预渲染产物
+          （否则收录引擎拿到的仍是旧快照；页面本身即时可看）。
+          文档里的 <code>&lt;script&gt;</code> 出于安全会被剥掉、不会执行。
+        </p>
+
+        <div class="card panel">
+          <div class="form-grid">
+            <label>
+              HTML 文档
+              <input ref="researchInput" type="file" accept=".html,.htm,text/html" @change="researchFile = $event.target.files[0]" />
+            </label>
+            <label>
+              slug（留空取文件名）
+              <input v-model="researchForm.slug" type="text" placeholder="例如：浙江产业集群收录体系搭建方案" />
+            </label>
+            <label>
+              标题（留空取文档 &lt;title&gt;）
+              <input v-model="researchForm.title" type="text" placeholder="例如：浙江产业集群收录体系搭建方案" />
+            </label>
+            <label>
+              发布日期（留空取今天）
+              <input v-model="researchForm.published_at" type="text" placeholder="2026-10-28" />
+            </label>
+            <label class="wide">
+              摘要（留空取首个段落前 160 字）
+              <input v-model="researchForm.summary" type="text" placeholder="出现在列表页与搜索结果摘要里" />
+            </label>
+          </div>
+          <div class="stack" style="margin-top: 12px">
+            <button class="primary" :disabled="researchBusy || !researchFile" @click="importResearch">
+              {{ researchBusy ? '处理中…' : '导入文档' }}
+            </button>
+          </div>
+          <p
+            v-if="researchFlow.text"
+            class="flow"
+            :class="`flow-${researchFlow.tone}`"
+            :role="researchFlow.tone === 'error' ? 'alert' : 'status'"
+          >
+            {{ researchFlow.text }}
+          </p>
+
+          <table v-if="researchDocs.length" class="card list" style="margin-top: 14px">
+            <thead>
+              <tr>
+                <th>标题</th>
+                <th>slug</th>
+                <th>发布日期</th>
+                <th>更新</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="doc in researchDocs" :key="doc.slug">
+                <td>
+                  <a :href="`/research/${encodeURIComponent(doc.slug)}`" target="_blank" rel="noopener">{{ doc.title }}</a>
+                </td>
+                <td class="small muted mono">{{ doc.slug }}</td>
+                <td class="small muted mono">{{ doc.published_at }}</td>
+                <td class="small muted mono">{{ doc.updated_at }}</td>
+                <td><button class="tiny-btn" :disabled="researchBusy" @click="removeResearch(doc)">下线</button></td>
               </tr>
             </tbody>
           </table>

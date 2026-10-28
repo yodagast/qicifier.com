@@ -939,6 +939,33 @@ initdb -D ~/.local/share/<proj>-pg -U <user> --auth=trust --encoding=UTF8 --loca
 pg_ctl -D ~/.local/share/<proj>-pg -o "-p 5433" start
 ```
 
+### 客户端渲染站点的搜索可见性（可复用做法）
+
+SPA 的默认状态是「对搜索引擎与 AI 引擎不可见」：服务器对所有路径回同一份
+`index.html`，正文要等 JS 执行完才出现。补救分四件事，**顺序不能颠倒**，
+而且第四件（nginx）不做，前三件全部白做：
+
+1. **构建后预渲染需要排名的页面。** Playwright 打开 `vite preview`，等
+   `h1` 出现后把 `page.content()` 写成 `dist/<path>/index.html`。
+   两个必须注意的点：目录名要 `unquote`（中文 slug 在 URL 里是百分号编码，
+   nginx 是解码后找目录）；URL 清单从接口拉，别手写（增删是常态）。
+   薄页跳过 —— 提交「名字 + 一句话」的页面只会拉低整站质量。
+2. **head 只能有一份实现。** `seo.js` 的 `applySeo` 同时负责预渲染时写进 HTML
+   与站内导航时改写 DOM；另写一份「构建时注入 meta」的逻辑必然漂移。
+   详情页要在数据到手后覆盖 title / description / canonical 与 JSON-LD。
+3. **长文档要么后端直出，要么嵌进页面 —— 两种都要处理「外来 HTML」。**
+   直出（FastAPI 返回整份 HTML + CSP `default-src 'none'`）最省事，但读者会丢掉
+   站点导航；嵌进页面（`v-html`）能保住外壳，代价是两件事必须做：
+   正文清洗（服务端剥 `<script>` + 前端用 `DOMParser` 去 `on*` / `javascript:` / `iframe`），
+   样式作用域（给文档 CSS 的每条选择器加容器前缀，`@media` 递归进去）。
+   后者不做，文档里的 `body{}` / `*{}` 会直接改掉全站排版。
+4. **nginx 必须配合。** `robots.txt` 命中真文件、`sitemap.xml` 与直出路径反代后端、
+   其余 `try_files $uri/index.html $uri =404`（否则软 404 会给无限路径都发 200）、
+   开 gzip。参考配置放仓库里（`deploy/`），别只留在服务器上。
+
+验收不看构建日志，看四条 `curl`：`robots.txt` 是 `text/plain`、`sitemap.xml` 是 XML、
+详情页 HTML 里有自己的 `<title>`、不存在的路径返回 404。
+
 ---
 
 ## 反模式清单

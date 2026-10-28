@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:seo": "vite build && ../.venv/bin/python ../tools/prerender.py",
     "preview": "vite preview --port 4173"
   },
   "dependencies": {

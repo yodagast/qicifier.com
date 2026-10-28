@@ -1,0 +1,39 @@
+# 目录数据希望被搜到，但登录 / 收藏 / 后台不该被索引。
+#
+# 这个文件必须**真实存在于构建产物根目录**（frontend/public/ 会被原样复制到 dist/）。
+# 线上 nginx 里对应 `location = /robots.txt { try_files /robots.txt =404; }`：
+# 少了那一条，请求会被 SPA 的 try_files 兜到 index.html，返回 200 + HTML，
+# 搜索引擎读到的「robots.txt」就是一段网页源码。
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /favorites
+Disallow: /admin
+Disallow: /api/admin
+Disallow: /*?q=
+Disallow: /*?page=
+
+# AI 抓取器：这一组是 GEO（生成式引擎优化）的入口，**不要屏蔽**。
+# 被白嫖的风险靠 /api 限流解决，不靠 robots 堵 —— 堵掉的只是自己被引用的机会。
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://qicifier.com/sitemap.xml

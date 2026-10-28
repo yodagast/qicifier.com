@@ -31,12 +31,16 @@ function submit() {
   <header class="site-header">
     <div class="container inner">
       <RouterLink class="brand" to="/">浙江产业带<span>企业库</span></RouterLink>
-      <!-- 顶部导航只留三个内容入口 + 关于我们。
-           「数据来源」是说明性页面，已移到页脚的「关于我们」列（与「关于本站」同组）。 -->
+      <!-- 顶部导航只留内容入口：产业地图 / 产业集群 / 企业名录 / 行业研究 / 关于我们。
+           「行业研究」放在企业名录与关于我们之间：前三个是**查数据**的入口，
+           行业研究是**读观点**的入口，关于我们是**站务**入口 —— 由数据到内容再到站务，
+           读者往下看的顺序就是这个顺序。
+           「数据来源」是说明性页面，仍在页脚的「关于我们」列（与「关于本站」同组）。 -->
       <nav class="nav">
         <RouterLink to="/map">产业地图</RouterLink>
         <RouterLink to="/clusters">产业集群</RouterLink>
         <RouterLink to="/enterprises">企业名录</RouterLink>
+        <RouterLink to="/research">行业研究</RouterLink>
         <RouterLink to="/company">关于我们</RouterLink>
       </nav>
       <form class="header-search" @submit.prevent="submit">
@@ -68,7 +72,7 @@ function submit() {
   <footer class="site-footer">
     <div class="container">
       <!-- 三列结构：客户服务 / 网站地图 / 关于我们。
-           五条内容约定，改页脚时不要回退：
+           六条内容约定，改页脚时不要回退：
              1. 网站地图列只放**通用入口**，不列具体类目 —— 类目随运营增删，
                 写死在页脚必然过期；
              2. 账户流（登录 / 收藏）不进页脚：它们属于登录后的账户中心，
@@ -79,7 +83,11 @@ function submit() {
                 客户服务列只放「服务」类入口（隐私条款 / 联系邮箱），
                 不放说明页 —— 两列的分工是「怎么办事」与「站是什么」。
                 三者的顺序是刻意的：关于本站（站是什么）→ 数据导入（数据怎么进来的）
-                → 数据来源与核实程度（进来的数据有多可信），别打乱。 -->
+                → 数据来源与核实程度（进来的数据有多可信），别打乱。
+             6. 「行业研究」虽然是内容入口，但它是**站点自己的路由**（正文嵌在页面里），
+                所以与其它入口一样用 RouterLink —— 早先它是后端直出的独立文档，
+                当时必须用原生 `<a>`；改成嵌入页面后，那条约束自然消失。
+                顶部导航与页脚指向同一个 `/research`，两处不要一个直出、一个走路由。 -->
       <div class="footer-cols">
         <div class="footer-col">
           <h4>客户服务</h4>
@@ -117,6 +125,9 @@ function submit() {
                  不是新开一个页面）。 -->
             <li><RouterLink :to="{ name: 'admin-contacts', hash: '#import' }">数据导入</RouterLink></li>
             <li><RouterLink :to="{ name: 'about' }">数据来源与核实程度</RouterLink></li>
+            <!-- 「行业研究」现在是**站点自己的路由**（正文嵌在页面里，不是独立文档），
+                 所以这里用 RouterLink 与顶部导航同一个目标。 -->
+            <li><RouterLink :to="{ name: 'research' }">行业研究</RouterLink></li>
           </ul>
         </div>
       </div>

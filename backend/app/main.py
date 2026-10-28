@@ -21,6 +21,8 @@ from .routers import (
     clusters,
     enterprises,
     regions,
+    research,
+    sitemap,
     stats,
     tracks,
 )
@@ -69,6 +71,11 @@ app.include_router(admin.router)
 app.include_router(admin_lists.router)
 app.include_router(admin_clusters.router)
 app.include_router(account.router)
+# 行业研究文档（/research 与 /api/research）与 sitemap（/sitemap.xml）。
+# 三者都不在 /api 前缀下：它们的 URL 要直接给搜索引擎与读者用。
+app.include_router(research.router)
+app.include_router(research.admin_router)
+app.include_router(sitemap.router)
 
 
 @app.get("/api/health", tags=["meta"])

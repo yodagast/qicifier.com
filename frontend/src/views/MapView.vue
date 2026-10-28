@@ -16,15 +16,13 @@ const cities = computed(() => province.value?.children || [])
 // 站点收录总数（与首页同一个数）。此前这里第一格放的是 `province.enterprise_count`
 // —— 那是「按县汇总的家数」，地盘上点得到的才有，比收录总数小一截；
 // 它占据总量位会让读者以为企业少了一批，所以这一格改放收录总数。
-// 差额单独算出来写在副标题里：不解释的话，「已收录 2699」与
-// 「点遍 11 个市加起来只有 2136」就是读者第一眼会发现的矛盾
-// （差额全部来自名单没给地址、企业名里也不含地名的企业，见「口径与边界」）。
+// 差额（名单没给地址、企业名里也不含地名，落不到县一级的那部分）只写在
+// 「口径与边界」里，不在数字带上重复 —— 那一行解释对读者没用，反而让第一格
+// 变成「一句话带三个数字」。口径本身没变，可核对的算式仍是 2626 = 2512 + 114。
 const stats = ref(null)
 const zhejiang = computed(() =>
   stats.value ? stats.value.enterprise_total - stats.value.enterprise_out_of_province : 0,
 )
-const countySum = computed(() => province.value?.enterprise_count || 0)
-const unmapped = computed(() => Math.max(0, zhejiang.value - countySum.value))
 
 // 省级新区/开发区单独计数：它们不是国标县级行政区，不能并进「90 个县级行政区」
 const countyCount = computed(() =>
@@ -105,11 +103,6 @@ onMounted(async () => {
             已收录企业<br />
             <template v-if="stats">
               浙江 {{ zhejiang }} · 省外对比 {{ stats.enterprise_out_of_province }}
-              <template v-if="unmapped">
-                <br />
-                其中 {{ unmapped }} 家名单未给地址、企业名里也不含地名，
-                落不到县一级（地图可汇总 {{ countySum }} 家）
-              </template>
             </template>
           </div>
         </div>

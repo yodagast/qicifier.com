@@ -112,6 +112,24 @@ def call_multipart(
             return exc.code, raw
 
 
+def raw_get(path: str, timeout: int = 20) -> tuple[int, object, str]:
+    """取原始响应（状态码 + 响应头 + 正文）。
+
+    ``call`` 只返回解析后的 JSON，而 sitemap / robots / 行业研究文档要看的是
+    **原文与 Content-Type**（审计里「robots.txt 返回 text/html」就是这么发现的）。
+
+    响应头返回 ``email.message.Message`` 而不是 dict：它的大小写不敏感，
+    直接 ``headers.get("Content-Type")`` 就能取到 —— 换 dict 会拿到 None
+    （h11 发出的头名是小写的 ``content-type``），断言会以「没这个头」的形式失败。
+    """
+    request = urllib.request.Request(BASE + quote(path, safe="/?&=:%"), method="GET")
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.status, response.headers, response.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as exc:
+        return exc.code, exc.headers, exc.read().decode("utf-8", "replace")
+
+
 def check(label: str, condition: bool, detail: str = "") -> None:
     global passed, failed
     if condition:
@@ -1161,6 +1179,134 @@ def main() -> int:
         )
         _, health_after = call("GET", "/api/health")
         check("灌库之后库仍然可用（不是把连接弄断了）", health_after.get("database") == "up", health_after)
+
+    section("搜索可见性：sitemap / robots / 行业研究")
+
+    # sitemap 由后端按库生成。它唯一的价值是「列出来的 URL 一定存在」，
+    # 所以这里断言的是**结构**（XML 而不是 SPA 的 index.html）与**取舍**
+    # （薄页不进、非薄页进），而不是某个固定条数。
+    status, headers, sitemap_xml = raw_get("/sitemap.xml")
+    check(
+        "sitemap 返回真正的 XML（不是被 SPA 兜底成 index.html）",
+        status == 200
+        and headers.get("Content-Type", "").startswith("application/xml")
+        and "<urlset" in sitemap_xml,
+        (status, headers.get("Content-Type")),
+    )
+    check(
+        "sitemap 声明了 sitemap 协议命名空间（否则爬虫不认）",
+        'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"' in sitemap_xml,
+    )
+    check(
+        "sitemap 里的中文集群 URL 已百分号编码（XML 不接受裸中文）",
+        re.search(r"<loc>[^<]*[\u4e00-\u9fa5]", sitemap_xml) is None,
+    )
+    check("sitemap 收录了「行业研究」入口", "https://qicifier.com/research</loc>" in sitemap_xml)
+
+    _, cluster_page = call("GET", "/api/clusters?page_size=100&sort=name")
+    stub_cluster = next((row for row in cluster_page["items"] if row["is_stub"]), None)
+    solid_cluster = next((row for row in cluster_page["items"] if not row["is_stub"]), None)
+    if stub_cluster:
+        check(
+            "薄页集群不进 sitemap（宁可少 90 个，也别提交一堆废页）",
+            quote(stub_cluster["slug"]) not in sitemap_xml,
+            f"{stub_cluster['slug']}（{stub_cluster['enterprise_count']} 家）",
+        )
+    if solid_cluster:
+        check("非薄页集群进 sitemap", quote(solid_cluster["slug"]) in sitemap_xml, solid_cluster["slug"])
+
+    robots_path = ROOT / "frontend" / "public" / "robots.txt"
+    robots_text = robots_path.read_text(encoding="utf-8") if robots_path.exists() else ""
+    check("仓库里有 robots.txt（构建后会被复制到 dist/ 根目录）", robots_path.exists(), str(robots_path))
+    check(
+        "robots.txt 声明了 sitemap 地址",
+        "Sitemap: https://qicifier.com/sitemap.xml" in robots_text,
+    )
+    check(
+        "robots.txt 没有整站 Disallow（那等于不让任何引擎进来）",
+        re.search(r"^Disallow: /\s*$", robots_text, re.M) is None,
+    )
+    check(
+        "AI 抓取器没有被屏蔽（GEO 的入口，堵掉只是堵自己）",
+        all(f"User-agent: {bot}" in robots_text for bot in ("GPTBot", "ClaudeBot", "PerplexityBot")),
+    )
+
+    status, docs = call("GET", "/api/research")
+    check("行业研究清单可公开读取（无需鉴权）", status == 200 and isinstance(docs.get("items"), list), status)
+    check(
+        "清单条目带标题 / 摘要 / 发布日期（列表页与 sitemap 只靠这三样）",
+        all({"slug", "title", "summary", "published_at"} <= set(item) for item in docs["items"]),
+        [sorted(item) for item in docs["items"]][:1],
+    )
+    status, _ = call("GET", "/api/research/not-exist-xyz")
+    check("不存在的研究文档返回 404（不是空对象）", status == 404, status)
+
+    if not admin_token:
+        print("  SKIP  未设置 ADMIN_TOKEN，跳过行业研究导入往返")
+    else:
+        sample = (
+            '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            "<title>测试用行业研究</title>"
+            "<style>body{margin:0}.wrap{max-width:800px}</style></head><body>"
+            "<h1>测试用行业研究</h1><p>这是一段用于校验导入通路的正文。</p>"
+            "<script>console.log('x')</script></body></html>"
+        ).encode()
+        status, imported = call_multipart(
+            "/api/admin/research/import",
+            Path("itest-research.html"),
+            {"slug": "itest-research", "published_at": "2026-01-01"},
+            token=admin_token,
+            override_bytes=sample,
+        )
+        check(
+            "可以导入一份研究文档（整份 HTML，标题留给后端从 <title> 抽）",
+            status == 200
+            and imported.get("article", {}).get("slug") == "itest-research"
+            and imported["article"]["title"] == "测试用行业研究",
+            (status, str(imported)[:100]),
+        )
+        try:
+            check(
+                "文档里的 <script> 会被明确告警（它不会被执行）",
+                any("<script>" in warning for warning in imported.get("warnings", [])),
+                imported.get("warnings"),
+            )
+
+            status, detail = call("GET", "/api/research/itest-research")
+            check("导入的文档立刻可取（导入即生效，不需要灌库）", status == 200, status)
+            check(
+                "单篇返回「正文片段 + 文档自带样式」，而不是整份 HTML 文档",
+                status == 200
+                and "<h1>" in detail["body"]
+                and "<html" not in detail["body"].lower()
+                and "<body" not in detail["body"].lower()
+                and detail["styles"],
+                (len(detail.get("body") or ""), len(detail.get("styles") or [])),
+            )
+            check(
+                "正文里的 <script> 在服务端就被剥掉（嵌进同源页面不能带脚本）",
+                "<script" not in detail["body"].lower(),
+                detail["body"][:80],
+            )
+            _, listed = call("GET", "/api/research")
+            check(
+                "清单里出现这篇（列表页与 sitemap 都靠它）",
+                any(item["slug"] == "itest-research" for item in listed["items"]),
+                [item["slug"] for item in listed["items"]][:5],
+            )
+            _, _, sitemap_after = raw_get("/sitemap.xml")
+            check("新导入的研究文档自动进 sitemap", "/research/itest-research</loc>" in sitemap_after)
+
+            status, _ = call("DELETE", "/api/admin/research/itest-research", token=admin_token)
+            check(
+                "可以下线一篇，删除后立刻 404（不留半篇文章）",
+                status == 200 and call("GET", "/api/research/itest-research")[0] == 404,
+                status,
+            )
+        finally:
+            # 断言失败也要收尾：留下 data/research/itest-research.html，
+            # 下次打开 /research 就会多出一条「测试用行业研究」。
+            call("DELETE", "/api/admin/research/itest-research", token=admin_token)
 
     print(f"\n=== {passed} passed, {failed} failed ===")
     if failures:

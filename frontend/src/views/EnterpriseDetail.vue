@@ -2,6 +2,7 @@
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { api, ENRICH_LABELS, GRADE_CLASS, GRADE_LABELS, PARENT_SITE_KINDS, tierLabel } from '../api'
+import { applySeo, enterpriseJsonLd } from '../seo'
 import GradeTag from '../components/GradeTag.vue'
 import SourceTag from '../components/SourceTag.vue'
 import FavoriteButton from '../components/FavoriteButton.vue'
@@ -17,6 +18,23 @@ async function load(id) {
   enterprise.value = null
   try {
     enterprise.value = await api.enterprise(id)
+    const row = enterprise.value
+    applySeo({
+      title: row.name,
+      description:
+        [
+          [row.city, row.district, row.town].filter(Boolean).join(' '),
+          (row.products || []).slice(0, 3).join('、'),
+          row.data_grade_label,
+        ]
+          .filter(Boolean)
+          .join('，') + '。联系方式与来源逐条标注。',
+      path: `/enterprises/${row.id}`,
+      // 集团站 / 母公司站的域名不是这家企业的官网，塞进 url 会张冠李戴
+      jsonLd: enterpriseJsonLd(row, {
+        isParentSite: PARENT_SITE_KINDS.has(row.website_kind),
+      }),
+    })
   } catch (err) {
     error.value = String(err.message || err)
   } finally {

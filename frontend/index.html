@@ -13,9 +13,10 @@
     -->
     <title>杭州波动粒子 · 产业集群与企业检索</title>
     <!--
-      标签页图标。路径必须是**相对**的（`./img/...`）：本库没有 `public/` 目录，
-      Vite 的 publicDir 指向不存在的 `public/`，所以写成 `/img/favicon-16x16.png`
-      只在 dev 下能取到 —— 构建后 dist 里没有这个文件，图标会 404（标签页退回默认图）。
+      标签页图标。路径必须是**相对**的（`./img/...`）：`img/` 不在 publicDir 里
+      （`frontend/public/` 只放原样复制的文件，目前是 robots.txt 与 llms.txt），
+      所以写成 `/img/favicon-16x16.png` 只在 dev 下能取到 —— 构建后 dist 里没有
+      这个文件，图标会 404（标签页退回默认图）。
       相对路径会被 Vite 当资源处理：打进 `dist/assets/` 并带上内容哈希。
 
       同一个坑 `src/site.js` 的备案图标已经记过一次（那里改用 import 解决），
