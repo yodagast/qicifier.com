@@ -27,10 +27,6 @@ onMounted(async () => {
   <div class="container">
     <div class="page-head">
       <h1>行业研究</h1>
-      <p class="lead">
-        站方自己写的方法论、调研报告与数据口径说明。每一篇都交代「数字从哪来、按什么口径算」，
-        与本站收录纪律同一套标准。
-      </p>
     </div>
 
     <div v-if="loading" class="loading">加载中…</div>

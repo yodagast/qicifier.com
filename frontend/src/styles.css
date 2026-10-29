@@ -366,6 +366,13 @@ button:disabled {
   line-height: 1.25;
 }
 
+/* 只有标题的页面头部（说明性 lead 已按要求移除）：不要再留 h1 的下外边距，
+   否则标题与下方内容之间会多出 8px 死空。用 :last-child 判据而不是给每个页面
+   加类名 —— 将来谁再删/补 lead，间距自动跟着走。 */
+.page-head h1:last-child {
+  margin-bottom: 0;
+}
+
 .page-head .lead {
   margin: 0;
   max-width: 74ch;

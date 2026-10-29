@@ -145,9 +145,6 @@ const tierLabel = computed(() => ({ A: 'A 级 必收', B: 'B 级 应收', C: 'C 
   <div class="container">
     <div class="page-head">
       <h1>产业集群</h1>
-      <p class="lead">
-        A 级 = 有官方认定的 415X 赛道，按完整档案收录；C 级 = 无官方名单的镇街级块状经济，属站方整理，单独标档，绝不混进「官方来源」。镇街级产区的可信度靠<strong>逐行核实档位</strong>交代（A 官网公示 / B 工商可核 / C 线索未核），且「有官网」不等于「打得通电话」——每条号码都带性质标注。
-      </p>
     </div>
 
     <section class="section">

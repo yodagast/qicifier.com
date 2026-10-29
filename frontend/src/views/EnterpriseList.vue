@@ -130,9 +130,6 @@ function pickTown(event) {
   <div class="container">
     <div class="page-head">
       <h1>企业名录</h1>
-      <p class="lead">
-        按产品、集群、镇街、核实程度四个入口检索。排序只依据公开可核验程度与资料完整度，对所有企业一致；不收入驻费、不卖排名。
-      </p>
     </div>
 
     <section class="section">

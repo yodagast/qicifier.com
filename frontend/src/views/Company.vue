@@ -37,9 +37,6 @@ import {
   <div class="container">
     <div id="about-us" class="page-head">
       <h1>关于我们</h1>
-      <p class="lead">
-        {{ COMPANY_NAME }} 主办的公开信息整理工具。本页放主办单位、备案信息，以及本站的收录纪律与退出边界 —— 不写客户证言，也不放荣誉墙。
-      </p>
 
       <div class="card panel">
         <h3>主办单位</h3>

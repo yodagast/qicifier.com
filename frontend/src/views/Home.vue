@@ -28,13 +28,13 @@ onMounted(async () => {
 <template>
   <div class="container">
     <!-- 首屏：不用「大数字 + 小标签 + 渐变」的默认款。
-         先给**一句判断**（这个库到底在说什么），再用一条合计栏把规模说清楚。
-         构成方式取自登记册的合计栏，而不是仪表盘。 -->
+         只留**一句判断**（这个库到底在说什么）+ 两个动作，下面直接接合计栏 ——
+         构成方式取自登记册的合计栏，而不是仪表盘。
+         句下那段解释性导语（「大唐袜业、濮院毛衫……每一笔来路」）已按要求删除：
+         这些信息在「收录所依据的名单」「集群赛道」「镇街级块状经济」三节里逐条给出，
+         放在首屏只是把结论重复一遍。 -->
     <section class="section hero">
       <h1>浙江的产业优势不在单个企业，在镇。</h1>
-      <p class="lead">
-        大唐袜业、濮院毛衫、柳市电器、店口五金、织里童装——本站把这些以镇命名的产业带做成可检索的企业登记册：以官方名单当骨架，把官方认定、政府公开、第三方调研三层数据分开存、逐条标核实程度。采购商能按产品、集群、镇街、核实程度找到企业；每一个数字旁边都跟着它的来路。
-      </p>
       <div class="hero-actions">
         <RouterLink class="btn primary-btn" to="/enterprises">检索企业</RouterLink>
         <RouterLink class="btn" to="/map">打开产业地图</RouterLink>
@@ -70,10 +70,6 @@ onMounted(async () => {
 
     <section class="section" v-if="stats">
       <h2>收录所依据的名单</h2>
-      <p class="hint">
-        各名单的发布主体、认定层级、口径都不同，<strong>互不相加、互不比较</strong>；
-        每份名单的企业数单独列出，核实程度按名单分级。
-      </p>
       <div class="source-list">
         <div v-for="entry in stats.list_breakdown" :key="entry.name" class="source-row">
           <span class="source-name">{{ entry.name }}</span>
@@ -92,10 +88,6 @@ onMounted(async () => {
 
     <section class="section" v-if="tracks.length">
       <h2>“415X” 集群赛道</h2>
-      <p class="hint">
-        赛道名称取自《2026年浙江制造精品推广目录》公示名单原文，用于给企业做顶层产业分类。
-        括号内是该赛道已收录的企业数。
-      </p>
       <div class="track-lines">
         <RouterLink
           v-for="track in tracks"
@@ -112,10 +104,6 @@ onMounted(async () => {
 
     <section class="section" v-if="towns.length">
       <h2>镇街级块状经济</h2>
-      <p class="hint">
-        浙江最值钱的那部分产业带以镇/街道命名，多数<strong>没有官方名单</strong>，
-        因此单独建实体、单独标档，绝不混进「官方来源」。
-      </p>
       <div class="register">
         <ClusterRow v-for="cluster in towns" :key="cluster.slug" :item="cluster" />
       </div>
@@ -136,12 +124,6 @@ onMounted(async () => {
   margin: 0 0 14px;
   line-height: 1.45;
   max-width: 24em;
-}
-
-.lead {
-  max-width: 60ch;
-  color: var(--ink-2);
-  margin: 0;
 }
 
 .hero-actions {
