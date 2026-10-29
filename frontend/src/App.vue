@@ -30,7 +30,7 @@ function submit() {
 <template>
   <header class="site-header">
     <div class="container inner">
-      <RouterLink class="brand" to="/">浙江产业带<span>企业库</span></RouterLink>
+      <RouterLink class="brand" to="/">产业带<span>企业库</span></RouterLink>
       <!-- 顶部导航只留内容入口：产业地图 / 产业集群 / 企业名录 / 行业研究 / 关于我们。
            「行业研究」放在企业名录与关于我们之间：前三个是**查数据**的入口，
            行业研究是**读观点**的入口，关于我们是**站务**入口 —— 由数据到内容再到站务，

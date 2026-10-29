@@ -66,7 +66,7 @@ const ORG_NAME = '杭州余杭波动粒子信息经营部'
 /** 站点自身（``isPartOf`` / ``publisher`` 共用），避免各页各写一份名字。 */
 export const SITE_ENTITY = {
   '@type': 'WebSite',
-  name: '浙江产业带企业库',
+  name: '产业带企业库',
   alternateName: SITE_TITLE,
   url: SITE_ORIGIN,
 }

@@ -27,10 +27,15 @@ import {
 // 不运营内容栏目，写这些等于给页面加上无法长期维护的承诺，也不属于备案要求展示的内容。
 //
 // 2026-10-26 新增「我们提供的服务」一节（主办单位对外的四项业务）。它与上面那份
-// 声明是**两件事**，所以两处必须互相指认，否则读者会以为「不卖排名」是句空话：
+// 声明是**两件事**，所以本节开头必须点明边界、否则读者会以为「不卖排名」是句空话：
 //   * 收录与核实免费且不可购买（本页「收录纪律与退出边界」一节）；
 //   * 这四项是主办单位另设的对外业务，不影响是否收录、也不影响排序位置。
 // 措辞按主办单位对外的原文写，名称本身不改写 —— 见 site.js 的 SERVICES。
+//
+// 2026-10-29 按站方要求把本节结尾那句压成一句：只留「与本站的收录、排序无关」+
+// 联系邮箱，**不再**重复「不收入驻费、不卖排名…」那串断言，也不再链到下一节。
+// 删掉的只是重复 —— 那几条断言仍完整写在下方「收录与排序」「付费边界」里，
+// /about、/service 与本页三处口径不变，不要因此去改那两处。
 </script>
 
 <template>
@@ -83,15 +88,13 @@ import {
           {{ COMPANY_NAME }} 面向制造业企业提供的四项对外服务：
         </p>
         <ul class="service-list">
-          <li v-for="service in SERVICES" :key="service">{{ service }}</li>
+          <li v-for="service in SERVICES" :key="service.name">
+            <strong class="service-name">{{ service.name }}</strong>
+            <span class="service-desc">{{ service.desc }}</span>
+          </li>
         </ul>
         <p class="small muted">
           <strong>这些服务与本站的收录、排序无关。</strong>
-          本站是否收录一家企业、按什么顺序展示，只依据公开可核验程度与资料完整度，
-          对所有企业一致 —— 不收入驻费、不卖排名、不接受竞价、不做付费认证与等级背书
-          （见下节
-          <a href="#policy">收录纪律与退出边界</a>
-          ）。上述服务也不通过本站站内功能提供，
           如需了解请
           <a :href="`mailto:${CONTACT_EMAIL}`" :title="`发送邮件至 ${CONTACT_EMAIL}`">
             {{ CONTACT_EMAIL }}
@@ -203,7 +206,17 @@ h3 {
   font-size: 13px;
   color: var(--muted);
   display: grid;
-  gap: 6px;
+  gap: 10px;
+}
+
+/* 名称与简介各占一行：简介是几条短语连写，跟名称挤在一行会读成一句 */
+.service-list li {
+  display: grid;
+  gap: 2px;
+}
+
+.service-list .service-name {
+  color: var(--text);
 }
 
 .policy-list {

@@ -1,4 +1,4 @@
-"""FastAPI application: 浙江产业带企业库 API."""
+"""FastAPI application: 产业带企业库 API."""
 
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ from .routers import (
 app = FastAPI(
     title=settings.site_name,
     description=(
-        "浙江产业带企业库：以官方名单为骨架、逐条标注核实程度的产业集群与企业检索服务。"
+        "产业带企业库：以官方名单为骨架、逐条标注核实程度的产业集群与企业检索服务。"
         "排序只依据公开可核验程度与资料完整度，对所有企业一致。"
     ),
     version="1.0.0",

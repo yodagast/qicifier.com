@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     # 两者不通用；换库只需改 .env 一行，不要动这里）。
     database_url: str = "postgresql+psycopg://huangyong@127.0.0.1:5432/zanzhu"
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
-    site_name: str = "浙江产业带企业库"
+    site_name: str = "产业带企业库"
     # 管理接口令牌。声明成字段是为了让 backend/.env 里那一行生效 ——
     # 不声明的话 pydantic-settings 会忽略它，也不写回 os.environ，
     # 管理接口就永远停留在「未启用」状态（实战踩过）。

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# 浙江产业带企业库 · 启停脚本
+# 产业带企业库 · 启停脚本
 #
 #   ./zanzhu.sh start      启动（默认：确认数据库 → 起后端 → 起前端 → 等就绪）
 #   ./zanzhu.sh stop       停止（按 PID 停我们起的进程，逐个确认已退出）
@@ -354,9 +354,9 @@ ensure_postgres() {
 #   * 后端用 settings.site_name（`/api/health` 回的那句，见 backend/app/config.py）；
 #   * 前端用标签页标题里的站名（`frontend/index.html` 的静态 <title>，
 #     JS 启动后由 `src/main.js` 的 SITE_TITLE 改成同一个后缀）。
-# 前端**不能**再用「浙江产业带企业库」：那个名字现在是页面内的品牌文案，
+# 前端**不能**再用「产业带企业库」：那个名字现在是页面内的品牌文案，
 # 由 JS 渲染，`curl` 只拿得到 index.html，抓不到它。
-API_MARKER="${API_MARKER:-浙江产业带企业库}"
+API_MARKER="${API_MARKER:-产业带企业库}"
 WEB_MARKER="${WEB_MARKER:-杭州波动粒子}"
 
 api_ready() {
@@ -464,7 +464,7 @@ start_web() {
 # ── 子命令 ──────────────────────────────────────────────────────────────
 cmd_start() {
   mkdir -p "$RUN_DIR"
-  info "启动 浙江产业带企业库"
+  info "启动 产业带企业库"
   ensure_postgres || die "数据库没起来，后面的步骤没有意义"
   start_api || die "后端启动失败"
   start_web || die "前端启动失败"
@@ -478,7 +478,7 @@ cmd_start() {
 }
 
 cmd_stop() {
-  info "停止 浙江产业带企业库"
+  info "停止 产业带企业库"
   local rc=0
   stop_group "前端" "$WEB_PORT" "$WEB_PID_FILE" || rc=1
   stop_group "后端" "$API_PORT" "$API_PID_FILE" || rc=1
@@ -493,7 +493,7 @@ cmd_stop() {
 
 cmd_status() {
   local overall=0
-  info "状态 浙江产业带企业库"
+  info "状态 产业带企业库"
   info ""
 
   # 数据库状态按**后端实际连的那个库**报，不按本脚本的 PG_PORT ——
@@ -544,7 +544,7 @@ cmd_restart() {
 
 usage() {
   cat <<EOF
-浙江产业带企业库 · 启停脚本
+产业带企业库 · 启停脚本
 
   ./zanzhu.sh start              启动数据库 + 后端 + 前端（已在跑的会自动跳过）
   ./zanzhu.sh stop               停止后端与前端（数据库保持运行）

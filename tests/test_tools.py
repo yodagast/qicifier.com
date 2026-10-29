@@ -1699,8 +1699,25 @@ def main() -> int:
         [line.strip() for line in company_vue.splitlines() if "品牌优化" in line],
     )
     check(
-        "服务一节同时说明「与收录、排序无关」并指向收录纪律",
-        "这些服务与本站的收录、排序无关" in company_vue and "#policy" in company_vue,
+        "四项业务各带一句介绍，介绍也只写在 site.js",
+        all(
+            intro in site_js
+            for intro in (
+                "诊断品牌现状、建设品牌形象、提升用户信任度",
+                "多语言站点架构规划和实施、支付与物流对接、SEO/GEO 基础服务",
+                "聚焦垂类海外红人资源，覆盖细分场景和长尾客群",
+                "精准内容触达、系统获取高质量商机",
+            )
+        )
+        and "service.desc" in company_vue
+        and "诊断品牌现状" not in company_vue,
+        "",
+    )
+    services_block = company_vue.split('id="services"', 1)[-1].split("</section>", 1)[0]
+    check(
+        "服务一节同时说明「与收录、排序无关」并给出联系邮箱",
+        "这些服务与本站的收录、排序无关" in services_block
+        and "mailto:${CONTACT_EMAIL}" in services_block,
         "",
     )
     check(
